@@ -10,17 +10,17 @@ Please see the [contributing guide](https://github.com/exercism/legacy-docs/tree
 
 ### Exercise ideas
 
-http://www.mycode4fun.co.uk/red-beginners-reference-guide
-http://redprogramming.com/Short%20Red%20Code%20Examples.html#section-2
-https://github.com/red/red/wiki/%5BLINKS%5D-Scripts-collection
+* http://www.mycode4fun.co.uk/red-beginners-reference-guide
+* http://redprogramming.com/Short%20Red%20Code%20Examples.html#section-2
+* https://github.com/red/red/wiki/%5BLINKS%5D-Scripts-collection
 
-http://www.rebol.org/script-index.r
-http://reb4.me/r/
-http://www.rebol.com/oneliners.html
+* http://www.rebol.org/script-index.r
+* http://reb4.me/r/
+* http://www.rebol.com/oneliners.html
 
 Concepts
 
-http://helpin.red/
+* http://helpin.red/
 
 ## Contact
 

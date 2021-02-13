@@ -14,6 +14,8 @@ Please see the [contributing guide](https://github.com/exercism/legacy-docs/tree
 * http://redprogramming.com/Short%20Red%20Code%20Examples.html#section-2
 * https://github.com/red/red/wiki/%5BLINKS%5D-Scripts-collection
 
+Rebol (it's very similar to Red)
+
 * http://www.rebol.org/script-index.r
 * http://reb4.me/r/
 * http://www.rebol.com/oneliners.html

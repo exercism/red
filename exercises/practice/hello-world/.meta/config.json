@@ -1,0 +1,12 @@
+{
+  "authors": [
+    {
+      "github_username": "loziniak",
+    }
+  ],
+  "files": {
+    "solution": ["hello-world.red"],
+    "test": ["hello-world-test.red"],
+    "example": [".meta/example.red"]
+  }
+}

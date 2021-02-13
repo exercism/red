@@ -101,6 +101,16 @@
   "key_features": [],
   "exercises": {
     "concept": [],
-    "practice": []
+    "practice": [
+      {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "status": "wip",
+        "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      }
+    ]
   }
 }

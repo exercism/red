@@ -100,18 +100,10 @@
   ],
   "key_features": [],
   "files": {
-    "solution": [
-      "path/to/%{kebab_slug}.ext"
-    ],
-    "test": [
-      "path/to/%{kebab_slug}.ext"
-    ],
-    "example": [
-      "path/to/%{kebab_slug}.ext"
-    ],
-    "exemplar": [
-      "path/to/%{kebab_slug}.ext"
-    ]
+    "solution": ["%{kebab_slug}.red"],
+    "test": ["%{kebab_slug}-test.red"],
+    "example": [".meta/example.red"],
+    "exemplar": [".meta/exemplar.red"]
   },
   "exercises": {
     "concept": [],

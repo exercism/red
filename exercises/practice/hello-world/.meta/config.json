@@ -1,12 +1,19 @@
 {
+  "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
   "authors": [
     {
-      "github_username": "loziniak",
+      "github_username": "loziniak"
     }
   ],
   "files": {
-    "solution": ["hello-world.red"],
-    "test": ["hello-world-test.red"],
-    "example": [".meta/example.red"]
+    "solution": [
+      "hello-world.red"
+    ],
+    "test": [
+      "hello-world-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
   }
 }

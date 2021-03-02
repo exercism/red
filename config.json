@@ -99,6 +99,12 @@
     "used_for/scripts"
   ],
   "key_features": [],
+  "files": {
+    "solution": ["%{kebab_slug}.red"],
+    "test": ["%{kebab_slug}-test.red"],
+    "example": [".meta/example.red"],
+    "exemplar": [".meta/exemplar.red"]
+  },
   "exercises": {
     "concept": [],
     "practice": [

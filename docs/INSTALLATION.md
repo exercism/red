@@ -9,3 +9,7 @@ In general, you don't install Red. You download it and it's ready to go.
 1. Another way you can run scripts is not using REPL Console, but just giving them as arguments to Red **in commandline**: `red.exe my-dir\my-script.red`.
 
 1. It's always good to **rename** downloaded file to `red.exe` (or `red` on Linux/Mac) and **add it to your system's *PATH* environment variable**, so you can run it from every folder and don't have to remember full name of downloaded automated build file. Also, it makes easier to update Red configured this way.
+
+1. Under **Linux**, Red needs 32-bit versions of *Curl* and *Gtk 3* libraries.
+
+1. If you are using **macOS**, [you cannot run 32-bit applicatons](https://support.apple.com/en-us/HT208436), and therefore, Red.

@@ -18,3 +18,5 @@ Sometimes function called `type?` (yes, it has question mark in it's name!) can 
 ```red
 print ["x type:" type? x]
 ```
+
+There are also some more advanced debugging techniques [listed on Red's Wiki](https://github.com/red/red/wiki/%5BDOC%5D-Debugging).

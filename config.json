@@ -1,4 +1,6 @@
 {
+  "version": 3,
+
   "language": "Red",
   "slug": "red",
   "active": false,
@@ -9,7 +11,6 @@
     "analyzer": false
   },
   "blurb": "Red is a next-generation full stack programming language, strongly inspired by REBOL.",
-  "version": 3,
   "online_editor": {
     "indent_style": "tab",
     "indent_size": 4
@@ -72,7 +73,7 @@
     {
       "slug": "view",
       "name": "View",
-      "blurb": "View is Red's module used for programming grapfical user interface.",
+      "blurb": "View is Red's module used for programming graphical user interface.",
       "uuid": "e09fd445-ad55-4c04-a7f8-fa4b78e1cfbb"
     },
     {
@@ -98,7 +99,38 @@
     "used_for/guis",
     "used_for/scripts"
   ],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Full-stack",
+      "content": "Red can be used to create a device driver as well as a GUI application.",
+      "icon": "features-oop"
+    },
+    {
+      "title": "Lightweight",
+      "content": "Entire toolchain is about 1.5 MB download, single executable. Low memory footprint.",
+      "icon": "features-oop"
+    },
+    {
+      "title": "Homoiconic",
+      "content": "Red is its own meta-language and own data-format. Program can operate on it's own code.",
+      "icon": "features-oop"
+    },
+    {
+      "title": "DSL",
+      "content": "It's easy to create Domain Specific Languages, dialects and parsers.",
+      "icon": "features-oop"
+    },
+    {
+      "title": "GUI",
+      "content": "It's simple as: view [b: base 100x100 button {Draw circle} [b/draw: [pen red circle 50x50 50]]]",
+      "icon": "features-oop"
+    },
+    {
+      "title": "Reactive",
+      "content": "Objects can be linked by reactions to reduce size and complexity of program.",
+      "icon": "features-oop"
+    }
+  ],
   "exercises": {
     "concept": [],
     "practice": [

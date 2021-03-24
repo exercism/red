@@ -3,6 +3,10 @@
   "authors": [
     "loziniak"
   ],
+  "contributors": [
+    "ErikSchierboom",
+    "iHiD"
+  ],
   "files": {
     "solution": [
       "hello-world.red"

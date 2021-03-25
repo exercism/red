@@ -3,6 +3,8 @@
   "authors": [
     "loziniak"
   ],
+  "contributors": [
+  ],
   "files": {
     "solution": [
       "hello-world.red"

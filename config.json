@@ -12,7 +12,9 @@
   "blurb": "Red is a next-generation full stack programming language, strongly inspired by REBOL.",
   "online_editor": {
     "indent_style": "tab",
-    "indent_size": 4
+    "indent_size": 4,
+    "ace_editor_language": "red",
+    "highlightjs_language": "red"
   },
   "concepts": [
     {

@@ -13,7 +13,6 @@
   "online_editor": {
     "indent_style": "tab",
     "indent_size": 4,
-    "ace_editor_language": "red",
     "highlightjs_language": "red"
   },
   "concepts": [

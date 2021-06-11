@@ -18,7 +18,7 @@ Worth checking are also excellent [general](https://hackmd.io/60gYIZYYS-6_l8kLH0
 
 ### Exercise ideas
 
-Generally, [practice exercises](https://github.com/exercism/docs/blob/main/anatomy/tracks/practice-exercises.md) are best taken from [Exercism's problem-specifications repository](https://github.com/exercism/problem-specifications), so the experience is similar for students in every language track. But in case you need some fresh ideas, here are some links with script examples you can check for inspiration:
+Generally, [practice exercises](https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md) are best taken from [Exercism's problem-specifications repository](https://github.com/exercism/problem-specifications), so the experience is similar for students in every language track. But in case you need some fresh ideas, here are some links with script examples you can check for inspiration:
 
 * http://www.mycode4fun.co.uk/red-beginners-reference-guide
 * http://redprogramming.com/Short%20Red%20Code%20Examples.html#section-2
@@ -30,7 +30,7 @@ Scripts in Rebol (it's very similar to Red)
 * http://reb4.me/r/
 * http://www.rebol.com/oneliners.html
 
-Useful for [concepts](https://github.com/exercism/docs/blob/main/anatomy/tracks/concepts.md) and [concept exercises](https://github.com/exercism/docs/blob/main/anatomy/tracks/concept-exercises.md)
+Useful for [concepts](https://github.com/exercism/docs/blob/main/building/tracks/concepts.md) and [concept exercises](https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md)
 
 * http://helpin.red/
 

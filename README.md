@@ -12,7 +12,9 @@ Tooling:
 
 ## Contributing
 
-Please see the [contributing guide](https://github.com/exercism/legacy-docs/tree/master/contributing-to-language-tracks). This track is currently at the beginning of it's creation, so any help is very welcome.
+Please see the [old contributing guide](https://github.com/exercism/legacy-docs/tree/master/contributing-to-language-tracks) and [new track building guide](https://github.com/exercism/docs/tree/main/building/tracks). This track is currently at the beginning of it's creation, so any help is very welcome.
+
+Worth checking are also excellent [general](https://hackmd.io/60gYIZYYS-6_l8kLH0QXAQ?view) and [concepts](https://github.com/exercism/elm/blob/main/docs/contributing-concept.md) guides from Elm track maintainers, that are in great part universal and can be applied also to Red track.
 
 ### Exercise ideas
 

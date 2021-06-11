@@ -35,6 +35,26 @@
       "slug": "functions",
       "name": "Functions",
       "uuid": "af09604a-bbfc-460f-8b78-5850abf16bea"
+    },
+    {
+      "slug": "blocks",
+      "name": "Blocks",
+      "uuid": "af09604a-bbfc-460f-8b78-5850abf16bea"
+    },
+    {
+      "slug": "none",
+      "name": "None",
+      "uuid": "af09604a-bbfc-460f-8b78-5850abf16bea"
+    },
+    {
+      "slug": "conditionals",
+      "name": "Functions",
+      "uuid": "af09604a-bbfc-460f-8b78-5850abf16bea"
+    },
+    {
+      "slug": "evaluation",
+      "name": "Evaluation",
+      "uuid": "af09604a-bbfc-460f-8b78-5850abf16bea"
     }
   ],
   "tags": [
@@ -95,7 +115,7 @@
         "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
         "practices": [
           "basics",
-          "script-header",
+          "script",
           "strings"
         ],
         "prerequisites": [],

@@ -4,6 +4,12 @@
 
 Exercism exercises in [Red](https://www.red-lang.org/).
 
+Tooling:
+
+* [Test Runner](https://github.com/exercism/red-test-runner)
+* [Analyzer](https://github.com/exercism/red-analyzer) (not ready)
+* [Representer](https://github.com/exercism/red-representer) (not ready)
+
 ## Contributing
 
 Please see the [contributing guide](https://github.com/exercism/legacy-docs/tree/master/contributing-to-language-tracks). This track is currently at the beginning of it's creation, so any help is very welcome.

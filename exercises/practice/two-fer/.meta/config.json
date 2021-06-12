@@ -1,0 +1,19 @@
+{
+  "blurb": "Create a sentence of the form \"One for X, one for me.\".",
+  "authors": [
+    "loziniak"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "two-fer.red"
+    ],
+    "test": [
+      "two-fer-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  }
+}

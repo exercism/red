@@ -4,7 +4,7 @@ Red [
 ]
 
 exercise-slug: "two-fer"
-ignore-after: 3
+ignore-after: 1
 
 comment [
 	source:
@@ -42,7 +42,6 @@ comment [
 	    }
 	  ]
 	}
-
 ]
 
 canonical-cases: [

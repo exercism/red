@@ -38,8 +38,11 @@ foreach test-case cases [
 	result: do
 		to file! rejoin [exercise-slug %.red]
 
-	if function? :result [
-		result: result			; execute function
+	if function? :result [			;-- execute function
+		result: do
+			append
+				copy [result]
+				values-of test-case/input
 	]
 
 	print [

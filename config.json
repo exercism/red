@@ -5,7 +5,7 @@
   "active": false,
   "status": {
     "concept_exercises": false,
-    "test_runner": false,
+    "test_runner": true,
     "representer": false,
     "analyzer": false
   },
@@ -14,6 +14,9 @@
     "indent_style": "tab",
     "indent_size": 4,
     "highlightjs_language": "red"
+  },
+  "test_runner": {
+    "average_run_time": 2.0
   },
   "concepts": [
     {
@@ -93,11 +96,7 @@
         "name": "Hello World",
         "status": "wip",
         "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
-        "practices": [
-          "basics",
-          "script-header",
-          "strings"
-        ],
+        "practices": ["basics", "script-header", "strings"],
         "prerequisites": [],
         "difficulty": 1
       }

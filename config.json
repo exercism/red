@@ -38,6 +38,26 @@
       "slug": "functions",
       "name": "Functions",
       "uuid": "af09604a-bbfc-460f-8b78-5850abf16bea"
+    },
+    {
+      "slug": "blocks",
+      "name": "Blocks",
+      "uuid": "f437b719-1edc-49bc-b917-337423c6822e"
+    },
+    {
+      "slug": "none",
+      "name": "None",
+      "uuid": "b89c5d74-766f-431d-8e2c-855ae9b5b294"
+    },
+    {
+      "slug": "conditionals",
+      "name": "Functions",
+      "uuid": "c493b197-f0d1-4283-ab22-9d0a00d8caf9"
+    },
+    {
+      "slug": "evaluation",
+      "name": "Evaluation",
+      "uuid": "7c65ca89-66e7-4d33-85ec-a87285116f66"
     }
   ],
   "tags": [
@@ -94,11 +114,30 @@
       {
         "slug": "hello-world",
         "name": "Hello World",
-        "status": "wip",
+        "status": "beta",
         "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
-        "practices": ["basics", "script-header", "strings"],
+        "practices": [
+          "basics",
+          "script",
+          "strings"
+        ],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "two-fer",
+        "name": "Two-fer",
+        "status": "wip",
+        "uuid": "2aa5cea7-4bff-4217-9f76-fe5c6d5ab5b0",
+        "practices": [
+          "conditionals",
+          "strings",
+          "none",
+          "blocks",
+          "evaluation"
+        ],
+        "prerequisites": ["conditionals", "blocks"],
+        "difficulty": 2
       }
     ]
   }

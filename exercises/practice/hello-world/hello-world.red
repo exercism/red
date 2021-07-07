@@ -4,5 +4,5 @@ Red [
 ]
 
 greet-the-world: function [] [
-	"Hello, Universe!"
+	"Goodbye, Mars!"
 ]

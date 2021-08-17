@@ -80,32 +80,32 @@
     {
       "title": "Full-stack",
       "content": "Red can be used to create a device driver as well as a GUI application.",
-      "icon": "features-oop"
+      "icon": "general-purpose"
     },
     {
       "title": "Lightweight",
       "content": "Entire toolchain is about 1.5 MB download, single executable. Low memory footprint.",
-      "icon": "features-oop"
+      "icon": "small"
     },
     {
       "title": "Code is data",
       "content": "Red is its own meta-language and own data-format. Program can operate on it's own code.",
-      "icon": "features-oop"
+      "icon": "interop"
     },
     {
       "title": "DSL",
       "content": "It's easy to create Domain Specific Languages, dialects and parsers.",
-      "icon": "features-oop"
+      "icon": "stable"
     },
     {
       "title": "GUI",
       "content": "It's simple as: view [b: base 100x100 button {Draw circle} [b/draw: [pen red circle 50x50 50]]]",
-      "icon": "features-oop"
+      "icon": "interactive"
     },
     {
       "title": "Reactive",
       "content": "Objects can be linked by reactions to reduce size and complexity of program.",
-      "icon": "features-oop"
+      "icon": "extensible"
     }
   ],
   "exercises": {

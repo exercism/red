@@ -51,7 +51,7 @@
     },
     {
       "slug": "conditionals",
-      "name": "Functions",
+      "name": "Conditional functions",
       "uuid": "c493b197-f0d1-4283-ab22-9d0a00d8caf9"
     },
     {
@@ -127,7 +127,7 @@
       {
         "slug": "two-fer",
         "name": "Two-fer",
-        "status": "wip",
+        "status": "beta",
         "uuid": "2aa5cea7-4bff-4217-9f76-fe5c6d5ab5b0",
         "practices": [
           "conditionals",
@@ -138,6 +138,19 @@
         ],
         "prerequisites": ["conditionals", "blocks"],
         "difficulty": 2
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse string",
+        "status": "wip",
+        "uuid": "73a4b319-a418-4c2a-941a-7bab18f7d95e",
+        "practices": [
+          "strings",
+          "evaluation",
+          "functions"
+        ],
+        "prerequisites": ["strings", "functions"],
+        "difficulty": 1
       }
     ]
   }

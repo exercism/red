@@ -1,0 +1,19 @@
+{
+  "blurb": "Introductory challenge to reverse an input string",
+  "authors": [
+    "loziniak"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "reverse-string.red"
+    ],
+    "test": [
+      "reverse-string-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  }
+}

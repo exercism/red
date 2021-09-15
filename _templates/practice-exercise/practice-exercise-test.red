@@ -14,15 +14,21 @@ print ["Testing" ignore-after "cases…"]
 
 cases: copy/deep/part canonical-cases ignore-after
 foreach test-case cases [
-	result: do
-		to file! rejoin [exercise-slug %.red]
+	result: context load to file!
+		rejoin [exercise-slug %.red]
+	;	%.meta/example.red						; test example solution
 
-	if function? :result [			;-- execute function
-		result: do
-			append
-				copy [result]
-				values-of test-case/input
+	; function name
+	result-execution: reduce [
+		make path! reduce [
+			'result
+			to word! test-case/function
+		]
 	]
+	; arguments
+	append result-execution values-of test-case/input
+
+	result: do result-execution
 
 	print [
 		pad/with test-case/description 30 #"."

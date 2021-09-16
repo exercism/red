@@ -136,7 +136,10 @@
           "blocks",
           "evaluation"
         ],
-        "prerequisites": ["conditionals", "blocks"],
+        "prerequisites": [
+          "conditionals",
+          "blocks"
+        ],
         "difficulty": 2
       },
       {
@@ -149,8 +152,27 @@
           "evaluation",
           "functions"
         ],
-        "prerequisites": ["strings", "functions"],
+        "prerequisites": [
+          "strings",
+          "functions"
+        ],
         "difficulty": 1
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor-Color",
+        "staus": "wip",
+        "uuid": "52170c0e-12d3-4ede-a417-70801c76985b",
+        "practices": [
+          "blocks",
+          "conditionals",
+          "evaluation"
+        ],
+        "prerequisites": [
+          "basics",
+          "blocks"
+        ],
+        "difficulty": 0
       }
     ]
   }

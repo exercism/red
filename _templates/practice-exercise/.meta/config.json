@@ -1,0 +1,19 @@
+{
+  "blurb": "",
+  "authors": [
+    "loziniak"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "practice-exercise.red"
+    ],
+    "test": [
+      "practice-exercise-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  }
+}

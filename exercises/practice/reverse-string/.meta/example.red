@@ -1,5 +1,5 @@
 Red [
-	description: {Example "Hello World" exercise solution for exercism platform}
+	description: {Example "Reverse string" exercise solution for exercism platform}
 	author: "loziniak"
 ]
 

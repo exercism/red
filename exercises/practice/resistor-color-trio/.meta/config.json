@@ -1,0 +1,18 @@
+{
+	"blurb": "Convert color codes, as used on resistors, to a human-readable label.",
+	"authors": [
+		"loziniak"
+	],
+	"contributors": [],
+	"files": {
+		"solution": [
+			"resistor-color-trio.red"
+		],
+		"test": [
+			"resistor-color-trio-test.red"
+		],
+		"example": [
+			".meta/example.red"
+		]
+	}
+}

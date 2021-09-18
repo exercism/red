@@ -51,6 +51,7 @@ if none? metadata/title [
 		title-case: find/tail title-case "-"
 		none? title-case
 	]
+	replace/all metadata/title "-" " "
 
 	metadata/title: head metadata/title
 ]

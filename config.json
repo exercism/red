@@ -46,18 +46,28 @@
     },
     {
       "slug": "none",
-      "name": "None",
+      "name": "None! Type",
       "uuid": "b89c5d74-766f-431d-8e2c-855ae9b5b294"
     },
     {
       "slug": "conditionals",
-      "name": "Conditional functions",
+      "name": "Conditional Functions",
       "uuid": "c493b197-f0d1-4283-ab22-9d0a00d8caf9"
     },
     {
       "slug": "evaluation",
-      "name": "Evaluation",
+      "name": "Code Evaluation Rules",
       "uuid": "7c65ca89-66e7-4d33-85ec-a87285116f66"
+    },
+    {
+      "slug": "maths",
+      "name": "Mathematical Operations",
+      "uuid": "daedcca2-9870-46d3-9101-64303036a109"
+    },
+    {
+      "slug": "maps",
+      "name": "Maps",
+      "uuid": "7ee99694-6f18-4234-92d4-122b9773ebac"
     }
   ],
   "tags": [
@@ -122,7 +132,7 @@
           "strings"
         ],
         "prerequisites": [],
-        "difficulty": 1
+        "difficulty": 0
       },
       {
         "slug": "two-fer",
@@ -137,15 +147,14 @@
           "evaluation"
         ],
         "prerequisites": [
-          "conditionals",
-          "blocks"
+          "basics"
         ],
         "difficulty": 2
       },
       {
         "slug": "reverse-string",
         "name": "Reverse string",
-        "status": "wip",
+        "status": "beta",
         "uuid": "73a4b319-a418-4c2a-941a-7bab18f7d95e",
         "practices": [
           "strings",
@@ -153,15 +162,14 @@
           "functions"
         ],
         "prerequisites": [
-          "strings",
-          "functions"
+          "basics"
         ],
         "difficulty": 1
       },
       {
         "slug": "resistor-color",
-        "name": "Resistor-Color",
-        "staus": "wip",
+        "name": "Resistor Color",
+        "staus": "beta",
         "uuid": "52170c0e-12d3-4ede-a417-70801c76985b",
         "practices": [
           "blocks",
@@ -169,10 +177,38 @@
           "evaluation"
         ],
         "prerequisites": [
-          "basics",
+          "basics"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "staus": "beta",
+        "uuid": "593ac491-9b1e-4b92-86bd-7a49395846af",
+        "practices": [
+          "maths",
           "blocks"
         ],
-        "difficulty": 0
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "staus": "beta",
+        "uuid": "676e2e36-174e-4cad-bb8d-bee5d2660f05",
+        "practices": [
+          "conditionals",
+          "maps"
+        ],
+        "prerequisites": [
+          "maths",
+          "strings"
+        ],
+        "difficulty": 6
       }
     ]
   }

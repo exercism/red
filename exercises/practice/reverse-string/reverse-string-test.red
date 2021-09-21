@@ -1,5 +1,5 @@
 Red [
-	description: {Tests for "Hello World" Exercism exercise}
+	description: {Tests for "Reverse String" Exercism exercise}
 	author: "loziniak"
 ]
 

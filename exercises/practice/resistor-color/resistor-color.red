@@ -1,5 +1,5 @@
 Red [
-	description: {"Resistor-Color" exercise solution for exercism platform}
+	description: {"Resistor Color" exercise solution for exercism platform}
 	author: "" ; you can write your name here, in quotes
 ]
 

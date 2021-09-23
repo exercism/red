@@ -1,5 +1,5 @@
 Red [
-	description: {Tests for Resistor-Color Exercism exercise}
+	description: {Tests for Resistor Color Exercism exercise}
 	author: "loziniak"
 ]
 

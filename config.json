@@ -173,6 +173,20 @@
           "blocks"
         ],
         "difficulty": 0
+      },
+      {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "staus": "beta",
+        "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
+        "practices": [
+          "conditionals",
+          "series"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 3
       }
     ]
   }

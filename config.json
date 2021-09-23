@@ -182,6 +182,20 @@
         "difficulty": 2
       },
       {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "staus": "beta",
+        "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
+        "practices": [
+          "conditionals",
+          "series"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "staus": "beta",

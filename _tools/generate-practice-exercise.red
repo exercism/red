@@ -1,19 +1,36 @@
 Red [
+	description: "Practice exercise generator for Exercism's Red track"
+	usage: [
+		change "author" value in line 13
+		"red generate-practice-exercise.red <exercise-slug>"
+	]
+	requirements: [
+		os: Linux										; "cp" and "uuidgen" commands are used.
+	]
 	author: "loziniak"
 ]
 
+; change to your GitHub username
+author: "kickass"
 
-probe slug: system/script/args
-probe slug: copy/part  skip slug 1  back tail slug
-probe github-problem-spec: rejoin
-	[https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/ slug]
 
+slug: system/script/args
+slug: copy/part  skip slug 1  back tail slug			; Linux adds quotes around arguments
+
+
+;     ===========================
+print "      GENERATE UUID ..."
 
 uuid: copy ""
 call/wait/output "uuidgen -r" uuid
-remove back tail probe uuid						; remove newline
+remove back tail uuid									; remove newline
 
 
+;     ===========================
+print "          PATHS ..."
+
+github-problem-spec: rejoin
+	[https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/ slug]
 
 exercise-path: rejoin [%../exercises/practice/ slug]
 call/wait rejoin ["cp -r ../_templates/practice-exercise " exercise-path]
@@ -24,17 +41,19 @@ rename
 
 rename
 	rejoin [exercise-path %/practice-exercise-test.red]
-	probe test-file: rejoin [exercise-path %/ slug %-test.red]
+	test-file: rejoin [exercise-path %/ slug %-test.red]
 
 example-file: rejoin [exercise-path %/.meta/example.red]
 
 tests-toml-file: rejoin [exercise-path %/.meta/tests.toml]
 
-probe config-file: rejoin [exercise-path %/.meta/config.json]
+config-file: rejoin [exercise-path %/.meta/config.json]
 
 track-config-file: %../config.json
 
 
+;     ===========================
+print "         METADATA ..."
 
 metadata: make map! 
 	load
@@ -56,9 +75,9 @@ if none? metadata/title [
 	metadata/title: head metadata/title
 ]
 
-probe metadata
 
-
+;     ===========================
+print "   EXERCISE DESCRIPTION ..."
 
 instructions: read/lines
 	rejoin [github-problem-spec %/description.md]
@@ -67,6 +86,8 @@ instructions:  copy  skip instructions 2
 write/lines/append  rejoin [exercise-path %/.docs/instructions.md]  instructions
 
 
+;     ===========================
+print "       TEST SUITE ..."
 
 canonical-data: load-json read 
 	rejoin [github-problem-spec %/canonical-data.json]
@@ -107,13 +128,13 @@ load-testcases: function [
 					'uuid testcase/uuid
 				]
 			] [
-				load-testcases testcase/cases			; recurrently load nested testcases
+				load-testcases testcase/cases				; recurrently load nested testcases
 			]
 	]
 	loaded
 ]
 
-probe cases-for-tests: load-testcases canonical-data/cases
+cases-for-tests: load-testcases canonical-data/cases
 
 test-code: read test-file
 
@@ -133,11 +154,13 @@ test-code: replace/case test-code
 	"practice-exercise"
 	slug
 
-write test-file probe test-code
+write test-file test-code
 
 
+;     ===========================
+print "      SOLUTION STUB ..."
 
-probe solution-code: read solution-file
+solution-code: read solution-file
 
 solution-code: replace/case solution-code
 	"Practice Exercise"
@@ -165,15 +188,22 @@ foreach testcase cases-for-tests [
 	]
 ]
 
-write example-file solution-code
+example-code: copy solution-code
+replace/case example-code
+	{author: ""}
+	rejoin [{author: "} author {"}]
+
+write example-file example-code
 
 replace/case solution-code
-	"author: ^"loziniak^""
-	"author: ^"^" ; you can write your name here, in quotes"
+	{author: ""}
+	{author: "" ; you can write your name here, in quotes}
 
 write solution-file solution-code
 
 
+;     ===========================
+print "        TESTS.TOML ..."
 
 tests-toml: read tests-toml-file
 
@@ -187,16 +217,21 @@ foreach testcase cases-for-tests [
 write tests-toml-file tests-toml
 
 
+;     ===========================
+print "   EXERCISE CONFIG FILE ..."
 
 config-data: load-json read config-file
 
 config-data/blurb: metadata/blurb
 replace config-data/files/solution/1 "practice-exercise" slug
 replace config-data/files/test/1 "practice-exercise" slug
+append config-data/authors author
 
-write config-file to-json/pretty probe config-data "^-"
+write config-file to-json/pretty config-data "^-"
 
 
+;     ===========================
+print "    UPDATE TRACK CONFIG ..."
 
 track-config-data: load-json read track-config-file
 
@@ -213,6 +248,9 @@ exercise-config: make map! reduce [
 append track-config-data/exercises/practice exercise-config
 
 write track-config-file rejoin [
-	to-json/pretty probe track-config-data "  "
+	to-json/pretty track-config-data "  "
 	"^/"
 ]
+
+;     ===========================
+print "          done."

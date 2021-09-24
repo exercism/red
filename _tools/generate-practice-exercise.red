@@ -1,11 +1,17 @@
 Red [
 	description: "Practice exercise generator for Exercism's Red track"
-	usage: "red generate-practice-exercise.red <exercise-slug>"
+	usage: [
+		change "author" value in line 13
+		"red generate-practice-exercise.red <exercise-slug>"
+	]
 	requirements: [
 		os: Linux										; "cp" and "uuidgen" commands are used.
 	]
 	author: "loziniak"
 ]
+
+; change to your GitHub username
+author: "kickass"
 
 
 slug: system/script/args
@@ -182,11 +188,16 @@ foreach testcase cases-for-tests [
 	]
 ]
 
-write example-file solution-code
+example-code: copy solution-code
+replace/case example-code
+	{author: ""}
+	rejoin [{author: "} author {"}]
+
+write example-file example-code
 
 replace/case solution-code
-	"author: ^"loziniak^""
-	"author: ^"^" ; you can write your name here, in quotes"
+	{author: ""}
+	{author: "" ; you can write your name here, in quotes}
 
 write solution-file solution-code
 
@@ -214,6 +225,7 @@ config-data: load-json read config-file
 config-data/blurb: metadata/blurb
 replace config-data/files/solution/1 "practice-exercise" slug
 replace config-data/files/test/1 "practice-exercise" slug
+append config-data/authors author
 
 write config-file to-json/pretty config-data "^-"
 

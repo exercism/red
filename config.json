@@ -223,6 +223,20 @@
           "strings"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "staus": "wip",
+        "uuid": "623011e0-54b7-4497-b72c-3a012516a45e",
+        "practices": [
+          "maths",
+          "maps"
+        ],
+        "prerequisites": [
+          "maths"
+        ],
+        "difficulty": 3
       }
     ]
   }

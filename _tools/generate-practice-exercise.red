@@ -1,7 +1,7 @@
 Red [
 	description: "Practice exercise generator for Exercism's Red track"
 	usage: [
-		change "author" value in line 13
+		change "author" value in line 14
 		"red generate-practice-exercise.red <exercise-slug>"
 	]
 	requirements: [

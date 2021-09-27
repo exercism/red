@@ -11,7 +11,7 @@ concepts-unlock: #()
 append-concept: function [
 	type [word!]
 	name [word! string!]
-	slug [string!]
+	exercise [map!]
 ] [
 	name: to string! name
 	
@@ -24,7 +24,7 @@ append-concept: function [
 	if none? c [
 		c: type-concepts/(name): copy []
 	]
-	append c slug
+	append c exercise
 	
 ]
 
@@ -32,23 +32,30 @@ print-concepts: function [
 	c [map!]
 ] [
 	foreach key keys-of c [
+		difficulties: copy ""
+		names: copy []
+		foreach exercise c/(key) [
+			append difficulties to string! exercise/difficulty
+			append names to string! exercise/slug
+		]
+		sort difficulties
+
 		print [
-			pad/left/with
-				pad/left copy key (30 - length? c/(key))
-				30
-				#"*"
-			" "
-			c/(key)
+			head insert
+				pad/left  copy key  (30 - length? difficulties)
+				difficulties
+			"-"
+			names
 		]
 	]
 ]
 
 foreach exercise config/exercises/practice [
 	foreach concept exercise/practices [
-		append-concept 'practice concept exercise/slug
+		append-concept 'practice concept exercise
 	]
 	foreach concept exercise/prerequisites [
-		append-concept 'unlocks concept exercise/slug
+		append-concept 'unlocks concept exercise
 	]
 ]
 

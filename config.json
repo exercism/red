@@ -143,7 +143,6 @@
           "conditionals",
           "strings",
           "none",
-          "blocks",
           "evaluation"
         ],
         "prerequisites": [
@@ -187,11 +186,39 @@
         "staus": "beta",
         "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
         "practices": [
-          "conditionals",
           "series"
         ],
         "prerequisites": [
           "blocks"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "staus": "wip",
+        "uuid": "623011e0-54b7-4497-b72c-3a012516a45e",
+        "practices": [
+          "maths",
+          "blocks"
+        ],
+        "prerequisites": [
+          "maths"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "staus": "wip",
+        "uuid": "2ce5425d-2814-4f01-9a11-c47b714b1930",
+        "practices": [
+          "series",
+          "maths",
+          "conditionals"
+        ],
+        "prerequisites": [
+          "strings"
         ],
         "difficulty": 3
       },
@@ -223,20 +250,6 @@
           "strings"
         ],
         "difficulty": 6
-      },
-      {
-        "slug": "space-age",
-        "name": "Space Age",
-        "staus": "wip",
-        "uuid": "623011e0-54b7-4497-b72c-3a012516a45e",
-        "practices": [
-          "maths",
-          "maps"
-        ],
-        "prerequisites": [
-          "maths"
-        ],
-        "difficulty": 3
       }
     ]
   }

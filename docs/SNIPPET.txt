@@ -1,6 +1,7 @@
 Red [
 	Title: {Random dog viewer}
 	Author: "loziniak"
+	Needs: View
 ]
 
 view [

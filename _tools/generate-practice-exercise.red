@@ -55,11 +55,10 @@ track-config-file: %../config.json
 ;     ===========================
 print "         METADATA ..."
 
-metadata: make map! 
-	load
-		find/tail
-			read rejoin [github-problem-spec %/metadata.yml]
-			#"^/"
+metadata: load read rejoin [github-problem-spec %/metadata.toml]
+
+; convert toml to map assuming simple key/value pairs
+metadata: make map! parse metadata [collect any['= | keep skip]]
 
 if none? metadata/title [
 	metadata/title: title-case: copy slug

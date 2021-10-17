@@ -1,11 +1,8 @@
 Red [
 	description: "Practice exercise generator for Exercism's Red track"
 	usage: [
-		change "author" value in line 14
+		change "author" value in line 11
 		"red generate-practice-exercise.red <exercise-slug>"
-	]
-	requirements: [
-		os: Linux										; "cp" and "uuidgen" commands are used.
 	]
 	author: "loziniak"
 ]
@@ -15,15 +12,23 @@ author: "kickass"
 
 
 slug: system/script/args
-slug: copy/part  skip slug 1  back tail slug			; Linux adds quotes around arguments
+slug: trim/with copy slug {"'}			; Linux adds quotes around arguments
 
+
+either system/platform = 'Windows [
+	uuid-cmd: {powershell -Command "[guid]::NewGuid().ToString()"}
+	copy-cmd: "xcopy /I /E /H"
+][
+	uuid-cmd: {uuidgen -r}
+	copy-cmd: {cp -r}
+]
 
 ;     ===========================
 print "      GENERATE UUID ..."
 
 uuid: copy ""
-call/wait/output "uuidgen -r" uuid
-remove back tail uuid									; remove newline
+call/wait/output uuid-cmd uuid
+trim/lines uuid
 
 
 ;     ===========================
@@ -33,7 +38,7 @@ github-problem-spec: rejoin
 	[https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/ slug]
 
 exercise-path: rejoin [%../exercises/practice/ slug]
-call/wait rejoin ["cp -r ../_templates/practice-exercise " exercise-path]
+call/wait rejoin [copy-cmd " " to-local-file %../_templates/practice-exercise " " to-local-file exercise-path]
 
 rename
 	rejoin [exercise-path %/practice-exercise.red]

@@ -237,6 +237,19 @@
         "difficulty": 4
       },
       {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "staus": "beta",
+        "uuid": "1795f469-9555-49a9-ab42-c60d44667381",
+        "practices": [
+          "series"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "resistor-color-trio",
         "name": "Resistor Color Trio",
         "staus": "beta",

@@ -124,7 +124,7 @@
       {
         "slug": "hello-world",
         "name": "Hello World",
-        "status": "beta",
+        "status": "active",
         "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
         "practices": [
           "basics",

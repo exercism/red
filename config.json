@@ -250,6 +250,18 @@
           "strings"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "staus": "wip",
+        "uuid": "16a56737-a61d-44e7-a4d6-6bbeb95bd41a",
+        "practices": [
+          "conditionals",
+          "maths"
+        ],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   }

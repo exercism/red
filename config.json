@@ -237,6 +237,18 @@
         "difficulty": 4
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "staus": "wip",
+        "uuid": "16a56737-a61d-44e7-a4d6-6bbeb95bd41a",
+        "practices": [
+          "conditionals",
+          "maths"
+        ],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "staus": "beta",

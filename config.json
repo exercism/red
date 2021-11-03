@@ -249,6 +249,19 @@
         "difficulty": 4
       },
       {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "staus": "beta",
+        "uuid": "139cfa97-ef3a-4f9d-8673-4d525c5c5aa0",
+        "practices": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "staus": "beta",

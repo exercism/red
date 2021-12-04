@@ -28,7 +28,19 @@ foreach test-case cases [
 	; arguments
 	append result-execution values-of test-case/input
 
-	result: do result-execution
+	result: try [
+		catch [
+			do result-execution
+		]
+	]
+
+	if error? result [
+		either result/type = 'user [
+			result: make map! reduce ['error result/arg1]
+		] [
+			print result
+		]
+	]
 
 	print [
 		pad/with test-case/description 30 #"."

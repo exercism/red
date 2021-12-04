@@ -31,7 +31,7 @@
     },
     {
       "slug": "strings",
-      "name": "String! type",
+      "name": "String! Type",
       "uuid": "a936c324-9503-4acc-968f-ab18b8092ed0"
     },
     {
@@ -55,6 +55,11 @@
       "uuid": "c493b197-f0d1-4283-ab22-9d0a00d8caf9"
     },
     {
+      "slug": "loops",
+      "name": "Looping Functions",
+      "uuid": "9843fabf-ea9f-4c21-8442-220b7a922844"
+    },
+    {
       "slug": "evaluation",
       "name": "Code Evaluation Rules",
       "uuid": "7c65ca89-66e7-4d33-85ec-a87285116f66"
@@ -68,6 +73,11 @@
       "slug": "maps",
       "name": "Maps",
       "uuid": "7ee99694-6f18-4234-92d4-122b9773ebac"
+    },
+    {
+      "slug": "errors",
+      "name": "Handling Errors",
+      "uuid": "d33f88db-be6a-4868-b6c6-4dca70a47cc9"
     }
   ],
   "tags": [
@@ -260,6 +270,19 @@
           "strings"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "staus": "wip",
+        "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "errors"
+        ],
+        "difficulty": 5
       },
       {
         "slug": "roman-numerals",

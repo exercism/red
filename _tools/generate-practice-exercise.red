@@ -242,7 +242,7 @@ track-config-data: load-json read track-config-file
 exercise-config: make map! reduce [
 	'slug slug
 	'name metadata/title
-	'staus 'wip
+	'status 'wip
 	'uuid uuid
 	'practices []
 	'prerequisites []

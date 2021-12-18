@@ -178,7 +178,7 @@
       {
         "slug": "resistor-color",
         "name": "Resistor Color",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "52170c0e-12d3-4ede-a417-70801c76985b",
         "practices": [
           "blocks",
@@ -193,7 +193,7 @@
       {
         "slug": "protein-translation",
         "name": "Protein Translation",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
         "practices": [
           "series"
@@ -206,7 +206,7 @@
       {
         "slug": "space-age",
         "name": "Space Age",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "623011e0-54b7-4497-b72c-3a012516a45e",
         "practices": [
           "maths",
@@ -220,7 +220,7 @@
       {
         "slug": "raindrops",
         "name": "Raindrops",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "2ce5425d-2814-4f01-9a11-c47b714b1930",
         "practices": [
           "series",
@@ -235,7 +235,7 @@
       {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "593ac491-9b1e-4b92-86bd-7a49395846af",
         "practices": [
           "maths",
@@ -249,7 +249,7 @@
       {
         "slug": "darts",
         "name": "Darts",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "16a56737-a61d-44e7-a4d6-6bbeb95bd41a",
         "practices": [
           "conditionals",
@@ -261,7 +261,7 @@
       {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "139cfa97-ef3a-4f9d-8673-4d525c5c5aa0",
         "practices": [
           "conditionals"
@@ -274,7 +274,7 @@
       {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
-        "staus": "wip",
+        "status": "wip",
         "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
         "practices": [
           "loops"
@@ -287,7 +287,7 @@
       {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "1795f469-9555-49a9-ab42-c60d44667381",
         "practices": [
           "series"
@@ -300,7 +300,7 @@
       {
         "slug": "resistor-color-trio",
         "name": "Resistor Color Trio",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "676e2e36-174e-4cad-bb8d-bee5d2660f05",
         "practices": [
           "conditionals",

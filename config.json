@@ -311,6 +311,15 @@
           "strings"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "status": "wip",
+        "uuid": "ab563cba-5556-4625-b1aa-971c01d3bead",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 0
       }
     ]
   }

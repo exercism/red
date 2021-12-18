@@ -78,6 +78,11 @@
       "slug": "errors",
       "name": "Handling Errors",
       "uuid": "d33f88db-be6a-4868-b6c6-4dca70a47cc9"
+    },
+    {
+      "slug": "dsl",
+      "name": "Domain Specific Languages",
+      "uuid": "2a949ab5-9293-4d9a-9538-eeeda281a66e"
     }
   ],
   "tags": [
@@ -317,7 +322,9 @@
         "name": "Circular Buffer",
         "status": "wip",
         "uuid": "ab563cba-5556-4625-b1aa-971c01d3bead",
-        "practices": [],
+        "practices": [
+          "dsl"
+        ],
         "prerequisites": [],
         "difficulty": 0
       }

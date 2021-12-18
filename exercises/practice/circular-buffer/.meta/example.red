@@ -3,10 +3,25 @@ Red [
 	author: "loziniak"
 ]
 
-run: function [
-	capacity
-	operations
-] [
-	cause-error 'user 'message ["You need to implement this function."]
+circular-buffer!: context [
+	buffer: none
+	results: none
+	
+	read: function [] [append results 'false]
 ]
 
+run: function [
+	capacity [integer!]
+	operations [block!]
+	return: [block!]
+] [
+	buf: make circular-buffer! [
+		buffer: append/dup  copy []  none  capacity
+		results: copy []
+	]
+	
+	bind operations buf
+	
+	do operations
+	buf/results
+]

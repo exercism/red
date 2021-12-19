@@ -78,6 +78,11 @@
       "slug": "errors",
       "name": "Handling Errors",
       "uuid": "d33f88db-be6a-4868-b6c6-4dca70a47cc9"
+    },
+    {
+      "slug": "dsl",
+      "name": "Domain Specific Languages",
+      "uuid": "2a949ab5-9293-4d9a-9538-eeeda281a66e"
     }
   ],
   "tags": [
@@ -274,7 +279,7 @@
       {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
-        "status": "wip",
+        "status": "beta",
         "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
         "practices": [
           "loops"
@@ -311,6 +316,19 @@
           "strings"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "status": "wip",
+        "uuid": "ab563cba-5556-4625-b1aa-971c01d3bead",
+        "practices": [
+          "dsl"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 9
       }
     ]
   }

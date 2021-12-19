@@ -279,7 +279,7 @@
       {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
-        "status": "wip",
+        "status": "beta",
         "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
         "practices": [
           "loops"
@@ -325,8 +325,10 @@
         "practices": [
           "dsl"
         ],
-        "prerequisites": [],
-        "difficulty": 0
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 9
       }
     ]
   }

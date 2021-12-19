@@ -4,7 +4,7 @@ Red [
 ]
 
 exercise-slug: "circular-buffer"
-ignore-after: 14
+ignore-after: 1
 
 
 canonical-cases: [#(
@@ -142,8 +142,8 @@ print ["Testing" ignore-after "cases…"]
 cases: copy/deep/part canonical-cases ignore-after
 foreach test-case cases [
 	result: context load to file!
-	;	rejoin [exercise-slug %.red]
-		%.meta/example.red						; test example solution
+		rejoin [exercise-slug %.red]
+	;	%.meta/example.red						; test example solution
 
 	; function name
 	result-execution: reduce [

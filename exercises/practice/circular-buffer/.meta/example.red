@@ -10,33 +10,46 @@ circular-buffer!: context [
 	start: 1
 	length: 0
 	
-	read: function [] [
-;		probe "rrr"
+	read: function [
+		/extern start length
+	] [
 		append results either any [
 			none? buffer
-			start > length
+			length < 1
 		] [
 			'false
 		] [
-			buffer/(start)
+			out: buffer/(start)
+			start: (start % length? buffer) + 1
+			length: length - 1
+			out
 		]
 	]
 
 	write: function [
 		item [integer!]
-		/extern length
+		/extern start length
 	] [
-;		probe "www"
 		append results either any [
 			none? buffer
+			(length + 1) > length? buffer
 		] [
 			'false
 		] [
-			buffer/(start): item
+			pos: ((start - 1 + length) % length? buffer) + 1
+			buffer/(pos): item
 			length: length + 1
 			'true
 		]
 	]
+	
+	clear: function [
+		/extern start length
+	] [
+		length: 0
+	]
+
+	overwrite: function [] [append results 'unimplemented]
 ]
 
 run: function [

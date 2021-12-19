@@ -10,6 +10,21 @@ circular-buffer!: context [
 	start: 1
 	length: 0
 	
+	
+	full?: function [return: [logic!]] [
+		(length + 1) > length? buffer
+	]
+	
+	write-end: function [item [integer!]] [
+		end: ((start - 1 + length) % length? buffer) + 1
+		buffer/(end): item
+	]
+	
+	consume: function [] [
+		self/start: (self/start % length? buffer) + 1
+	]
+	
+	
 	read: function [
 		/extern start length
 	] [
@@ -19,10 +34,11 @@ circular-buffer!: context [
 		] [
 			'false
 		] [
-			out: buffer/(start)
-			start: (start % length? buffer) + 1
+			result: buffer/(start)
+			consume
 			length: length - 1
-			out
+
+			result
 		]
 	]
 
@@ -32,13 +48,13 @@ circular-buffer!: context [
 	] [
 		append results either any [
 			none? buffer
-			(length + 1) > length? buffer
+			full?
 		] [
 			'false
 		] [
-			pos: ((start - 1 + length) % length? buffer) + 1
-			buffer/(pos): item
+			write-end item
 			length: length + 1
+
 			'true
 		]
 	]
@@ -49,7 +65,20 @@ circular-buffer!: context [
 		length: 0
 	]
 
-	overwrite: function [] [append results 'unimplemented]
+	overwrite: function [
+		item [integer!]
+		/extern start length
+	] [
+		unless none? buffer [
+			write-end item
+			
+			either full? [
+				consume
+			] [
+				length: length + 1
+			]
+		]
+	]
 ]
 
 run: function [

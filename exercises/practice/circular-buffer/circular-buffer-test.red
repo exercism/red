@@ -4,7 +4,7 @@ Red [
 ]
 
 exercise-slug: "circular-buffer"
-ignore-after: 1
+ignore-after: 2
 
 
 canonical-cases: [#(

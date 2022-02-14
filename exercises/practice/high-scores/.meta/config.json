@@ -1,0 +1,18 @@
+{
+	"blurb": "Manage a player's High Score list.",
+	"authors": [
+		"kickass"
+	],
+	"contributors": [],
+	"files": {
+		"solution": [
+			"high-scores.red"
+		],
+		"test": [
+			"high-scores-test.red"
+		],
+		"example": [
+			".meta/example.red"
+		]
+	}
+}

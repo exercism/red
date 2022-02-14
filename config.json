@@ -329,6 +329,15 @@
           "blocks"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "status": "wip",
+        "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 0
       }
     ]
   }

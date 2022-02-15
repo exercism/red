@@ -318,9 +318,18 @@
         "difficulty": 6
       },
       {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "status": "beta",
+        "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",
+        "practices": ["blocks"],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
-        "status": "wip",
+        "status": "beta",
         "uuid": "ab563cba-5556-4625-b1aa-971c01d3bead",
         "practices": [
           "dsl"
@@ -329,15 +338,6 @@
           "blocks"
         ],
         "difficulty": 9
-      },
-      {
-        "slug": "high-scores",
-        "name": "High Scores",
-        "status": "wip",
-        "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 0
       }
     ]
   }

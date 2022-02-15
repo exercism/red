@@ -1,41 +1,42 @@
 Red [
 	description: {"High Scores" exercise solution for exercism platform}
-	author: "kickass"
+	author: "loziniak"
 ]
 
 scores: function [
-	scores
+	scores [block!]
+	return: [block!]
 ] [
-	cause-error 'user 'message ["You need to implement this function."]
+	scores
 ]
 
 latest: function [
-	scores
+	scores [block!]
+	return: [integer!]
 ] [
-	cause-error 'user 'message ["You need to implement this function."]
+	last scores
 ]
 
 personal-best: function [
-	scores
+	scores [block!]
+	return: [integer!]
 ] [
-	cause-error 'user 'message ["You need to implement this function."]
+	best: first scores
+	foreach score next scores [
+		if best < score [
+			best: score
+		]
+	]
+	best
 ]
 
 personal-top-three: function [
-	scores
+	scores [block!]
+	return: [block!]
 ] [
-	cause-error 'user 'message ["You need to implement this function."]
+	head remove/part
+		at
+			sort/reverse  copy scores
+			4
+		length? scores
 ]
-
-latest-after-top-three: function [
-	scores
-] [
-	cause-error 'user 'message ["You need to implement this function."]
-]
-
-scores-after-top-three: function [
-	scores
-] [
-	cause-error 'user 'message ["You need to implement this function."]
-]
-

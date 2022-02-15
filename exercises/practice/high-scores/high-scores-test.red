@@ -1,11 +1,12 @@
 Red [
-	description: {Tests for High Scores Exercism exercise}
+	description: {Tests for "High Scores" Exercism exercise}
 	author: "loziniak"
 ]
 
-exercise-slug: "high-scores"
-ignore-after: 1
+#include %testlib.red
 
+test-init/limit	%.meta/example.red 10						; test example solution
+;test-init/limit %high-scores.red 1
 
 canonical-cases: [#(
     description: "List of scores"
@@ -71,69 +72,35 @@ canonical-cases: [#(
     expected: [40]
     function: "personal-top-three"
     uuid: "16608eae-f60f-4a88-800e-aabce5df2865"
-) #(
-    description: "Latest score after personal top scores"
-    input: #(
-        scores: [70 50 20 30]
-    )
-    expected: 30
-    function: "latest-after-top-three"
-    uuid: "2df075f9-fec9-4756-8f40-98c52a11504f"
-) #(
-    description: "Scores after personal top scores"
-    input: #(
-        scores: [30 50 20 70]
-    )
-    expected: [30 50 20 70]
-    function: "scores-after-top-three"
-    uuid: "809c4058-7eb1-4206-b01e-79238b9b71bc"
 )]
 
-
-
-print ["Testing" ignore-after "cases…"]
-
-cases: copy/deep/part canonical-cases ignore-after
-foreach test-case cases [
-	result: context load to file!
-		rejoin [exercise-slug %.red]
-	;	%.meta/example.red						; test example solution
-
-	; function name
-	result-execution: reduce [
-		make path! reduce [
-			'result
-			to word! test-case/function
-		]
-	]
-	; arguments
-	append result-execution values-of test-case/input
-
-	result: try [
-		catch [
-			do result-execution
-		]
+foreach c-case canonical-cases [
+	case-code: reduce [
+		'expect c-case/expected compose [
+			(to word! c-case/function) (values-of c-case/input)
+		] 
 	]
 
-	if error? result [
-		either result/type = 'user [
-			result: make map! reduce ['error result/arg1]
-		] [
-			print result
-		]
-	]
+	test c-case/description case-code
+]
 
-	print [
-		pad/with test-case/description 30 #"."
-		either result = test-case/expected [
-			"✓"
-		] [
-			rejoin [{FAILED. Expected: "} test-case/expected {", but got "} result {"}]
-		]
+
+test "Latest score after personal top scores" [
+	scoresList: [70 50 20 30]
+
+	personal-top-three scoresList
+	
+	expect 30 [
+		latest scoresList
 	]
 ]
 
-print [
-	(length? canonical-cases) - ignore-after
-	"cases ignored."
+test "Scores after personal top scores" [
+	scoresList: [70 50 20 30]
+
+	personal-top-three scoresList
+	
+	expect [70 50 20 30] [
+		scores scoresList
+	]
 ]

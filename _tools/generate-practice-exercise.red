@@ -152,7 +152,7 @@ test-code: replace/case test-code
 
 test-code: replace/case test-code
 	{description: {Tests for "Practie Exercise" Exercism exercise}}
-	rejoin ["description: {Tests for " metadata/title " Exercism exercise}"]
+	rejoin ["description: {Tests for ^"" metadata/title "^" Exercism exercise}"]
 
 test-code: replace/case test-code
 	"practice-exercise"

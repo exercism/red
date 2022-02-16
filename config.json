@@ -322,7 +322,9 @@
         "name": "High Scores",
         "status": "beta",
         "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",
-        "practices": ["blocks"],
+        "practices": [
+          "blocks"
+        ],
         "prerequisites": [],
         "difficulty": 7
       },
@@ -338,6 +340,15 @@
           "blocks"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run Length Encoding",
+        "status": "wip",
+        "uuid": "8d71bae6-cd2c-45d8-ae0b-5b842bca1c6d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 0
       }
     ]
   }

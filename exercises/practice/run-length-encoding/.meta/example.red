@@ -7,7 +7,7 @@ encode: function [
 	text [string!]
 	return: [string!]
 ] [
-	out: copy ""
+	encoded: copy ""
 	current: none
 	count: 0
 	forall text [
@@ -21,18 +21,39 @@ encode: function [
 			none? current
 			current = second text
 		] [
-			append out rejoin [
+			append encoded rejoin [
 				either count > 1 [count] []
 				current
 			]
 		]
 	]
-	out
+	encoded
 ]
 
 decode: function [
-	encoding [string!]
+	encoded [string!]
 	return: [string!]
 ] [
-	cause-error 'user 'message ["You need to implement this function."]
+	decoded: copy ""
+
+	num: make bitset! [#"0" - #"9"]
+	letter: make bitset! [
+		#"a" - #"z"
+		#"A" - #"Z"
+		#" "
+	]
+
+	repetition: [
+		copy n thru any num
+		copy l thru letter
+	]
+
+	parse encoded [any [repetition (
+		append/dup
+			decoded
+			l 
+			either empty? n [1] [to integer! n]
+	)]]
+
+	decoded
 ]

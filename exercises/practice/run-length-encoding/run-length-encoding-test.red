@@ -5,7 +5,7 @@ Red [
 
 #include %testlib.red
 
-test-init/limit %.meta/example.red 7						; test example solution
+test-init/limit %.meta/example.red 13						; test example solution
 ; test-init/limit %run-length-encoding.red 1
 
 canonical-cases: [#(

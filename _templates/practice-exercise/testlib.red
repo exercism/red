@@ -52,23 +52,22 @@ context [
 		/extern
 			tested
 	] [
-		unless any [
+		result: either any [
 			none? ignore-after
 			tested < ignore-after
 		] [
-			print ["(ingored)" summary]
-			return none
-		]
+			exercise: make sandbox! load test-file
+	
+			code: bind code exercise
 		
-		exercise: make sandbox! load test-file
-
-		code: bind code exercise
-	
-		result: catch [
-			do code
-			"✓"
+			catch [
+				do code
+				"✓"
+			]
+		] [
+			rejoin ["(ignored)"]
 		]
-	
+
 		print [
 			pad/with summary 40 #"."
 			result

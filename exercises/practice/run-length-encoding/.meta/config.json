@@ -1,0 +1,18 @@
+{
+	"blurb": "Implement run-length encoding and decoding.",
+	"authors": [
+		"loziniak"
+	],
+	"contributors": [],
+	"files": {
+		"solution": [
+			"run-length-encoding.red"
+		],
+		"test": [
+			"run-length-encoding-test.red"
+		],
+		"example": [
+			".meta/example.red"
+		]
+	}
+}

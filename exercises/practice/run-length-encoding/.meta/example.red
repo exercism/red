@@ -4,20 +4,35 @@ Red [
 ]
 
 encode: function [
-	string
+	text [string!]
+	return: [string!]
 ] [
-	cause-error 'user 'message ["You need to implement this function."]
+	out: copy ""
+	current: none
+	count: 0
+	forall text [
+		either current = first text [
+			count: count + 1
+		] [
+			current: first text
+			count: 1
+		]
+		unless any [
+			none? current
+			current = second text
+		] [
+			append out rejoin [
+				either count > 1 [count] []
+				current
+			]
+		]
+	]
+	out
 ]
 
 decode: function [
-	string
+	encoding [string!]
+	return: [string!]
 ] [
 	cause-error 'user 'message ["You need to implement this function."]
 ]
-
-consistency: function [
-	string
-] [
-	cause-error 'user 'message ["You need to implement this function."]
-]
-

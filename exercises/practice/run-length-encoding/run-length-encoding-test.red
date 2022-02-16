@@ -5,8 +5,8 @@ Red [
 
 #include %testlib.red
 
-; test-init/limit %.meta/example.red 1						; test example solution
-test-init/limit %run-length-encoding.red 1
+test-init/limit %.meta/example.red 7						; test example solution
+; test-init/limit %run-length-encoding.red 1
 
 canonical-cases: [#(
     description: "empty string"
@@ -104,14 +104,6 @@ canonical-cases: [#(
     expected: "aabbbcccc"
     function: "decode"
     uuid: "29f721de-9aad-435f-ba37-7662df4fb551"
-) #(
-    description: "encode followed by decode gives original string"
-    input: #(
-        string: "zzz ZZ  zZ"
-    )
-    expected: "zzz ZZ  zZ"
-    function: "consistency"
-    uuid: "2a762efd-8695-4e04-b0d6-9736899fbc16"
 )]
 
 
@@ -123,4 +115,8 @@ foreach c-case canonical-cases [
 	]
 
 	test c-case/description case-code
+]
+
+test "encode followed by decode gives original string" [
+    expect "zzz ZZ  zZ" [decode encode "zzz ZZ  zZ"]
 ]

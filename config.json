@@ -277,19 +277,6 @@
         "difficulty": 4
       },
       {
-        "slug": "largest-series-product",
-        "name": "Largest Series Product",
-        "status": "beta",
-        "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
-        "practices": [
-          "loops"
-        ],
-        "prerequisites": [
-          "errors"
-        ],
-        "difficulty": 5
-      },
-      {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "status": "beta",
@@ -318,6 +305,19 @@
         "difficulty": 6
       },
       {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "status": "beta",
+        "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "errors"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "high-scores",
         "name": "High Scores",
         "status": "beta",
@@ -327,6 +327,20 @@
         ],
         "prerequisites": [],
         "difficulty": 7
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run Length Encoding",
+        "status": "beta",
+        "uuid": "8d71bae6-cd2c-45d8-ae0b-5b842bca1c6d",
+        "practices": [
+          "parse"
+        ],
+        "prerequisites": [
+          "loops",
+          "strings"
+        ],
+        "difficulty": 8
       },
       {
         "slug": "circular-buffer",
@@ -340,15 +354,6 @@
           "blocks"
         ],
         "difficulty": 9
-      },
-      {
-        "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
-        "status": "wip",
-        "uuid": "8d71bae6-cd2c-45d8-ae0b-5b842bca1c6d",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 0
       }
     ]
   }

@@ -340,7 +340,7 @@
           "loops",
           "strings"
         ],
-        "difficulty": 8
+        "difficulty": 7
       },
       {
         "slug": "circular-buffer",

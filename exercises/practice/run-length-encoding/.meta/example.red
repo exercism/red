@@ -1,6 +1,6 @@
 Red [
 	description: {"Run Length Encoding" exercise solution for exercism platform}
-	author: "kickass"
+	author: "loziniak"
 ]
 
 encode: function [

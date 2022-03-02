@@ -178,7 +178,7 @@
         "prerequisites": [
           "basics"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "resistor-color",
@@ -339,6 +339,21 @@
         "prerequisites": [
           "loops",
           "strings"
+        ],
+        "difficulty": 7
+      },
+      {
+        "slug": "simple-linked-list",
+        "name": "Simple Linked List",
+        "status": "beta",
+        "uuid": "55399872-3758-4424-80a1-36b1f80ad7b2",
+        "practices": [
+          "blocks",
+          "loops",
+          "functions"
+        ],
+        "prerequisites": [
+          "loops"
         ],
         "difficulty": 7
       },

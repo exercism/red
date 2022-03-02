@@ -27,7 +27,7 @@ jobs:
     runs-on: <image-name>
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use <setup tooling>
         uses: <action to setup tooling>
         with:
@@ -50,7 +50,7 @@ jobs:
         # Optionally, add more matrix variables, such as os or arch
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use <setup tooling> ${{ matrix.version }}
         uses: <action to setup tooling>
         with:

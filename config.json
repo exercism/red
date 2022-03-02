@@ -354,6 +354,15 @@
           "blocks"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "simple-linked-list",
+        "name": "Simple Linked List",
+        "status": "wip",
+        "uuid": "55399872-3758-4424-80a1-36b1f80ad7b2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 0
       }
     ]
   }

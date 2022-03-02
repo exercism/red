@@ -24,6 +24,22 @@ canonical-cases: [#(
     expected: [1 6 3]
     function: "convert-reverse-convert-back"
     uuid: "70484949-cf28-4446-af05-e24f5ae8a265"
+) #(
+    description: {Convert empty array}
+    input: #(
+        array: []
+    )
+    expected: []
+    function: "from-array-and-back"
+    uuid: "02fb7cdd-ad7f-4d0b-88b7-a3e0ccfcb584"
+) #(
+    description: {Convert and reverse empty array}
+    input: #(
+        array: []
+    )
+    expected: []
+    function: "convert-reverse-convert-back"
+    uuid: "410ed9b3-d4cd-4969-bc5e-3909efed65d8"
 )]
 
 

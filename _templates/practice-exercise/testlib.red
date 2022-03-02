@@ -68,8 +68,9 @@ context [
 			rejoin ["(ignored)"]
 		]
 
-		print [
+		print rejoin [
 			pad/with summary 40 #"."
+			"... "
 			result
 		]
 

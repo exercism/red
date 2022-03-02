@@ -93,8 +93,12 @@ write/lines/append  rejoin [exercise-path %/.docs/instructions.md]  instructions
 ;     ===========================
 print "       TEST SUITE ..."
 
-canonical-data: load-json read 
-	rejoin [github-problem-spec %/canonical-data.json]
+canonical-data: unless map? canonical-data: try [
+	load-json read 
+		rejoin [github-problem-spec %/canonical-data.json]
+] [
+	#( cases: [])
+]
 
 camel-to-kebab-case: function [
 	"Converts a string in camelCase to kebab-case"

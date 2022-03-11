@@ -60,7 +60,9 @@ track-config-file: %../config.json
 ;     ===========================
 print "         METADATA ..."
 
-metadata: load read rejoin [github-problem-spec %/metadata.toml]
+metadata: read rejoin [github-problem-spec %/metadata.toml]
+metadata: replace/all metadata {\"} {^^"}
+metadata: load metadata
 
 ; convert toml to map assuming simple key/value pairs
 metadata: make map! parse metadata [collect any['= | keep skip]]
@@ -93,9 +95,11 @@ write/lines/append  rejoin [exercise-path %/.docs/instructions.md]  instructions
 ;     ===========================
 print "       TEST SUITE ..."
 
-canonical-data: unless map? canonical-data: try [
+canonical-data: either map? canonical-data: try [
 	load-json read 
 		rejoin [github-problem-spec %/canonical-data.json]
+] [
+	canonical-data
 ] [
 	#( cases: [])
 ]

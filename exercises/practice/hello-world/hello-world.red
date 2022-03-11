@@ -3,6 +3,7 @@ Red [
 	author: "" ; you can write your name here, in quotes
 ]
 
-greet-the-world: function [] [
+hello: function [] [
 	"Goodbye, Mars!"
 ]
+

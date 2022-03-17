@@ -74,6 +74,7 @@ canonical-cases: [#(
     uuid: "16608eae-f60f-4a88-800e-aabce5df2865"
 )]
 
+
 foreach c-case canonical-cases [
 	case-code: reduce [
 		'expect c-case/expected compose [
@@ -104,3 +105,5 @@ test "Scores after personal top scores" [
 		scores scoresList
 	]
 ]
+
+test-results/print

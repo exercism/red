@@ -120,3 +120,5 @@ foreach c-case canonical-cases [
 test "encode followed by decode gives original string" [
     expect "zzz ZZ  zZ" [decode encode "zzz ZZ  zZ"]
 ]
+
+test-results/print

@@ -195,7 +195,7 @@ foreach testcase cases-for-tests [
 			testcase/function
 			": function ["
 			arguments
-			"] [^/^-cause-error 'user 'message [^"You need to implement this function.^"]^/]^/^/"
+			"] [^/^-cause-error 'user 'message ^"You need to implement " testcase/function " function.^"^/]^/^/"
 		]
 	]
 ]

@@ -52,3 +52,5 @@ foreach c-case canonical-cases [
 
 	test c-case/description case-code
 ]
+
+test-results/print

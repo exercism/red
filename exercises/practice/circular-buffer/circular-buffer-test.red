@@ -3,9 +3,10 @@ Red [
 	author: "loziniak"
 ]
 
-exercise-slug: "circular-buffer"
-ignore-after: 1
+#include %testlib.red
 
+test-init/limit %circular-buffer.red 1
+; test-init/limit %.meta/example.red 1						; test example solution
 
 canonical-cases: [#(
     description: "reading empty buffer should fail"
@@ -136,50 +137,14 @@ canonical-cases: [#(
 )]
 
 
-
-print ["Testing" ignore-after "cases…"]
-
-cases: copy/deep/part canonical-cases ignore-after
-foreach test-case cases [
-	result: context load to file!
-		rejoin [exercise-slug %.red]
-	;	%.meta/example.red						; test example solution
-
-	; function name
-	result-execution: reduce [
-		make path! reduce [
-			'result
-			to word! test-case/function
-		]
-	]
-	; arguments
-	append result-execution values-of test-case/input
-
-	result: try [
-		catch [
-			do result-execution
-		]
+foreach c-case canonical-cases [
+	case-code: reduce [
+		'expect c-case/expected compose [
+			(to word! c-case/function) (values-of c-case/input)
+		] 
 	]
 
-	if error? result [
-		either result/type = 'user [
-			result: make map! reduce ['error result/arg1]
-		] [
-			print result
-		]
-	]
-
-	print [
-		pad/with test-case/description 30 #"."
-		either result = test-case/expected [
-			"✓"
-		] [
-			rejoin [{FAILED. Expected: "} test-case/expected {", but got "} result {"}]
-		]
-	]
+	test c-case/description case-code
 ]
 
-print [
-	(length? canonical-cases) - ignore-after
-	"cases ignored."
-]
+test-results/print

@@ -369,6 +369,15 @@
           "blocks"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "bowling",
+        "name": "Bowling",
+        "status": "wip",
+        "uuid": "7ce14e08-63df-4e68-a3f9-cbc59b8fa4b0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 0
       }
     ]
   }

@@ -1,0 +1,18 @@
+{
+	"blurb": "Score a bowling game.",
+	"authors": [
+		"kickass"
+	],
+	"contributors": [],
+	"files": {
+		"solution": [
+			"bowling.red"
+		],
+		"test": [
+			"bowling-test.red"
+		],
+		"example": [
+			".meta/example.red"
+		]
+	}
+}

@@ -1,18 +1,19 @@
 Red [
 	description: {"Bowling" exercise solution for exercism platform}
-	author: "kickass"
+	author: "loziniak"
 ]
 
+running-total: 0
+
 score: function [
-	previousRolls
+	return: [integer!]
 ] [
-	cause-error 'user 'message "You need to implement score function."
+	running-total
 ]
 
 roll: function [
-	previousRolls
-	roll
+	pins [integer!]
+	/extern running-total
 ] [
-	cause-error 'user 'message "You need to implement roll function."
+	running-total: running-total + pins
 ]
-

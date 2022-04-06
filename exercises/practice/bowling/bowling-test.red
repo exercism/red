@@ -5,8 +5,8 @@ Red [
 
 #include %testlib.red
 
-test-init/limit %bowling.red 1
-; test-init/limit %.meta/example.red 1						; test example solution
+; test-init/limit %bowling.red 1
+test-init/limit %.meta/example.red 5						; test example solution
 
 canonical-cases: [#(
     description: "should be able to score a game with all zeros"
@@ -300,10 +300,29 @@ canonical-cases: [#(
 
 
 foreach c-case canonical-cases [
-	case-code: reduce [
-		'expect c-case/expected compose [
-			(to word! c-case/function) (values-of c-case/input)
-		] 
+	case-code: copy []
+	
+	foreach previous-roll c-case/input/previousRolls [
+		append case-code compose [roll (previous-roll)]
+	]
+	
+	either all [
+		map? c-case/expected
+		string? c-case/expected/error
+	] [
+		append case-code compose/only [
+			expect-error/message
+				'user
+				(switch c-case/function [
+					"roll"  [compose [roll (c-case/input/roll)]]
+					"score" [[score]]
+				])
+				(c-case/expected/error)
+		]
+	] [
+		append case-code compose [
+			expect (c-case/expected) [score]
+		]
 	]
 
 	test c-case/description case-code

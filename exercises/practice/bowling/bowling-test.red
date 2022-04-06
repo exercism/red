@@ -6,7 +6,7 @@ Red [
 #include %testlib.red
 
 ; test-init/limit %bowling.red 1
-test-init/limit %.meta/example.red 5						; test example solution
+test-init/limit %.meta/example.red 10						; test example solution
 
 canonical-cases: [#(
     description: "should be able to score a game with all zeros"
@@ -303,7 +303,9 @@ foreach c-case canonical-cases [
 	case-code: copy []
 	
 	foreach previous-roll c-case/input/previousRolls [
-		append case-code compose [roll (previous-roll)]
+		append case-code compose [
+			roll (previous-roll)
+		]
 	]
 	
 	either all [

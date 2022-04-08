@@ -147,8 +147,12 @@ context [
 					"... "
 					switch result/status [
 						pass	["✓"]
-						fail	[rejoin [{FAILED. Expected: } result/expected {, but got } result/actual]]
-						error	[first split form result/actual "^/"]
+						fail	[rejoin [
+								{FAILED. Expected: } result/expected {, but got } result/actual
+								newline
+								result/output
+							]]
+						error	[form result/actual]
 						ignored	["(ignored)"]
 					]
 				]

@@ -4,14 +4,13 @@ Red [
 ]
 
 score: function [
-	previousRolls
+	return: [integer!]
 ] [
 	cause-error 'user 'message "You need to implement score function."
 ]
 
 roll: function [
-	previousRolls
-	roll
+	pins [integer!]
 ] [
 	cause-error 'user 'message "You need to implement roll function."
 ]

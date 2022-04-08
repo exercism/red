@@ -3,8 +3,6 @@ Red [
 	author: "loziniak"
 ]
 
-; running-total: 0
-
 frames: copy []
 
 frame!: object [

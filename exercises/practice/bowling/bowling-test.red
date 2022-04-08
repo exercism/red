@@ -5,8 +5,8 @@ Red [
 
 #include %testlib.red
 
-; test-init/limit %bowling.red 1
-test-init/limit %.meta/example.red 35						; test example solution
+test-init/limit %bowling.red 1
+; test-init/limit %.meta/example.red 1						; test example solution
 
 canonical-cases: [#(
     description: "should be able to score a game with all zeros"

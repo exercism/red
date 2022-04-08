@@ -358,6 +358,19 @@
         "difficulty": 7
       },
       {
+        "slug": "bowling",
+        "name": "Bowling",
+        "status": "beta",
+        "uuid": "7ce14e08-63df-4e68-a3f9-cbc59b8fa4b0",
+        "practices": [
+          "errors"
+        ],
+        "prerequisites": [
+          "conditionals"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "status": "beta",

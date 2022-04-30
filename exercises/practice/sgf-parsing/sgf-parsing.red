@@ -3,9 +3,9 @@ Red [
 	author: "" ; you can write your name here, in quotes
 ]
 
-parse: function [
+parse-sgf: function [
 	encoded
 ] [
-	cause-error 'user 'message ["You need to implement this function."]
+	do make error! "You need to implement this function."
 ]
 

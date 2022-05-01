@@ -1,6 +1,6 @@
 Red [
 	description: {"Two-fer" exercise solution for exercism platform}
-	author: "loziniak"
+	author: "" ; you can write your name here, in quotes
 ]
 
 two-fer: function [

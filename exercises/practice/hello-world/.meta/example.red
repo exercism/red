@@ -1,8 +1,9 @@
 Red [
-	description: {Example "Hello World" exercise solution for exercism platform}
+	description: {"Hello World" exercise solution for exercism platform}
 	author: "loziniak"
 ]
 
-greet-the-world: function [] [
+hello: function [] [
 	"Hello, World!"
 ]
+

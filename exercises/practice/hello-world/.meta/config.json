@@ -1,19 +1,18 @@
 {
-  "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [
-    "loziniak"
-  ],
-  "contributors": [
-  ],
-  "files": {
-    "solution": [
-      "hello-world.red"
-    ],
-    "test": [
-      "hello-world-test.red"
-    ],
-    "example": [
-      ".meta/example.red"
-    ]
-  }
+	"blurb": "The classical introductory exercise. Just say \"Hello, World!\".",
+	"authors": [
+		"loziniak"
+	],
+	"contributors": [],
+	"files": {
+		"solution": [
+			"hello-world.red"
+		],
+		"test": [
+			"hello-world-test.red"
+		],
+		"example": [
+			".meta/example.red"
+		]
+	}
 }

@@ -1,0 +1,18 @@
+{
+	"blurb": "Write a simple linked list implementation that uses Elements and a List.",
+	"authors": [
+		"loziniak"
+	],
+	"contributors": [],
+	"files": {
+		"solution": [
+			"simple-linked-list.red"
+		],
+		"test": [
+			"simple-linked-list-test.red"
+		],
+		"example": [
+			".meta/example.red"
+		]
+	}
+}

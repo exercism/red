@@ -1,5 +1,3 @@
-# Hints
-
 ## General
 
-Replace the word `Universe` with something more suitable.
+Try to replace exisiting text.

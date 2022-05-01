@@ -1,11 +1,8 @@
 Red [
 	description: "Practice exercise generator for Exercism's Red track"
 	usage: [
-		change "author" value in line 14
+		change "author" value in line 11
 		"red generate-practice-exercise.red <exercise-slug>"
-	]
-	requirements: [
-		os: Linux										; "cp" and "uuidgen" commands are used.
 	]
 	author: "loziniak"
 ]
@@ -15,15 +12,23 @@ author: "kickass"
 
 
 slug: system/script/args
-slug: copy/part  skip slug 1  back tail slug			; Linux adds quotes around arguments
+slug: trim/with copy slug {"'}			; Linux adds quotes around arguments
 
+
+either system/platform = 'Windows [
+	uuid-cmd: {powershell -Command "[guid]::NewGuid().ToString()"}
+	copy-cmd: "xcopy /I /E /H"
+][
+	uuid-cmd: {uuidgen -r}
+	copy-cmd: {cp -r}
+]
 
 ;     ===========================
 print "      GENERATE UUID ..."
 
 uuid: copy ""
-call/wait/output "uuidgen -r" uuid
-remove back tail uuid									; remove newline
+call/wait/output uuid-cmd uuid
+trim/lines uuid
 
 
 ;     ===========================
@@ -33,7 +38,7 @@ github-problem-spec: rejoin
 	[https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/ slug]
 
 exercise-path: rejoin [%../exercises/practice/ slug]
-call/wait rejoin ["cp -r ../_templates/practice-exercise " exercise-path]
+call/wait rejoin [copy-cmd " " to-local-file %../_templates/practice-exercise " " to-local-file exercise-path]
 
 rename
 	rejoin [exercise-path %/practice-exercise.red]
@@ -55,11 +60,12 @@ track-config-file: %../config.json
 ;     ===========================
 print "         METADATA ..."
 
-metadata: make map! 
-	load
-		find/tail
-			read rejoin [github-problem-spec %/metadata.yml]
-			#"^/"
+metadata: read rejoin [github-problem-spec %/metadata.toml]
+metadata: replace/all metadata {\"} {^^"}
+metadata: load metadata
+
+; convert toml to map assuming simple key/value pairs
+metadata: make map! parse metadata [collect any['= | keep skip]]
 
 if none? metadata/title [
 	metadata/title: title-case: copy slug
@@ -89,8 +95,14 @@ write/lines/append  rejoin [exercise-path %/.docs/instructions.md]  instructions
 ;     ===========================
 print "       TEST SUITE ..."
 
-canonical-data: load-json read 
-	rejoin [github-problem-spec %/canonical-data.json]
+canonical-data: either map? canonical-data: try [
+	load-json read 
+		rejoin [github-problem-spec %/canonical-data.json]
+] [
+	canonical-data
+] [
+	#( cases: [])
+]
 
 camel-to-kebab-case: function [
 	"Converts a string in camelCase to kebab-case"
@@ -148,7 +160,7 @@ test-code: replace/case test-code
 
 test-code: replace/case test-code
 	{description: {Tests for "Practie Exercise" Exercism exercise}}
-	rejoin ["description: {Tests for " metadata/title " Exercism exercise}"]
+	rejoin ["description: {Tests for ^"" metadata/title "^" Exercism exercise}"]
 
 test-code: replace/case test-code
 	"practice-exercise"
@@ -183,7 +195,7 @@ foreach testcase cases-for-tests [
 			testcase/function
 			": function ["
 			arguments
-			"] [^/^-cause-error 'user 'message [^"You need to implement this function.^"]^/]^/^/"
+			"] [^/^-cause-error 'user 'message ^"You need to implement " testcase/function " function.^"^/]^/^/"
 		]
 	]
 ]
@@ -238,7 +250,7 @@ track-config-data: load-json read track-config-file
 exercise-config: make map! reduce [
 	'slug slug
 	'name metadata/title
-	'staus 'wip
+	'status 'wip
 	'uuid uuid
 	'practices []
 	'prerequisites []

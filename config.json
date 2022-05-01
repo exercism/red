@@ -31,7 +31,7 @@
     },
     {
       "slug": "strings",
-      "name": "String! type",
+      "name": "String! Type",
       "uuid": "a936c324-9503-4acc-968f-ab18b8092ed0"
     },
     {
@@ -55,6 +55,11 @@
       "uuid": "c493b197-f0d1-4283-ab22-9d0a00d8caf9"
     },
     {
+      "slug": "loops",
+      "name": "Looping Functions",
+      "uuid": "9843fabf-ea9f-4c21-8442-220b7a922844"
+    },
+    {
       "slug": "evaluation",
       "name": "Code Evaluation Rules",
       "uuid": "7c65ca89-66e7-4d33-85ec-a87285116f66"
@@ -68,6 +73,16 @@
       "slug": "maps",
       "name": "Maps",
       "uuid": "7ee99694-6f18-4234-92d4-122b9773ebac"
+    },
+    {
+      "slug": "errors",
+      "name": "Handling Errors",
+      "uuid": "d33f88db-be6a-4868-b6c6-4dca70a47cc9"
+    },
+    {
+      "slug": "dsl",
+      "name": "Domain Specific Languages",
+      "uuid": "2a949ab5-9293-4d9a-9538-eeeda281a66e"
     }
   ],
   "tags": [
@@ -132,7 +147,7 @@
           "strings"
         ],
         "prerequisites": [],
-        "difficulty": 0
+        "difficulty": 1
       },
       {
         "slug": "two-fer",
@@ -163,12 +178,12 @@
         "prerequisites": [
           "basics"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "resistor-color",
         "name": "Resistor Color",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "52170c0e-12d3-4ede-a417-70801c76985b",
         "practices": [
           "blocks",
@@ -183,7 +198,7 @@
       {
         "slug": "protein-translation",
         "name": "Protein Translation",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
         "practices": [
           "series"
@@ -196,7 +211,7 @@
       {
         "slug": "space-age",
         "name": "Space Age",
-        "staus": "wip",
+        "status": "beta",
         "uuid": "623011e0-54b7-4497-b72c-3a012516a45e",
         "practices": [
           "maths",
@@ -210,7 +225,7 @@
       {
         "slug": "raindrops",
         "name": "Raindrops",
-        "staus": "wip",
+        "status": "beta",
         "uuid": "2ce5425d-2814-4f01-9a11-c47b714b1930",
         "practices": [
           "series",
@@ -225,7 +240,7 @@
       {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "593ac491-9b1e-4b92-86bd-7a49395846af",
         "practices": [
           "maths",
@@ -239,7 +254,7 @@
       {
         "slug": "darts",
         "name": "Darts",
-        "staus": "wip",
+        "status": "beta",
         "uuid": "16a56737-a61d-44e7-a4d6-6bbeb95bd41a",
         "practices": [
           "conditionals",
@@ -249,9 +264,22 @@
         "difficulty": 4
       },
       {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "status": "beta",
+        "uuid": "139cfa97-ef3a-4f9d-8673-4d525c5c5aa0",
+        "practices": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "1795f469-9555-49a9-ab42-c60d44667381",
         "practices": [
           "series"
@@ -264,7 +292,7 @@
       {
         "slug": "resistor-color-trio",
         "name": "Resistor Color Trio",
-        "staus": "beta",
+        "status": "beta",
         "uuid": "676e2e36-174e-4cad-bb8d-bee5d2660f05",
         "practices": [
           "conditionals",
@@ -275,6 +303,85 @@
           "strings"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "status": "beta",
+        "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "errors"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "status": "beta",
+        "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",
+        "practices": [
+          "blocks"
+        ],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run Length Encoding",
+        "status": "beta",
+        "uuid": "8d71bae6-cd2c-45d8-ae0b-5b842bca1c6d",
+        "practices": [
+          "parse"
+        ],
+        "prerequisites": [
+          "loops",
+          "strings"
+        ],
+        "difficulty": 7
+      },
+      {
+        "slug": "simple-linked-list",
+        "name": "Simple Linked List",
+        "status": "beta",
+        "uuid": "55399872-3758-4424-80a1-36b1f80ad7b2",
+        "practices": [
+          "blocks",
+          "loops",
+          "functions"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
+        "difficulty": 7
+      },
+      {
+        "slug": "bowling",
+        "name": "Bowling",
+        "status": "beta",
+        "uuid": "7ce14e08-63df-4e68-a3f9-cbc59b8fa4b0",
+        "practices": [
+          "errors"
+        ],
+        "prerequisites": [
+          "conditionals"
+        ],
+        "difficulty": 8
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "status": "beta",
+        "uuid": "ab563cba-5556-4625-b1aa-971c01d3bead",
+        "practices": [
+          "dsl"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 9
       }
     ]
   }

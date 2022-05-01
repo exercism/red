@@ -3,7 +3,7 @@ Red [
 	author: "" ; you can write your name here, in quotes
 ]
 
-reverse-string: function [
+reverse: function [
 	"Reverses a string"
 	input [string!] "String to reverse"
 	return: [string!]

@@ -83,6 +83,11 @@
       "slug": "dsl",
       "name": "Domain Specific Languages",
       "uuid": "2a949ab5-9293-4d9a-9538-eeeda281a66e"
+    },
+    {
+      "slug": "parse",
+      "name": "Red parse DSL",
+      "uuid": "7b98f192-5f26-4767-9796-baa05c34d592"
     }
   ],
   "tags": [
@@ -311,6 +316,19 @@
         "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
         "practices": [
           "loops"
+        ],
+        "prerequisites": [
+          "errors"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "sgf-parsing",
+        "name": "SGF Parsing",
+        "status": "beta",
+        "uuid": "48c0ed14-f7a7-45cb-92a7-1da8cce36957",
+        "practices": [
+          "parse"
         ],
         "prerequisites": [
           "errors"

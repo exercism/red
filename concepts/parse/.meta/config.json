@@ -1,0 +1,5 @@
+{
+  "authors": ["loziniak", "dander"],
+  "contributors": [],
+  "blurb": "Parse is a powerful DSL built into Red for interpreting or validating text or data."
+}

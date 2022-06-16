@@ -32,8 +32,6 @@ parse-sgf: function [{
 }
 	encoded "sgf-formated gametree"
 ][
-	print ["input:" encoded]
-
 	if empty? encoded [input-error "tree missing"]
 
 	game-tree: [

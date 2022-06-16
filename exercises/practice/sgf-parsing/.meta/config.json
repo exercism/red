@@ -1,0 +1,19 @@
+{
+	"blurb": "Parsing a Smart Game Format string.",
+	"authors": [
+		"loziniak",
+		"dander"
+	],
+	"contributors": [],
+	"files": {
+		"solution": [
+			"sgf-parsing.red"
+		],
+		"test": [
+			"sgf-parsing-test.red"
+		],
+		"example": [
+			".meta/example.red"
+		]
+	}
+}

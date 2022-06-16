@@ -1,9 +1,9 @@
 Red [
 	description: "Practice exercise generator for Exercism's Red track"
-	usage: [
+	usage: {
 		change "author" value in line 11
 		"red generate-practice-exercise.red <exercise-slug>"
-	]
+	}
 	author: "loziniak"
 ]
 

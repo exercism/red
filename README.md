@@ -30,9 +30,17 @@ Scripts in Rebol (it's very similar to Red)
 * http://reb4.me/r/
 * http://www.rebol.com/oneliners.html
 
+### Concepts
+
 Useful for [concepts](https://github.com/exercism/docs/blob/main/building/tracks/concepts.md) and [concept exercises](https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md)
 
 * http://helpin.red/
+
+Concepts are being developed in separate branch. More info in GitHub task: https://github.com/exercism/red/issues/37 . There is no common source or list for concepts. Existing ones were created simply from looking at practice exercises example solutions and deducting what's needed to create and understand it.
+
+There is a tool, that counts and prints exercises unlocked by each concept, and exercises that practice the concept:
+
+`_tools/concepts-practice.red`
 
 ## Contact
 

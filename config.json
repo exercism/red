@@ -400,6 +400,15 @@
           "blocks"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "pov",
+        "name": "POV",
+        "status": "wip",
+        "uuid": "1601c705-b4aa-42b7-be01-3d5b658048fc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 0
       }
     ]
   }

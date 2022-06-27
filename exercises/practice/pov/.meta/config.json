@@ -1,0 +1,18 @@
+{
+	"blurb": "Reparent a graph on a selected node.",
+	"authors": [
+		"kickass"
+	],
+	"contributors": [],
+	"files": {
+		"solution": [
+			"pov.red"
+		],
+		"test": [
+			"pov-test.red"
+		],
+		"example": [
+			".meta/example.red"
+		]
+	}
+}

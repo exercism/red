@@ -152,7 +152,11 @@ context [
 								newline
 								result/output
 							]]
-						error	[form result/actual]
+						error	[rejoin [
+								newline
+								result/output
+								form result/actual
+							]]
 						ignored	["(ignored)"]
 					]
 				]

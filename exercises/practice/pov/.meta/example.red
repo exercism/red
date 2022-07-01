@@ -1,13 +1,13 @@
 Red [
 	description: {"POV" exercise solution for exercism platform}
-	author: "kickass"
+	author: "loziniak"
 ]
 
 rebranch: function [
 	parent [map!]
 	current [map!]
 ] [
-	if not block? current/children [current/children: copy []]
+	unless block? current/children [current/children: copy []]
 	append current/children parent
 	remove find parent/children current
 	if empty? parent/children [remove/key parent 'children]
@@ -19,17 +19,13 @@ from-pov-internal: function [
 	from [string!]
 	return: [map! none!]
 ] [
-	print "^/"
-	probe parent
-	probe current
-	probe from
 	either current/label = from [
 		if map? parent [rebranch parent current]
 		return current
 	] [
 		if block? current/children [
 			foreach child current/children [
-				probe new-tree: from-pov-internal current child from
+				new-tree: from-pov-internal current child from
 				if map? new-tree [
 					if map? parent [rebranch parent current]
 					return new-tree
@@ -48,12 +44,52 @@ from-pov: function [
 	return from-pov-internal none tree from
 ]
 
+
+
+path-to-internal: function [
+	current [map!]
+; 	start [string!]
+	finish [string!]
+	path [block!]
+	return: [logic!]
+] [
+	append path current/label
+	either current/label = finish [
+		return true
+	] [
+		if block? current/children [
+			foreach child current/children [
+				if path-to-internal child finish path [
+					return true
+				]
+			]
+		]
+	]
+	remove back tail path
+	return false
+]
+
 path-to: function [
-	from [string!]
-	to [string!]
+	start [string!]
+	finish [string!]
 	tree [map!]
 	return: [block! none!]
 ] [
-	cause-error 'user 'message "You need to implement path-to function."
-]
+	rerooted: from-pov tree start
+	
+	path: copy []
+	if map? rerooted [
+		path-to-internal rerooted finish path
+	]
 
+	return either
+		all [
+			not empty? path
+			start = first path
+			finish = last path
+	] [
+		path
+	] [
+		none
+	]
+]

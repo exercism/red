@@ -48,7 +48,6 @@ from-pov: function [
 
 path-to-internal: function [
 	current [map!]
-; 	start [string!]
 	finish [string!]
 	path [block!]
 	return: [logic!]

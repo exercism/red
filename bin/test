@@ -41,6 +41,8 @@ function verify_exercise() {
 
     if [[ $(jq -r '.status' "${results_file}") != "pass" ]]; then
         echo "${slug}: ${implementation_file_key} solution did not pass the tests"
+        cat "${results_file}"
+        echo ""
         exit_code=1
     fi
 

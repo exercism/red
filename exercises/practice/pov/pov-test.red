@@ -5,8 +5,8 @@ Red [
 
 #include %testlib.red
 
-; test-init/limit %pov.red 1
-test-init/limit %.meta/example.red 15						; test example solution
+test-init/limit %pov.red 1
+; test-init/limit %.meta/example.red 15						; test example solution
 
 canonical-cases: [#(
     description: {Results in the same tree if the input tree is a singleton}

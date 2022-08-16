@@ -6,6 +6,6 @@ Red [
 parse-sgf: function [
 	encoded
 ] [
-	do make error! "You need to implement this function."
+	cause-error 'user 'message "You need to implement parse-sgf function."
 ]
 

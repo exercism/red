@@ -3,8 +3,10 @@ Red [
 	author: "loziniak"
 ]
 
-exercise-slug: "sgf-parsing"
-ignore-after: either empty? system/script/args [1][load system/script/args]
+#include %testlib.red
+
+test-init/limit %sgf-parsing.red 1
+; test-init/limit %.meta/example.red 1						; test example solution
 
 
 canonical-cases: [#(
@@ -174,70 +176,22 @@ canonical-cases: [#(
     uuid: "11c36323-93fc-495d-bb23-c88ee5844b8c"
 )]
 
-check-result: function [result expected][
-    if expected/error [
-        if not error? result [
-            print ["error expected: " expected/error]
-            print ["instead got: " mold result]
-            print [{You can create an error like this with `do make error! "} expected/error {"'}]
-            return 'errored
-        ]
-        if expected/error <> result/arg1 [
-            print [{wrong error was produced.}]
-            print [{error expected:} expected/error]
-            print [{instead got:} result/arg1]
-            return 'errored
-        ]
-        return problems: none
-    ]
 
-    if error? result [
-        print [{unexpected error:} form result]
-        print [{expected value:} expected]
-        return 'errored
-    ]
-    
-    if result <> expected [
-        print [{incorrect output:}]
-        print [mold result]
-        print [{expected:}]
-        print [mold expected]
-        return 'errored
-    ]
-
-    unexpected-results: none
-]
-
-print ["Testing" ignore-after "cases…"]
-
-cases: copy/deep/part canonical-cases ignore-after
-foreach test-case cases [
-	result: context load to file!
-		rejoin [exercise-slug %.red]
-	;	%.meta/example.red						; test example solution
-
-	; function name
-	result-execution: reduce [
-		make path! reduce [
-			'result
-			to word! test-case/function
+foreach c-case canonical-cases [
+	expect-code: compose [
+		(to word! c-case/function) (values-of c-case/input)
+	]
+	case-code: reduce
+		either all [
+			map? c-case/expected
+			string? c-case/expected/error
+		] [
+			['expect-error/message quote 'user expect-code c-case/expected/error]
+		] [
+			['expect c-case/expected expect-code]
 		]
-	]
-	; arguments
-	append result-execution values-of test-case/input
-
-	result: try [do result-execution]
-    expected: test-case/expected
-
-    errors: check-result result expected
-
-	print [
-		pad/with test-case/description 30 #"."
-		either errors [{FAILED.}]["✓"]
-	]
+	
+	test c-case/description case-code
 ]
 
-print [
-	(length? canonical-cases) - ignore-after
-	"cases ignored."
-]
+test-results/print

@@ -5,22 +5,18 @@ Red [
 
 
 context [
-	tested: 0
-	ignore-after: none
-	test-file: none
-	results: none
-	output: copy ""
+	tested: ignore-after: test-file: results: output: none
 	
 	set 'test-init function [
 		file	[file!]
 		/limit
 			ia	[integer!]
 	] [
+		self/tested: 0
+		self/ignore-after: either limit [ia] [none]
 		self/test-file: file
 		self/results: copy []
-		if limit [
-			self/ignore-after: ia
-		]
+		self/output: copy ""
 	]
 
 	sandbox!: context [

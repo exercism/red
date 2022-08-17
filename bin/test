@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+
+# Test if the example/exemplar solution of each 
+# Practice/Concept Exercise passes the exercise's tests.
+
+# Example:
+# ./bin/test
+
+set -eo pipefail
+
+docker pull exercism/red-test-runner
+
+exit_code=0
+
+function run_test_runner() {
+    local dir=$1
+    local slug=$2
+
+    docker run \
+        --rm \
+        --network none \
+        --mount type=bind,src="${dir}",dst=/solution \
+        --mount type=bind,src="${dir}",dst=/output \
+        --tmpfs /tmp:rw \
+        exercism/red-test-runner "${slug}" "/solution" "/output"
+}
+
+function verify_exercise() {
+    local dir=$(realpath $1)
+    local slug=$(basename "${dir}")
+    local implementation_file_key=$2    
+    local implementation_file="${dir}/.meta/example.red"
+    local stub_file="${dir}/${slug}.red"
+    local stub_backup_file="${stub_file}.bak"
+    local results_file="${dir}/results.json"
+
+    cp "${stub_file}" "${stub_backup_file}"
+    cp "${implementation_file}" "${stub_file}"
+
+    run_test_runner "${dir}" "${slug}"
+
+    if [[ $(jq -r '.status' "${results_file}") != "pass" ]]; then
+        echo "${slug}: ${implementation_file_key} solution did not pass the tests"
+        cat "${results_file}"
+        echo ""
+        exit_code=1
+    fi
+
+    mv "${stub_backup_file}" "${stub_file}"
+    rm -f "${results_file}"
+}
+
+# Verify the Concept Exercises
+for concept_exercise_dir in ./exercises/concept/*/; do
+    if [ -d $concept_exercise_dir ]; then
+        echo "Checking $(basename "${concept_exercise_dir}") exercise..."
+        verify_exercise $concept_exercise_dir "exemplar"
+    fi
+done
+
+# Verify the Practice Exercises
+for practice_exercise_dir in ./exercises/practice/*/; do
+    if [ -d $practice_exercise_dir ]; then
+        echo "Checking $(basename "${practice_exercise_dir}") exercise..."
+        verify_exercise $practice_exercise_dir "example"
+    fi
+done
+
+exit ${exit_code}

@@ -5,18 +5,22 @@ Red [
 
 
 context [
-	tested: ignore-after: test-file: results: output: none
+	tested: 0
+	ignore-after: none
+	test-file: none
+	results: none
+	output: copy ""
 	
 	set 'test-init function [
 		file	[file!]
 		/limit
 			ia	[integer!]
 	] [
-		self/tested: 0
-		self/ignore-after: either limit [ia] [none]
 		self/test-file: file
 		self/results: copy []
-		self/output: copy ""
+		if limit [
+			self/ignore-after: ia
+		]
 	]
 
 	sandbox!: context [
@@ -148,11 +152,7 @@ context [
 								newline
 								result/output
 							]]
-						error	[rejoin [
-								newline
-								result/output
-								form result/actual
-							]]
+						error	[form result/actual]
 						ignored	["(ignored)"]
 					]
 				]

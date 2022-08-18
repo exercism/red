@@ -2,7 +2,7 @@
   "version": 3,
   "language": "Red",
   "slug": "red",
-  "active": false,
+  "active": true,
   "status": {
     "concept_exercises": false,
     "test_runner": true,

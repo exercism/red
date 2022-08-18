@@ -6,7 +6,7 @@
 
 Just as Rebol, Red is a **general purpose** programming language, you can use it to create any application you want. To be as familiar to developers as possible, **multiple paradigms** are implemented: *imperative*, *functional*, *object*, *symbolic*, *reactive*. Although it's entire toolchain fits in 1.5 MB download, it has **Graphical User Interface** implementations for all major operating systems (Windows, Linux, macOS) and no dependencies on external libraries.
 
-Red struggles to be **as simple as possible**. It's designed by making most usable compromises and choosing sensible defaults, to allow to complete every task without being overwhelmed by number of choices. It's focused on human **readability**, so syntax sugar is reduced to minimum and programs try to resemble sentences of natural language. As a result, Red and Rebol are [highly expressive](https://redmonk.com/dberkholz/2013/03/25/programming-languages-ranked-by-expressiveness/).
+Red strives to be **as simple as possible**. It's designed by making most usable compromises and choosing sensible defaults, to allow to complete every task without being overwhelmed by number of choices. It's focused on human **readability**, so syntax sugar is reduced to minimum and programs try to resemble sentences of natural language. As a result, Red and Rebol are [highly expressive](https://redmonk.com/dberkholz/2013/03/25/programming-languages-ranked-by-expressiveness/).
 
 Unusual value of Red is it's **homoiconicity**, so a Red program can be manipulated just as any Red data structure. Hence, Red and Rebol are also a data formats. Fun fact is, that [JSON was inspired by Rebol](http://www.rebol.com/article/0522.html).
 

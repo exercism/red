@@ -156,7 +156,7 @@
       },
       {
         "slug": "two-fer",
-        "name": "Two-fer",
+        "name": "Two Fer",
         "status": "beta",
         "uuid": "2aa5cea7-4bff-4217-9f76-fe5c6d5ab5b0",
         "practices": [
@@ -173,7 +173,7 @@
       },
       {
         "slug": "reverse-string",
-        "name": "Reverse string",
+        "name": "Reverse String",
         "status": "beta",
         "uuid": "73a4b319-a418-4c2a-941a-7bab18f7d95e",
         "practices": [
@@ -352,7 +352,7 @@
       },
       {
         "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
+        "name": "Run-Length Encoding",
         "status": "beta",
         "uuid": "8d71bae6-cd2c-45d8-ae0b-5b842bca1c6d",
         "practices": [

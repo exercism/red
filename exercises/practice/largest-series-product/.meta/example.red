@@ -29,7 +29,6 @@ largest-product: function [
 		if (span - 1 + index? integers) > len [
 			break
 		]
-		;probe integers
 		product: 1
 		foreach int copy/part integers span [
 			product: product * int

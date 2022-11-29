@@ -5,44 +5,58 @@ Red [
 
 
 context [
-	tested: 0
-	ignore-after: none
-	test-file: none
-	results: none
-	output: copy ""
+	tested: ignore-after: test-file: results: output: none
 	
 	set 'test-init function [
 		file	[file!]
 		/limit
 			ia	[integer!]
 	] [
+		self/tested: 0
+		self/ignore-after: either limit [ia] [none]
 		self/test-file: file
 		self/results: copy []
-		if limit [
-			self/ignore-after: ia
-		]
+		self/output: copy ""
 	]
 
 	sandbox!: context [
 	
-		expect: function [
-			expectation
+		assert: function [
 			code [block!]
+			/local result
 		] [
 			res: last results
-			res/expected: expectation
 
-			result: do code
-			res/actual: result
-		
-			either result = expectation [
+			set/any 'result do code
+			either :result = true [
 				res/status: 'pass
 			] [
 				res/status: 'fail
 				throw/name none 'expect-fail
 			]
 			
-			result
+			:result
+		]
+	
+		expect: function [
+			expectation [any-type!]
+			code [block!]
+			/local result
+		] [
+			res: last results
+			res/expected: :expectation
+
+			set/any 'result do code
+			res/actual: :result
+		
+			either :result = :expectation [
+				res/status: 'pass
+			] [
+				res/status: 'fail
+				throw/name none 'expect-fail
+			]
+			
+			:result
 		]
 
 		expect-error: function [
@@ -50,21 +64,22 @@ context [
 			code	[block!]
 			/message
 				msg	[string!]
+			/local result result-or-error
 		] [
 			returned-error?: no
-			result-or-error: try [
-				result: do code
+			set/any 'result-or-error try [
+				set/any 'result do code
 				returned-error?: yes
-				result
+				:result
 			]
 
 			res: last results
-			res/actual: result-or-error
+			res/actual: :result-or-error
 			res/expected: compose [type: (type)]
 			if message [append res/expected compose [id: 'message arg1: (msg)]]
 			
 			either all [
-				error? result-or-error
+				error? :result-or-error
 				not returned-error?
 				result-or-error/type = type
 				any [
@@ -81,7 +96,7 @@ context [
 				throw/name none 'expect-fail
 			]
 			
-			result-or-error
+			:result-or-error
 		]
 	]
 
@@ -91,9 +106,13 @@ context [
 		/extern
 			tested
 	] [
-		append results result: make map! compose [
-			summary: (summary)
-			status: none
+		append results result: make map! compose/only [
+			summary: (summary)				;@@ [string!]
+			test-code: (copy code)			;@@ [block!]
+			status: none					;@@ [word!] : 'pass | 'fail | 'error | 'ignored
+			;-- expected					(optional field)
+			;-- actual						(optional field)
+			;-- output						(optional field)
 		]
 	
 		either any [
@@ -147,8 +166,22 @@ context [
 					"... "
 					switch result/status [
 						pass	["✓"]
-						fail	[rejoin [{FAILED. Expected: } result/expected {, but got } result/actual]]
-						error	[first split form result/actual "^/"]
+						fail	[rejoin [
+								{FAILED.}
+								either find result 'expected [rejoin [
+									{ Expected: } result/expected
+									either find result 'actual [rejoin [
+										{, but got } result/actual
+									]] []
+								]] []
+								newline
+								result/output
+							]]
+						error	[rejoin [
+								newline
+								result/output
+								form result/actual
+							]]
 						ignored	["(ignored)"]
 					]
 				]

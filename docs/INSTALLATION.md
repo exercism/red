@@ -1,10 +1,10 @@
 # Installation
 
-In general, you don't install Red. You download it and it's ready to go.
+In a simplest case, you don't install Red. You just download it and it's ready to go.
 
-1. Download page: https://www.red-lang.org/p/download.html . Files are named with date of build and a Git hash, for example: `red-02mar21-6de9b93c5.exe`. If your anti-virus program detects a virus in Red, don't be scared. [It's normal](https://github.com/red/red/wiki/[NOTE]-Anti-virus-false-positives). Just allow for download and mark Red as safe program in anti-virus' options to calm it down.
+1. Download page: [https://www.red-lang.org/p/download.html](https://www.red-lang.org/p/download.html) . Files are named with date of build and a Git hash, for example: `red-02mar21-6de9b93c5.exe`. If your anti-virus program detects a virus in Red, don't be scared. [It's normal](https://github.com/red/red/wiki/[NOTE]-Anti-virus-false-positives). Just allow for download and mark Red as safe program in anti-virus' options to calm it down.
 
-1. Save it anywhere and run it. [REPL console](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) opens and **you can begin typing Red commands** and immediately see results. If you want to run script, you just use command "do": `do %my-dir/my-script.red` (percent sign is important, it marks [Red's `file!` datatype](https://github.com/red/docs/blob/master/en/datatypes/file.adoc)). If you downloaded GUI version, instead of text console, a nice window will be opened, and you can write commands there as well.
+1. Save it anywhere you want and run it. [REPL console](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) opens and **you can begin typing Red commands** and immediately see results. If you want to run script, you just use command "[do](https://www.red-by-example.org/#do)": `do %my-dir/my-script.red` (percent sign is important, it marks [Red's `file!` datatype](https://github.com/red/docs/blob/master/en/datatypes/file.adoc)). If you downloaded GUI version, instead of text console, a nice window will be opened, and you can write commands there as well.
 
 1. Another way you can run scripts is not using console (graphical or text), but instead just passing their names as arguments to Red **in commandline**, like: `red.exe my-dir\my-script.red`.
 

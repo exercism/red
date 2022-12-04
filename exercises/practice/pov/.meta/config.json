@@ -1,18 +1,17 @@
 {
-	"blurb": "Reparent a graph on a selected node.",
-	"authors": [
-		"loziniak"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"pov.red"
-		],
-		"test": [
-			"pov-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "loziniak"
+  ],
+  "files": {
+    "solution": [
+      "pov.red"
+    ],
+    "test": [
+      "pov-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Reparent a graph on a selected node."
 }

@@ -1,18 +1,17 @@
 {
-	"blurb": "Given an age in seconds, calculate how old someone is in terms of a given planet's solar years.",
-	"authors": [
-		"loziniak"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"space-age.red"
-		],
-		"test": [
-			"space-age-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "loziniak"
+  ],
+  "files": {
+    "solution": [
+      "space-age.red"
+    ],
+    "test": [
+      "space-age-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Given an age in seconds, calculate how old someone is in terms of a given planet's solar years."
 }

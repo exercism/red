@@ -1,18 +1,17 @@
 {
-	"blurb": "Score a bowling game.",
-	"authors": [
-		"loziniak"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"bowling.red"
-		],
-		"test": [
-			"bowling-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "loziniak"
+  ],
+  "files": {
+    "solution": [
+      "bowling.red"
+    ],
+    "test": [
+      "bowling-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Score a bowling game."
 }

@@ -1,9 +1,6 @@
 {
-  "blurb": "Introductory challenge to reverse an input string",
   "authors": [
     "loziniak"
-  ],
-  "contributors": [
   ],
   "files": {
     "solution": [
@@ -15,5 +12,6 @@
     "example": [
       ".meta/example.red"
     ]
-  }
+  },
+  "blurb": "Introductory challenge to reverse an input string"
 }

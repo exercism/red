@@ -1,18 +1,17 @@
 {
-	"blurb": "Convert color codes, as used on resistors, to a numeric value.",
-	"authors": [
-		"loziniak"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"resistor-color-duo.red"
-		],
-		"test": [
-			"resistor-color-duo-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "loziniak"
+  ],
+  "files": {
+    "solution": [
+      "resistor-color-duo.red"
+    ],
+    "test": [
+      "resistor-color-duo-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Convert color codes, as used on resistors, to a numeric value."
 }

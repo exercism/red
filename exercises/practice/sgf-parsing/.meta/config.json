@@ -1,18 +1,17 @@
 {
-	"blurb": "Parsing a Smart Game Format string.",
-	"authors": [
-		"dander"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"sgf-parsing.red"
-		],
-		"test": [
-			"sgf-parsing-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "dander"
+  ],
+  "files": {
+    "solution": [
+      "sgf-parsing.red"
+    ],
+    "test": [
+      "sgf-parsing-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Parsing a Smart Game Format string."
 }

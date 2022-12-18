@@ -1,18 +1,17 @@
 {
-	"blurb": "Write a function to convert from normal numbers to Roman Numerals.",
-	"authors": [
-		"loziniak"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"roman-numerals.red"
-		],
-		"test": [
-			"roman-numerals-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "loziniak"
+  ],
+  "files": {
+    "solution": [
+      "roman-numerals.red"
+    ],
+    "test": [
+      "roman-numerals-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Write a function to convert from normal numbers to Roman Numerals."
 }

@@ -1,18 +1,17 @@
 {
-	"blurb": "Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.",
-	"authors": [
-		"loziniak"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"rotational-cipher.red"
-		],
-		"test": [
-			"rotational-cipher-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "loziniak"
+  ],
+  "files": {
+    "solution": [
+      "rotational-cipher.red"
+    ],
+    "test": [
+      "rotational-cipher-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Create an implementation of the rotational cipher, also sometimes called the Caesar cipher."
 }

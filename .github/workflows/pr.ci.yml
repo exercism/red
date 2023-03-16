@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f
 
       - name: Use Node.js LTS (12.x)
         uses: <action to setup tooling>
@@ -49,7 +49,7 @@ jobs:
         # Optionally, add more matrix variables, such as os or arch
 
     steps:
-      - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+      - uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f
       - name: Use <setup tooling> ${{ matrix.version }}
         uses: <action to setup tooling>
         with:

@@ -1,9 +1,6 @@
 {
-  "blurb": "Create a sentence of the form \"One for X, one for me.\".",
   "authors": [
     "loziniak"
-  ],
-  "contributors": [
   ],
   "files": {
     "solution": [
@@ -15,5 +12,6 @@
     "example": [
       ".meta/example.red"
     ]
-  }
+  },
+  "blurb": "Create a sentence of the form \"One for X, one for me.\"."
 }

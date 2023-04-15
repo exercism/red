@@ -1,18 +1,17 @@
 {
-	"blurb": "Translate RNA sequences into proteins.",
-	"authors": [
-		"loziniak"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"protein-translation.red"
-		],
-		"test": [
-			"protein-translation-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "loziniak"
+  ],
+  "files": {
+    "solution": [
+      "protein-translation.red"
+    ],
+    "test": [
+      "protein-translation-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Translate RNA sequences into proteins."
 }

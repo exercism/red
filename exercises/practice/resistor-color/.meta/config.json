@@ -1,18 +1,17 @@
 {
-	"blurb": "Convert a resistor band's color to its numeric representation.",
-	"authors": [
-		"loziniak"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"resistor-color.red"
-		],
-		"test": [
-			"resistor-color-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "loziniak"
+  ],
+  "files": {
+    "solution": [
+      "resistor-color.red"
+    ],
+    "test": [
+      "resistor-color-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Convert a resistor band's color to its numeric representation."
 }

@@ -1,18 +1,17 @@
 {
-	"blurb": "Manage a player's High Score list.",
-	"authors": [
-		"loziniak"
-	],
-	"contributors": [],
-	"files": {
-		"solution": [
-			"high-scores.red"
-		],
-		"test": [
-			"high-scores-test.red"
-		],
-		"example": [
-			".meta/example.red"
-		]
-	}
+  "authors": [
+    "loziniak"
+  ],
+  "files": {
+    "solution": [
+      "high-scores.red"
+    ],
+    "test": [
+      "high-scores-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Manage a player's High Score list."
 }

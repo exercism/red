@@ -3,10 +3,12 @@ Red [
 	author: "loziniak"
 ]
 
-reverse-string: function [
+red-reverse: :system/words/reverse
+
+reverse: function [
 	"Reverses a string"
 	input [string!] "String to reverse"
 	return: [string!]
 ] [
-	reverse input
+	red-reverse input
 ]

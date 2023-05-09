@@ -16,7 +16,7 @@ Please, see the official contributing guide's [Building Tracks](https://exercism
 
 * We want to [complete basic concepts](https://github.com/exercism/red/issues/37).
 * You also can always add a new practice exercise.
-* Walk through the track, proofread any docs, [report problems](https://github.com/exercism/red/issues/new), or just [give us](https://github.com/exercism/red/issues/new) any suggestions ant thoughts you have on your mind.
+* Walk through the track, proofread any docs, [report problems](https://github.com/exercism/red/issues/new), or just [give us](https://github.com/exercism/red/issues/new) any suggestions and thoughts you have on your mind.
 
 There is also some interesting general info about Exercism, but remember it's a legacy documentation and can be outdated and [official docs](https://exercism.org/docs) always take precedence:
 
@@ -42,28 +42,28 @@ Scripts in Rebol (it's very similar to Red)
 
 First, read [official documentation](https://exercism.org/docs/building/tracks/practice-exercises) for background.
 
-Now, here's how we do this in Red track:
+Now, here's how we do this in the Red track:
 
-1. [Createa an issue](https://github.com/exercism/red/issues/new) to let anybody know which exercises are being worked on,
+1. [Create an issue](https://github.com/exercism/red/issues/new) to let everybody know which exercises are being worked on,
 2. Clone this repo,
-3. Run our exercise generator, it will create all necessary files for the exercise:
+3. Run our exercise generator; it will create all necessary files for the exercise:
 ```shell
 $ red _tools/generate-practice-exercise.red <exercise-slug>
 ```
-4. In `exercises/practice/<exercise-slug>/<exercise-slug>-test.red` make change like this, to test your example solution:
+4. In `exercises/practice/<exercise-slug>/<exercise-slug>-test.red` make a change like this, to test your example solution:
 ```red
 ; test-init/limit %exercise-slug.red 1
 test-init/limit %.meta/example.red 1
 ```
-5. Solve exercise example, by editing `exercises/practice/<exercise-slug>/.meta/example.red`,
-6. Run tests. You'll need to change second argument of `test-init` function from `1` to how many tests you want to run in `<exercise-slug>-test.red`.
+5. Solve the exercise example, by editing `exercises/practice/<exercise-slug>/.meta/example.red`,
+6. Run the tests. You'll need to change the second argument of the `test-init` function from `1` to how many tests you want to run in `<exercise-slug>-test.red`.
 ```shell
 $ cd exercises/practice/<exercise-slug>
 $ red <exercise-slug>-test.red
 ```
-7. Once your solution passes all the tests, remember to revert changes made ↑ at*point 4* in `test-init` line: uncomment solution file, comment example file and change `limit` to `1` (second argument).
-8. Change exercise's difficulty in track's `config,json`. If you want, add `practices` and `prerequisites` concepts. Copy exercise's config to proper position, so that all exercises are sorted from easiest to toughest.
-9. Make a commit to a fresh branch and [make Pull Requeset](https://exercism.org/docs/building/github/contributors-pull-request-guide).
+7. Once your solution passes all the tests, remember to revert the changes made ↑ at *point 4* in the `test-init` line: uncomment solution file, comment example file and change `limit` to `1` (second argument).
+8. Change the exercise's difficulty in track's `config,json`. If you want, add `practices` and `prerequisites` concepts. Copy the exercise's config to the proper position, so that all exercises are sorted from easiest to toughest.
+9. Make a commit to a fresh branch and [make a Pull Request](https://exercism.org/docs/building/github/contributors-pull-request-guide).
 
 ### Concepts
 
@@ -71,9 +71,9 @@ Useful for [concepts](https://github.com/exercism/docs/blob/main/building/tracks
 
 * http://helpin.red/
 
-Concepts are being developed in separate branch. More info in GitHub task: https://github.com/exercism/red/issues/37 . There is no common source or list for concepts. Existing ones were created simply from looking at practice exercises example solutions and deducting what's needed to create and understand it.
+Concepts are being developed in a separate branch. More info is in GitHub task: https://github.com/exercism/red/issues/37 . There is no common source or list for concepts. Existing ones were created simply from looking at the practice exercises' example solutions and deducing what's needed to create and understand them.
 
-There is a tool, that counts and prints exercises unlocked by each concept, and exercises that practice the concept:
+There is a tool that counts and prints exercises unlocked by each concept, and exercises that practice the concept:
 
 `_tools/concepts-practice.red`
 

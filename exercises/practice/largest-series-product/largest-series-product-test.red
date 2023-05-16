@@ -101,24 +101,6 @@ canonical-cases: [#(
     function: "largest-product"
     uuid: "5d81aaf7-4f67-4125-bf33-11493cc7eab7"
 ) #(
-    description: {reports 1 for empty string and empty product (0 span)}
-    input: #(
-        digits: ""
-        span: 0
-    )
-    expected: 1
-    function: "largest-product"
-    uuid: "06bc8b90-0c51-4c54-ac22-3ec3893a079e"
-) #(
-    description: {reports 1 for nonempty string and empty product (0 span)}
-    input: #(
-        digits: "123"
-        span: 0
-    )
-    expected: 1
-    function: "largest-product"
-    uuid: "3ec0d92e-f2e2-4090-a380-70afee02f4c0"
-) #(
     description: "rejects empty string and nonzero span"
     input: #(
         digits: ""

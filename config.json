@@ -327,6 +327,12 @@
         "difficulty": 6
       },
       {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "a997dde7-3101-44de-bfc1-9b424a2ae4eb",
+        "difficulty": 1
+      },
+      {
         "slug": "sgf-parsing",
         "name": "SGF Parsing",
         "status": "beta",

@@ -6,8 +6,5 @@ Red [
 two-fer: function [
 	name [string! none!]
 ] [
-	rejoin [
-		"One for ...., one for "
-		"me."
-	]
+	cause-error 'user 'message ["You need to implement this function."]
 ]

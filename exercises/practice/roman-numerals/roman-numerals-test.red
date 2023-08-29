@@ -65,6 +65,14 @@ canonical-cases: [#(
     function: "roman"
     uuid: "ff3fb08c-4917-4aab-9f4e-d663491d083d"
 ) #(
+    description: "16 is XVI"
+    input: #(
+        number: 16
+    )
+    expected: "XVI"
+    function: "roman"
+    uuid: "6d1d82d5-bf3e-48af-9139-87d7165ed509"
+) #(
     description: "27 is XXVII"
     input: #(
         number: 27
@@ -97,6 +105,14 @@ canonical-cases: [#(
     function: "roman"
     uuid: "d5b283d4-455d-4e68-aacf-add6c4b51915"
 ) #(
+    description: "66 is LXVI"
+    input: #(
+        number: 66
+    )
+    expected: "LXVI"
+    function: "roman"
+    uuid: "4465ffd5-34dc-44f3-ada5-56f5007b6dad"
+) #(
     description: "93 is XCIII"
     input: #(
         number: 93
@@ -121,6 +137,14 @@ canonical-cases: [#(
     function: "roman"
     uuid: "267f0207-3c55-459a-b81d-67cec7a46ed9"
 ) #(
+    description: "166 is CLXVI"
+    input: #(
+        number: 166
+    )
+    expected: "CLXVI"
+    function: "roman"
+    uuid: "902ad132-0b4d-40e3-8597-ba5ed611dd8d"
+)  #(
     description: "402 is CDII"
     input: #(
         number: 402
@@ -136,6 +160,14 @@ canonical-cases: [#(
     expected: "DLXXV"
     function: "roman"
     uuid: "6b71841d-13b2-46b4-ba97-dec28133ea80"
+) #(
+    description: "666 is DCLXVI"
+    input: #(
+        number: 666
+    )
+    expected: "DCLXVI"
+    function: "roman"
+    uuid: "dacb84b9-ea1c-4a61-acbb-ce6b36674906"
 ) #(
     description: "911 is CMXI"
     input: #(
@@ -153,6 +185,14 @@ canonical-cases: [#(
     function: "roman"
     uuid: "e6de6d24-f668-41c0-88d7-889c0254d173"
 ) #(
+    description: "1666 is MDCLXVI"
+    input: #(
+        number: 1666
+    )
+    expected: "MDCLXVI"
+    function: "roman"
+    uuid: "efbe1d6a-9f98-4eb5-82bc-72753e3ac328"
+) #(
     description: "3000 is MMM"
     input: #(
         number: 3000
@@ -160,6 +200,22 @@ canonical-cases: [#(
     expected: "MMM"
     function: "roman"
     uuid: "bb550038-d4eb-4be2-a9ce-f21961ac3bc6"
+) #(
+    description: "3001 is MMMI"
+    input: #(
+        number: 3001
+    )
+    expected: "MMMI"
+    function: "roman"
+    uuid: "3bc4b41c-c2e6-49d9-9142-420691504336"
+) #(
+    description: "3999 is MMMCMXCIX"
+    input: #(
+        number: 3999
+    )
+    expected: "MMMCMXCIX"
+    function: "roman"
+    uuid: "4e18e96b-5fbb-43df-a91b-9cb511fe0856"
 )]
 
 

@@ -330,6 +330,12 @@
         "slug": "leap",
         "name": "Leap",
         "uuid": "a997dde7-3101-44de-bfc1-9b424a2ae4eb",
+        "practices": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 1
       },
       {

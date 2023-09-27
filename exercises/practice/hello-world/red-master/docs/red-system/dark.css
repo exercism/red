@@ -1,0 +1,61 @@
+body, blockquote, p {
+	font: normal normal 13px Arial, sans-serif, helvetica;
+	color: #cccccc;
+	background: #292929;
+}
+html body {
+	min-width: 0;
+	max-width: 100%;
+	width: 100%;
+}
+a:link {color: white; text-decoration: none;}
+a:visited {color: white;}
+a:hover {color: #a84030;}
+.cnt * a:link {border-bottom: 1px dotted white;}
+strike {color: #888;}
+h1 {font-size: 16pt; Font-Weight: bold;}
+h2 {font-size: 14pt; color: #a84030; Font-Weight: bold; width: 100%;
+	border-bottom: 1px solid #c09060;}
+h3 {font-size: 12pt; color: #a84030; Font-Weight: bold;}
+h4 {font-size: 10pt; color: #a84030; Font-Weight: bold;}
+h5 {font-size: 10pt; Font-Weight: bold;}
+tt {font-family: "courier new", monospace, courier; color: darkgreen;}
+pre {font: normal 10pt "courier new", monospace, console;
+	background-color: #202020  ; padding: 16px;}
+legend {font-weight: bold; color: #cccccc;}
+.toc1 {margin-left: 1cm; font-size: 12pt; font-weight: bold; text-decoration: none;}
+.toc2 {margin-left: 2cm; font-size: 10pt; font-weight: bold; text-decoration: none;}
+.toc3 {margin-left: 3cm; font-size: 10pt; text-decoration: none;}
+.toc4 {margin-left: 4cm; font-size: 10pt; color: grey; text-decoration: none;}
+.output {color: #000080; font-weight: normal;}
+.znote {background-color: MidnightBlue; width: 100%; padding: 16px; border: solid #a0a0a0 1px;}
+.fset, .fset p {background-color: #140830;}
+.fset  {border: solid #a0a0a0 1px;}
+.tail {color: gray; font-size: 8pt;}
+.normal {
+	border: 1px solid #888;
+	border-collapse:collapse;
+}
+.normal th, .normal td {
+	border: 1px solid #888;
+	font-size: 10pt;
+	padding: 12px 12px;
+}
+.normal td {text-align: left;}
+.normal th {background-color: #222;}
+.matrix {
+	border: 1px solid #888;
+	border-collapse:collapse;
+}
+.matrix th, .matrix td {
+	border: 1px solid #888;
+	font-size: 8pt;
+	padding: 12px 12px;
+}
+.matrix td {text-align: center;}
+.matrix th {background-color: #222;}
+td .allow {background-color: #131;}
+td .warn {background-color: #531;}
+td .deny {background-color: #311;}
+td .arrow {color: #E6CDB0}
+#matrix-start {background-color: black;}

@@ -13,5 +13,6 @@
       ".meta/example.red"
     ]
   },
-  "blurb": "Translate RNA sequences into proteins."
+  "blurb": "Translate RNA sequences into proteins.",
+  "source": "Tyler Long"
 }

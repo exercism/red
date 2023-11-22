@@ -18,6 +18,20 @@
   "test_runner": {
     "average_run_time": 2
   },
+  "files": {
+    "solution": [
+      "%{kebab_slug}.red"
+    ],
+    "test": [
+      "%{kebab_slug}-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ],
+    "exemplar": [
+      ".meta/exemplar.red"
+    ]
+  },
   "concepts": [
     {
       "slug": "basics",

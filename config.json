@@ -421,6 +421,17 @@
           "blocks"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "668915db-bc3d-4ff4-a339-174ed2f35940",
+        "practices": [
+          "errors",
+          "loops"
+        ],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   }

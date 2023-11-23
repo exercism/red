@@ -421,6 +421,14 @@
           "blocks"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "pop-count",
+        "name": "Eliud's Eggs",
+        "uuid": "64cdb265-7065-4629-865a-5b5750e0c0e6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   }

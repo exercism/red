@@ -216,6 +216,14 @@
         "difficulty": 2
       },
       {
+        "slug": "pop-count",
+        "name": "Eliud's Eggs",
+        "uuid": "64cdb265-7065-4629-865a-5b5750e0c0e6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "protein-translation",
         "name": "Protein Translation",
         "status": "beta",
@@ -257,6 +265,17 @@
         "prerequisites": [
           "strings"
         ],
+        "difficulty": 3
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "668915db-bc3d-4ff4-a339-174ed2f35940",
+        "practices": [
+          "errors",
+          "loops"
+        ],
+        "prerequisites": [],
         "difficulty": 3
       },
       {
@@ -447,17 +466,6 @@
           "blocks"
         ],
         "difficulty": 9
-      },
-      {
-        "slug": "grains",
-        "name": "Grains",
-        "uuid": "668915db-bc3d-4ff4-a339-174ed2f35940",
-        "practices": [
-          "errors",
-          "loops"
-        ],
-        "prerequisites": [],
-        "difficulty": 3
       }
     ]
   }

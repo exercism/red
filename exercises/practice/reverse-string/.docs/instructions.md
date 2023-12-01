@@ -2,4 +2,6 @@
 
 Reverse a string
 
-For example input: "cool", output: "looc"
+For example:
+input: "cool"
+output: "looc"

@@ -13,5 +13,7 @@
       ".meta/example.red"
     ]
   },
-  "blurb": "Implement run-length encoding and decoding."
+  "blurb": "Implement run-length encoding and decoding.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Run-length_encoding"
 }

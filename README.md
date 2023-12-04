@@ -1,6 +1,6 @@
 # Exercism Red Track
 
-[![configlet](https://github.com/exercism/red/workflows/configlet/badge.svg)](https://github.com/exercism/red/actions?query=workflow%3Aconfiglet)
+[![Configlet](https://github.com/exercism/red/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/red/actions/workflows/configlet.yml) [![Test](https://github.com/exercism/red/actions/workflows/ci.yml/badge.svg)](https://github.com/exercism/red/actions/workflows/ci.yml)
 
 Exercises and a course in [Red](https://www.red-lang.org/).
 

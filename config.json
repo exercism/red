@@ -103,6 +103,14 @@
         "difficulty": 2
       },
       {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",

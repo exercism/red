@@ -279,6 +279,14 @@
         "difficulty": 3
       },
       {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "ff65a8c6-b7d5-47e4-a728-fd3d306b1a55",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "status": "beta",

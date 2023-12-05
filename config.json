@@ -1,5 +1,4 @@
 {
-  "version": 3,
   "language": "Red",
   "slug": "red",
   "active": true,
@@ -10,6 +9,7 @@
     "analyzer": false
   },
   "blurb": "Red is a next-generation full stack programming language, strongly inspired by REBOL.",
+  "version": 3,
   "online_editor": {
     "indent_style": "tab",
     "indent_size": 4,
@@ -32,93 +32,401 @@
       ".meta/exemplar.red"
     ]
   },
+  "exercises": {
+    "practice": [
+      {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
+        "practices": [
+          "basics",
+          "script",
+          "strings"
+        ],
+        "prerequisites": [],
+        "difficulty": 1,
+        "status": "active"
+      },
+      {
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "2aa5cea7-4bff-4217-9f76-fe5c6d5ab5b0",
+        "practices": [
+          "conditionals",
+          "strings",
+          "none",
+          "evaluation"
+        ],
+        "prerequisites": [
+          "basics",
+          "conditionals"
+        ],
+        "difficulty": 2,
+        "status": "beta"
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "73a4b319-a418-4c2a-941a-7bab18f7d95e",
+        "practices": [
+          "strings",
+          "evaluation",
+          "functions"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "difficulty": 2,
+        "status": "beta"
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "52170c0e-12d3-4ede-a417-70801c76985b",
+        "practices": [
+          "blocks",
+          "conditionals",
+          "evaluation"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "difficulty": 2,
+        "status": "beta"
+      },
+      {
+        "slug": "pop-count",
+        "name": "Eliud's Eggs",
+        "uuid": "64cdb265-7065-4629-865a-5b5750e0c0e6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
+        "practices": [
+          "series",
+          "loops"
+        ],
+        "prerequisites": [
+          "blocks",
+          "conditionals"
+        ],
+        "difficulty": 3,
+        "status": "beta"
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "623011e0-54b7-4497-b72c-3a012516a45e",
+        "practices": [
+          "maths",
+          "blocks"
+        ],
+        "prerequisites": [
+          "maths"
+        ],
+        "difficulty": 3,
+        "status": "beta"
+      },
+      {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "2ce5425d-2814-4f01-9a11-c47b714b1930",
+        "practices": [
+          "series",
+          "maths",
+          "conditionals"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "difficulty": 3,
+        "status": "beta"
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "668915db-bc3d-4ff4-a339-174ed2f35940",
+        "practices": [
+          "errors",
+          "loops"
+        ],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "593ac491-9b1e-4b92-86bd-7a49395846af",
+        "practices": [
+          "maths",
+          "blocks"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 4,
+        "status": "beta"
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "16a56737-a61d-44e7-a4d6-6bbeb95bd41a",
+        "practices": [
+          "conditionals",
+          "maths"
+        ],
+        "prerequisites": [],
+        "difficulty": 4,
+        "status": "beta"
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "139cfa97-ef3a-4f9d-8673-4d525c5c5aa0",
+        "practices": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "strings",
+          "loops"
+        ],
+        "difficulty": 4,
+        "status": "beta"
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "1795f469-9555-49a9-ab42-c60d44667381",
+        "practices": [
+          "series"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 5,
+        "status": "beta"
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "676e2e36-174e-4cad-bb8d-bee5d2660f05",
+        "practices": [
+          "conditionals",
+          "maps"
+        ],
+        "prerequisites": [
+          "maths",
+          "strings"
+        ],
+        "difficulty": 6,
+        "status": "beta"
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "errors"
+        ],
+        "difficulty": 6,
+        "status": "beta"
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "a997dde7-3101-44de-bfc1-9b424a2ae4eb",
+        "practices": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "difficulty": 1
+      },
+      {
+        "slug": "sgf-parsing",
+        "name": "SGF Parsing",
+        "uuid": "48c0ed14-f7a7-45cb-92a7-1da8cce36957",
+        "practices": [
+          "parse"
+        ],
+        "prerequisites": [
+          "errors"
+        ],
+        "difficulty": 6,
+        "status": "beta"
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",
+        "practices": [
+          "blocks"
+        ],
+        "prerequisites": [],
+        "difficulty": 7,
+        "status": "beta"
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "8d71bae6-cd2c-45d8-ae0b-5b842bca1c6d",
+        "practices": [
+          "parse"
+        ],
+        "prerequisites": [
+          "loops",
+          "strings"
+        ],
+        "difficulty": 7,
+        "status": "beta"
+      },
+      {
+        "slug": "simple-linked-list",
+        "name": "Simple Linked List",
+        "uuid": "55399872-3758-4424-80a1-36b1f80ad7b2",
+        "practices": [
+          "blocks",
+          "loops",
+          "functions"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
+        "difficulty": 7,
+        "status": "beta"
+      },
+      {
+        "slug": "bowling",
+        "name": "Bowling",
+        "uuid": "7ce14e08-63df-4e68-a3f9-cbc59b8fa4b0",
+        "practices": [
+          "errors"
+        ],
+        "prerequisites": [
+          "conditionals"
+        ],
+        "difficulty": 8,
+        "status": "beta"
+      },
+      {
+        "slug": "pov",
+        "name": "POV",
+        "uuid": "1601c705-b4aa-42b7-be01-3d5b658048fc",
+        "practices": [
+          "none",
+          "functions",
+          "loops",
+          "maps"
+        ],
+        "prerequisites": [
+          "functions",
+          "loops"
+        ],
+        "difficulty": 8,
+        "status": "beta"
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "ab563cba-5556-4625-b1aa-971c01d3bead",
+        "practices": [
+          "dsl"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 9,
+        "status": "beta"
+      }
+    ]
+  },
   "concepts": [
     {
+      "uuid": "726350c1-59c1-4ae6-8c72-a1e49ce7a0ed",
       "slug": "basics",
-      "name": "Basics",
-      "uuid": "726350c1-59c1-4ae6-8c72-a1e49ce7a0ed"
+      "name": "Basics"
     },
     {
+      "uuid": "ad9b3663-1194-4f5b-bce7-ec1e35042b2a",
       "slug": "script",
-      "name": "Script",
-      "uuid": "ad9b3663-1194-4f5b-bce7-ec1e35042b2a"
+      "name": "Script"
     },
     {
+      "uuid": "a936c324-9503-4acc-968f-ab18b8092ed0",
       "slug": "strings",
-      "name": "String! Type",
-      "uuid": "a936c324-9503-4acc-968f-ab18b8092ed0"
+      "name": "String! Type"
     },
     {
+      "uuid": "af09604a-bbfc-460f-8b78-5850abf16bea",
       "slug": "functions",
-      "name": "Functions",
-      "uuid": "af09604a-bbfc-460f-8b78-5850abf16bea"
+      "name": "Functions"
     },
     {
+      "uuid": "f437b719-1edc-49bc-b917-337423c6822e",
       "slug": "blocks",
-      "name": "Blocks",
-      "uuid": "f437b719-1edc-49bc-b917-337423c6822e"
+      "name": "Blocks"
     },
     {
+      "uuid": "b89c5d74-766f-431d-8e2c-855ae9b5b294",
       "slug": "none",
-      "name": "None! Type",
-      "uuid": "b89c5d74-766f-431d-8e2c-855ae9b5b294"
+      "name": "None! Type"
     },
     {
+      "uuid": "c493b197-f0d1-4283-ab22-9d0a00d8caf9",
       "slug": "conditionals",
-      "name": "Conditional Functions",
-      "uuid": "c493b197-f0d1-4283-ab22-9d0a00d8caf9"
+      "name": "Conditional Functions"
     },
     {
+      "uuid": "9843fabf-ea9f-4c21-8442-220b7a922844",
       "slug": "loops",
-      "name": "Looping Functions",
-      "uuid": "9843fabf-ea9f-4c21-8442-220b7a922844"
+      "name": "Looping Functions"
     },
     {
+      "uuid": "7c65ca89-66e7-4d33-85ec-a87285116f66",
       "slug": "evaluation",
-      "name": "Code Evaluation Rules",
-      "uuid": "7c65ca89-66e7-4d33-85ec-a87285116f66"
+      "name": "Code Evaluation Rules"
     },
     {
+      "uuid": "daedcca2-9870-46d3-9101-64303036a109",
       "slug": "maths",
-      "name": "Mathematical Operations",
-      "uuid": "daedcca2-9870-46d3-9101-64303036a109"
+      "name": "Mathematical Operations"
     },
     {
+      "uuid": "7ee99694-6f18-4234-92d4-122b9773ebac",
       "slug": "maps",
-      "name": "Maps",
-      "uuid": "7ee99694-6f18-4234-92d4-122b9773ebac"
+      "name": "Maps"
     },
     {
+      "uuid": "d33f88db-be6a-4868-b6c6-4dca70a47cc9",
       "slug": "errors",
-      "name": "Handling Errors",
-      "uuid": "d33f88db-be6a-4868-b6c6-4dca70a47cc9"
+      "name": "Handling Errors"
     },
     {
+      "uuid": "2a949ab5-9293-4d9a-9538-eeeda281a66e",
       "slug": "dsl",
-      "name": "Domain Specific Languages",
-      "uuid": "2a949ab5-9293-4d9a-9538-eeeda281a66e"
+      "name": "Domain Specific Languages"
     },
     {
+      "uuid": "7b98f192-5f26-4767-9796-baa05c34d592",
       "slug": "parse",
-      "name": "Red parse DSL",
-      "uuid": "7b98f192-5f26-4767-9796-baa05c34d592"
+      "name": "Red parse DSL"
     }
-  ],
-  "tags": [
-    "paradigm/imperative",
-    "paradigm/functional",
-    "typing/dynamic",
-    "typing/strong",
-    "execution_mode/compiled",
-    "execution_mode/interpreted",
-    "platform/windows",
-    "platform/mac",
-    "platform/linux",
-    "runtime/standalone_executable",
-    "used_for/cross_platform_development",
-    "used_for/games",
-    "used_for/guis",
-    "used_for/scripts"
   ],
   "key_features": [
     {
@@ -152,329 +460,20 @@
       "icon": "extensible"
     }
   ],
-  "exercises": {
-    "concept": [],
-    "practice": [
-      {
-        "slug": "hello-world",
-        "name": "Hello World",
-        "status": "active",
-        "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
-        "practices": [
-          "basics",
-          "script",
-          "strings"
-        ],
-        "prerequisites": [],
-        "difficulty": 1
-      },
-      {
-        "slug": "two-fer",
-        "name": "Two Fer",
-        "status": "beta",
-        "uuid": "2aa5cea7-4bff-4217-9f76-fe5c6d5ab5b0",
-        "practices": [
-          "conditionals",
-          "strings",
-          "none",
-          "evaluation"
-        ],
-        "prerequisites": [
-          "basics",
-          "conditionals"
-        ],
-        "difficulty": 2
-      },
-      {
-        "slug": "reverse-string",
-        "name": "Reverse String",
-        "status": "beta",
-        "uuid": "73a4b319-a418-4c2a-941a-7bab18f7d95e",
-        "practices": [
-          "strings",
-          "evaluation",
-          "functions"
-        ],
-        "prerequisites": [
-          "basics"
-        ],
-        "difficulty": 2
-      },
-      {
-        "slug": "resistor-color",
-        "name": "Resistor Color",
-        "status": "beta",
-        "uuid": "52170c0e-12d3-4ede-a417-70801c76985b",
-        "practices": [
-          "blocks",
-          "conditionals",
-          "evaluation"
-        ],
-        "prerequisites": [
-          "basics"
-        ],
-        "difficulty": 2
-      },
-      {
-        "slug": "pop-count",
-        "name": "Eliud's Eggs",
-        "uuid": "64cdb265-7065-4629-865a-5b5750e0c0e6",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "binary-search",
-        "name": "Binary Search",
-        "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3
-      },
-      {
-        "slug": "protein-translation",
-        "name": "Protein Translation",
-        "status": "beta",
-        "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
-        "practices": [
-          "series",
-          "loops"
-        ],
-        "prerequisites": [
-          "blocks",
-          "conditionals"
-        ],
-        "difficulty": 3
-      },
-      {
-        "slug": "space-age",
-        "name": "Space Age",
-        "status": "beta",
-        "uuid": "623011e0-54b7-4497-b72c-3a012516a45e",
-        "practices": [
-          "maths",
-          "blocks"
-        ],
-        "prerequisites": [
-          "maths"
-        ],
-        "difficulty": 3
-      },
-      {
-        "slug": "raindrops",
-        "name": "Raindrops",
-        "status": "beta",
-        "uuid": "2ce5425d-2814-4f01-9a11-c47b714b1930",
-        "practices": [
-          "series",
-          "maths",
-          "conditionals"
-        ],
-        "prerequisites": [
-          "strings"
-        ],
-        "difficulty": 3
-      },
-      {
-        "slug": "grains",
-        "name": "Grains",
-        "uuid": "668915db-bc3d-4ff4-a339-174ed2f35940",
-        "practices": [
-          "errors",
-          "loops"
-        ],
-        "prerequisites": [],
-        "difficulty": 3
-      },
-      {
-        "slug": "resistor-color-duo",
-        "name": "Resistor Color Duo",
-        "status": "beta",
-        "uuid": "593ac491-9b1e-4b92-86bd-7a49395846af",
-        "practices": [
-          "maths",
-          "blocks"
-        ],
-        "prerequisites": [
-          "blocks"
-        ],
-        "difficulty": 4
-      },
-      {
-        "slug": "darts",
-        "name": "Darts",
-        "status": "beta",
-        "uuid": "16a56737-a61d-44e7-a4d6-6bbeb95bd41a",
-        "practices": [
-          "conditionals",
-          "maths"
-        ],
-        "prerequisites": [],
-        "difficulty": 4
-      },
-      {
-        "slug": "rotational-cipher",
-        "name": "Rotational Cipher",
-        "status": "beta",
-        "uuid": "139cfa97-ef3a-4f9d-8673-4d525c5c5aa0",
-        "practices": [
-          "conditionals"
-        ],
-        "prerequisites": [
-          "strings",
-          "loops"
-        ],
-        "difficulty": 4
-      },
-      {
-        "slug": "roman-numerals",
-        "name": "Roman Numerals",
-        "status": "beta",
-        "uuid": "1795f469-9555-49a9-ab42-c60d44667381",
-        "practices": [
-          "series"
-        ],
-        "prerequisites": [
-          "blocks"
-        ],
-        "difficulty": 5
-      },
-      {
-        "slug": "resistor-color-trio",
-        "name": "Resistor Color Trio",
-        "status": "beta",
-        "uuid": "676e2e36-174e-4cad-bb8d-bee5d2660f05",
-        "practices": [
-          "conditionals",
-          "maps"
-        ],
-        "prerequisites": [
-          "maths",
-          "strings"
-        ],
-        "difficulty": 6
-      },
-      {
-        "slug": "largest-series-product",
-        "name": "Largest Series Product",
-        "status": "beta",
-        "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
-        "practices": [
-          "loops"
-        ],
-        "prerequisites": [
-          "errors"
-        ],
-        "difficulty": 6
-      },
-      {
-        "slug": "leap",
-        "name": "Leap",
-        "uuid": "a997dde7-3101-44de-bfc1-9b424a2ae4eb",
-        "practices": [
-          "conditionals"
-        ],
-        "prerequisites": [
-          "basics"
-        ],
-        "difficulty": 1
-      },
-      {
-        "slug": "sgf-parsing",
-        "name": "SGF Parsing",
-        "status": "beta",
-        "uuid": "48c0ed14-f7a7-45cb-92a7-1da8cce36957",
-        "practices": [
-          "parse"
-        ],
-        "prerequisites": [
-          "errors"
-        ],
-        "difficulty": 6
-      },
-      {
-        "slug": "high-scores",
-        "name": "High Scores",
-        "status": "beta",
-        "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",
-        "practices": [
-          "blocks"
-        ],
-        "prerequisites": [],
-        "difficulty": 7
-      },
-      {
-        "slug": "run-length-encoding",
-        "name": "Run-Length Encoding",
-        "status": "beta",
-        "uuid": "8d71bae6-cd2c-45d8-ae0b-5b842bca1c6d",
-        "practices": [
-          "parse"
-        ],
-        "prerequisites": [
-          "loops",
-          "strings"
-        ],
-        "difficulty": 7
-      },
-      {
-        "slug": "simple-linked-list",
-        "name": "Simple Linked List",
-        "status": "beta",
-        "uuid": "55399872-3758-4424-80a1-36b1f80ad7b2",
-        "practices": [
-          "blocks",
-          "loops",
-          "functions"
-        ],
-        "prerequisites": [
-          "loops"
-        ],
-        "difficulty": 7
-      },
-      {
-        "slug": "bowling",
-        "name": "Bowling",
-        "status": "beta",
-        "uuid": "7ce14e08-63df-4e68-a3f9-cbc59b8fa4b0",
-        "practices": [
-          "errors"
-        ],
-        "prerequisites": [
-          "conditionals"
-        ],
-        "difficulty": 8
-      },
-      {
-        "slug": "pov",
-        "name": "POV",
-        "status": "beta",
-        "uuid": "1601c705-b4aa-42b7-be01-3d5b658048fc",
-        "practices": [
-          "none",
-          "functions",
-          "loops",
-          "maps"
-        ],
-        "prerequisites": [
-          "functions",
-          "loops"
-        ],
-        "difficulty": 8
-      },
-      {
-        "slug": "circular-buffer",
-        "name": "Circular Buffer",
-        "status": "beta",
-        "uuid": "ab563cba-5556-4625-b1aa-971c01d3bead",
-        "practices": [
-          "dsl"
-        ],
-        "prerequisites": [
-          "blocks"
-        ],
-        "difficulty": 9
-      }
-    ]
-  }
+  "tags": [
+    "execution_mode/compiled",
+    "execution_mode/interpreted",
+    "paradigm/functional",
+    "paradigm/imperative",
+    "platform/linux",
+    "platform/mac",
+    "platform/windows",
+    "runtime/standalone_executable",
+    "typing/dynamic",
+    "typing/strong",
+    "used_for/cross_platform_development",
+    "used_for/games",
+    "used_for/guis",
+    "used_for/scripts"
+  ]
 }

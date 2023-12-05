@@ -224,6 +224,14 @@
         "difficulty": 2
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "7a55fec9-9b6e-4759-a96a-801649ca3989",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "protein-translation",
         "name": "Protein Translation",
         "status": "beta",

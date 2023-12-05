@@ -1,0 +1,20 @@
+{
+  "blurb": "Implement a binary search algorithm.",
+  "authors": [
+    "BNAndras"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "binary-search.red"
+    ],
+    "test": [
+      "binary-search-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Binary_search_algorithm"
+}

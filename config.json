@@ -48,6 +48,18 @@
         "status": "active"
       },
       {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "a997dde7-3101-44de-bfc1-9b424a2ae4eb",
+        "practices": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "2aa5cea7-4bff-4217-9f76-fe5c6d5ab5b0",
@@ -111,14 +123,6 @@
         "difficulty": 2
       },
       {
-        "slug": "binary-search",
-        "name": "Binary Search",
-        "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3
-      },
-      {
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
@@ -177,6 +181,14 @@
         "slug": "triangle",
         "name": "Triangle",
         "uuid": "ff65a8c6-b7d5-47e4-a728-fd3d306b1a55",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
@@ -261,18 +273,6 @@
         ],
         "difficulty": 6,
         "status": "beta"
-      },
-      {
-        "slug": "leap",
-        "name": "Leap",
-        "uuid": "a997dde7-3101-44de-bfc1-9b424a2ae4eb",
-        "practices": [
-          "conditionals"
-        ],
-        "prerequisites": [
-          "basics"
-        ],
-        "difficulty": 1
       },
       {
         "slug": "sgf-parsing",

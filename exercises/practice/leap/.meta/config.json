@@ -1,5 +1,7 @@
 {
-  "authors": ["BNAndras"],
+  "authors": [
+    "BNAndras"
+  ],
   "files": {
     "solution": [
       "leap.red"

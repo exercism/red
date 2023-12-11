@@ -115,6 +115,14 @@
         "difficulty": 2
       },
       {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "5d525867-c31c-468e-9b25-87b5ba93a1da",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "7a55fec9-9b6e-4759-a96a-801649ca3989",

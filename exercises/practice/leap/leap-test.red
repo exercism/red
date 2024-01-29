@@ -1,5 +1,5 @@
 Red [
-	description: {Tests for Largest Series Product Exercism exercise}
+	description: {Tests for Leap Exercism exercise}
 	author: "BNAndras"
 ]
 

@@ -131,6 +131,14 @@
         "difficulty": 2
       },
       {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "1091dfb5-d55e-4f38-8ce1-5e17d80d99cb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",

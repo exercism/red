@@ -1,9 +1,7 @@
 {
-  "blurb": "Given a natural radicand, return its square root.",
   "authors": [
     "BNAndras"
   ],
-  "contributors": [],
   "files": {
     "solution": [
       "square-root.red"
@@ -15,6 +13,7 @@
       ".meta/example.red"
     ]
   },
+  "blurb": "Given a natural radicand, return its square root.",
   "source": "wolf99",
   "source_url": "https://github.com/exercism/problem-specifications/pull/1582"
 }

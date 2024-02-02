@@ -393,6 +393,14 @@
         ],
         "difficulty": 9,
         "status": "beta"
+      },
+      {
+        "slug": "difference-of-squares",
+        "name": "Difference of Squares",
+        "uuid": "a4945f14-2116-4d19-a632-758d7e5669bf",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },

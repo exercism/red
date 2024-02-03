@@ -35,6 +35,57 @@
   "exercises": {
     "practice": [
       {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "1091dfb5-d55e-4f38-8ce1-5e17d80d99cb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "difference-of-squares",
+        "name": "Difference of Squares",
+        "uuid": "a4945f14-2116-4d19-a632-758d7e5669bf",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "64cdb265-7065-4629-865a-5b5750e0c0e6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "668915db-bc3d-4ff4-a339-174ed2f35940",
+        "practices": [
+          "errors",
+          "loops"
+        ],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "5d525867-c31c-468e-9b25-87b5ba93a1da",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "hello-world",
         "name": "Hello World",
         "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
@@ -44,8 +95,7 @@
           "strings"
         ],
         "prerequisites": [],
-        "difficulty": 1,
-        "status": "active"
+        "difficulty": 1
       },
       {
         "slug": "leap",
@@ -60,36 +110,32 @@
         "difficulty": 1
       },
       {
-        "slug": "two-fer",
-        "name": "Two Fer",
-        "uuid": "2aa5cea7-4bff-4217-9f76-fe5c6d5ab5b0",
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
         "practices": [
-          "conditionals",
-          "strings",
-          "none",
-          "evaluation"
+          "series",
+          "loops"
         ],
         "prerequisites": [
-          "basics",
+          "blocks",
           "conditionals"
         ],
-        "difficulty": 2,
-        "status": "beta"
+        "difficulty": 3
       },
       {
-        "slug": "reverse-string",
-        "name": "Reverse String",
-        "uuid": "73a4b319-a418-4c2a-941a-7bab18f7d95e",
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "2ce5425d-2814-4f01-9a11-c47b714b1930",
         "practices": [
-          "strings",
-          "evaluation",
-          "functions"
+          "series",
+          "maths",
+          "conditionals"
         ],
         "prerequisites": [
-          "basics"
+          "strings"
         ],
-        "difficulty": 2,
-        "status": "beta"
+        "difficulty": 3
       },
       {
         "slug": "resistor-color",
@@ -103,55 +149,48 @@
         "prerequisites": [
           "basics"
         ],
-        "difficulty": 2,
-        "status": "beta"
-      },
-      {
-        "slug": "eliuds-eggs",
-        "name": "Eliud's Eggs",
-        "uuid": "64cdb265-7065-4629-865a-5b5750e0c0e6",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 2
       },
       {
-        "slug": "hamming",
-        "name": "Hamming",
-        "uuid": "5d525867-c31c-468e-9b25-87b5ba93a1da",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "square-root",
-        "name": "Square Root",
-        "uuid": "7a55fec9-9b6e-4759-a96a-801649ca3989",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "collatz-conjecture",
-        "name": "Collatz Conjecture",
-        "uuid": "1091dfb5-d55e-4f38-8ce1-5e17d80d99cb",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3
-      },
-      {
-        "slug": "protein-translation",
-        "name": "Protein Translation",
-        "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "593ac491-9b1e-4b92-86bd-7a49395846af",
         "practices": [
-          "series",
-          "loops"
+          "maths",
+          "blocks"
         ],
         "prerequisites": [
-          "blocks",
-          "conditionals"
+          "blocks"
         ],
-        "difficulty": 3,
-        "status": "beta"
+        "difficulty": 4
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "676e2e36-174e-4cad-bb8d-bee5d2660f05",
+        "practices": [
+          "conditionals",
+          "maps"
+        ],
+        "prerequisites": [
+          "maths",
+          "strings"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "73a4b319-a418-4c2a-941a-7bab18f7d95e",
+        "practices": [
+          "strings",
+          "evaluation",
+          "functions"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "difficulty": 2
       },
       {
         "slug": "scrabble-score",
@@ -172,34 +211,15 @@
         "prerequisites": [
           "maths"
         ],
-        "difficulty": 3,
-        "status": "beta"
-      },
-      {
-        "slug": "raindrops",
-        "name": "Raindrops",
-        "uuid": "2ce5425d-2814-4f01-9a11-c47b714b1930",
-        "practices": [
-          "series",
-          "maths",
-          "conditionals"
-        ],
-        "prerequisites": [
-          "strings"
-        ],
-        "difficulty": 3,
-        "status": "beta"
-      },
-      {
-        "slug": "grains",
-        "name": "Grains",
-        "uuid": "668915db-bc3d-4ff4-a339-174ed2f35940",
-        "practices": [
-          "errors",
-          "loops"
-        ],
-        "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "7a55fec9-9b6e-4759-a96a-801649ca3989",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       },
       {
         "slug": "triangle",
@@ -210,26 +230,20 @@
         "difficulty": 3
       },
       {
-        "slug": "binary-search",
-        "name": "Binary Search",
-        "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3
-      },
-      {
-        "slug": "resistor-color-duo",
-        "name": "Resistor Color Duo",
-        "uuid": "593ac491-9b1e-4b92-86bd-7a49395846af",
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "2aa5cea7-4bff-4217-9f76-fe5c6d5ab5b0",
         "practices": [
-          "maths",
-          "blocks"
+          "conditionals",
+          "strings",
+          "none",
+          "evaluation"
         ],
         "prerequisites": [
-          "blocks"
+          "basics",
+          "conditionals"
         ],
-        "difficulty": 4,
-        "status": "beta"
+        "difficulty": 2
       },
       {
         "slug": "darts",
@@ -240,8 +254,41 @@
           "maths"
         ],
         "prerequisites": [],
-        "difficulty": 4,
-        "status": "beta"
+        "difficulty": 4
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",
+        "practices": [
+          "blocks"
+        ],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "errors"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "1795f469-9555-49a9-ab42-c60d44667381",
+        "practices": [
+          "series"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 5
       },
       {
         "slug": "rotational-cipher",
@@ -254,73 +301,7 @@
           "strings",
           "loops"
         ],
-        "difficulty": 4,
-        "status": "beta"
-      },
-      {
-        "slug": "roman-numerals",
-        "name": "Roman Numerals",
-        "uuid": "1795f469-9555-49a9-ab42-c60d44667381",
-        "practices": [
-          "series"
-        ],
-        "prerequisites": [
-          "blocks"
-        ],
-        "difficulty": 5,
-        "status": "beta"
-      },
-      {
-        "slug": "resistor-color-trio",
-        "name": "Resistor Color Trio",
-        "uuid": "676e2e36-174e-4cad-bb8d-bee5d2660f05",
-        "practices": [
-          "conditionals",
-          "maps"
-        ],
-        "prerequisites": [
-          "maths",
-          "strings"
-        ],
-        "difficulty": 6,
-        "status": "beta"
-      },
-      {
-        "slug": "largest-series-product",
-        "name": "Largest Series Product",
-        "uuid": "3bdc9858-390b-4d82-8669-663db97e6a0a",
-        "practices": [
-          "loops"
-        ],
-        "prerequisites": [
-          "errors"
-        ],
-        "difficulty": 6,
-        "status": "beta"
-      },
-      {
-        "slug": "sgf-parsing",
-        "name": "SGF Parsing",
-        "uuid": "48c0ed14-f7a7-45cb-92a7-1da8cce36957",
-        "practices": [
-          "parse"
-        ],
-        "prerequisites": [
-          "errors"
-        ],
-        "difficulty": 6,
-        "status": "beta"
-      },
-      {
-        "slug": "high-scores",
-        "name": "High Scores",
-        "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",
-        "practices": [
-          "blocks"
-        ],
-        "prerequisites": [],
-        "difficulty": 7,
-        "status": "beta"
+        "difficulty": 4
       },
       {
         "slug": "run-length-encoding",
@@ -333,8 +314,19 @@
           "loops",
           "strings"
         ],
-        "difficulty": 7,
-        "status": "beta"
+        "difficulty": 7
+      },
+      {
+        "slug": "sgf-parsing",
+        "name": "SGF Parsing",
+        "uuid": "48c0ed14-f7a7-45cb-92a7-1da8cce36957",
+        "practices": [
+          "parse"
+        ],
+        "prerequisites": [
+          "errors"
+        ],
+        "difficulty": 6
       },
       {
         "slug": "simple-linked-list",
@@ -348,8 +340,7 @@
         "prerequisites": [
           "loops"
         ],
-        "difficulty": 7,
-        "status": "beta"
+        "difficulty": 7
       },
       {
         "slug": "bowling",
@@ -361,8 +352,19 @@
         "prerequisites": [
           "conditionals"
         ],
-        "difficulty": 8,
-        "status": "beta"
+        "difficulty": 8
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "ab563cba-5556-4625-b1aa-971c01d3bead",
+        "practices": [
+          "dsl"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 9
       },
       {
         "slug": "pov",
@@ -378,29 +380,7 @@
           "functions",
           "loops"
         ],
-        "difficulty": 8,
-        "status": "beta"
-      },
-      {
-        "slug": "circular-buffer",
-        "name": "Circular Buffer",
-        "uuid": "ab563cba-5556-4625-b1aa-971c01d3bead",
-        "practices": [
-          "dsl"
-        ],
-        "prerequisites": [
-          "blocks"
-        ],
-        "difficulty": 9,
-        "status": "beta"
-      },
-      {
-        "slug": "difference-of-squares",
-        "name": "Difference of Squares",
-        "uuid": "a4945f14-2116-4d19-a632-758d7e5669bf",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 8
       }
     ]
   },

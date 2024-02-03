@@ -155,7 +155,7 @@ canonical-cases: [#(
 ) #(
     description: "Sequence of two different protein codons translates into proteins"
     input: #(
-        strand: "AUGUUUUGG"
+        strand: "UUAUUG"
     )
     expected: ["Leucine" "Leucine"]
     function: "proteins"

@@ -5,7 +5,7 @@ Red [
 
 #include %testlib.red
 
-test-init/limit %pop-count.red 1
+test-init/limit %eliuds-eggs.red 1
 ; test-init/limit %.meta/example.red 1						; test example solution
 
 canonical-cases: [#(

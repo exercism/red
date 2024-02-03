@@ -5,8 +5,8 @@ Red [
 
 #include %testlib.red
 
-test-init/limit %reverse-string.red 1
-; test-init/limit %.meta/example.red 1						; test example solution
+; test-init/limit %reverse-string.red 1
+test-init/limit %.meta/example.red 20						; test example solution
 
 canonical-cases: [
 	#(
@@ -50,6 +50,13 @@ canonical-cases: [
 		expected: "reward"
 		function: "reverse"
 		uuid: "b9e7dec1-c6df-40bd-9fa3-cd7ded010c4c"
+	)
+	#(
+		description: "wide characters"
+		input: #(value: "子猫")
+		expected: "猫子"
+		function: "reverse"
+		uuid: "1bed0f8a-13b0-4bd3-9d59-3d0593326fa2"
 	)
 ]
 

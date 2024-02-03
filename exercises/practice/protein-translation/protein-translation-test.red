@@ -145,6 +145,22 @@ canonical-cases: [#(
     function: "proteins"
     uuid: "9c2ad527-ebc9-4ace-808b-2b6447cb54cb"
 ) #(
+    description: "Sequence of two protein codons translate in proteins"
+    input: #(
+        strand: "UUUUUU"
+    )
+    expected: ["Phenylalanine" "Phenylalanine"]
+    function: "proteins"
+    uuid: "f4d9d8ee-00a8-47bf-a1e3-1641d4428e54"
+) #(
+    description: "Sequence of two different protein codons translates into proteins"
+    input: #(
+        strand: "UUAUUG"
+    )
+    expected: ["Leucine" "Leucine"]
+    function: "proteins"
+    uuid: "dd22eef3-b4f1-4ad6-bb0b-27093c090a9d"
+) #(
     description: "Translate RNA strand into correct protein list"
     input: #(
         strand: "AUGUUUUGG"

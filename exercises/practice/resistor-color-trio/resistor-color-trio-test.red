@@ -63,6 +63,61 @@ canonical-cases: [#(
     )
     function: "label"
     uuid: "f5d37ef9-1919-4719-a90d-a33c5a6934c9"
+) #(
+    description: "Blue and violet and blue"
+    input: #(
+        colors: ["blue" "violet" "blue"]
+    )
+    expected: #(
+        value: 67
+        unit: "megaohms"
+    )
+    function: "label"
+    uuid: "5f6404a7-5bb3-4283-877d-3d39bcc33854"
+) #(
+    description: "Minimum possible value"
+    input: #(
+        colors: ["black" "black" "black"]
+    )
+    expected: #(
+        value: 0
+        unit: "ohms"
+    )
+    function: "label"
+    uuid: "7d3a6ab8-e40e-46c3-98b1-91639fff2344"
+) #(
+    description: "Maximum possible value"
+    input: #(
+        colors: ["white" "white" "white"]
+    )
+    expected: #(
+        value: 99
+        unit: "gigaohms"
+    )
+    function: "label"
+    uuid: "ca0aa0ac-3825-42de-9f07-dac68cc580fd"
+) #(
+    description: "First two colors make an invalid octal number"
+    input: #(
+        colors: ["black" "grey" "black"]
+    )
+    expected: #(
+        value: 8
+        unit: "ohms"
+    )
+    function: "label"
+    uuid: "0061a76c-903a-4714-8ce2-f26ce23b0e09"
+) #(
+    description: "Ignore extra colors"
+    input: #(
+        colors: ["blue" "green" "yellow" "orange"]
+    )
+    expected: #(
+        value: 650
+        unit: "kiloohms"
+    )
+    function: "label"
+    uuid: "872c92-f567-4b69-a105-8455611c10c4"
 )]
 
 

@@ -106,4 +106,24 @@ test "Scores after personal top scores" [
 	]
 ]
 
+test "Latest score after personal best" [
+	scoresList: [20 70 15 25 30]
+
+	personal-best scoresList
+	
+	expect 30 [
+		latest scoresList
+	]
+]
+
+test "Scores after personal best" [
+	scoresList: [20 70 15 25 30]
+
+	personal-best scoresList
+	
+	expect [20 70 15 25 30] [
+		scores scoresList
+	]
+]
+
 test-results/print

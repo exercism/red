@@ -1,0 +1,18 @@
+{
+	"blurb": "Implement basic list operations.",
+	"authors": [
+		"BNAndras"
+	],
+	"contributors": [],
+	"files": {
+		"solution": [
+			"list-ops.red"
+		],
+		"test": [
+			"list-ops-test.red"
+		],
+		"example": [
+			".meta/example.red"
+		]
+	}
+}

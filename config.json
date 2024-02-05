@@ -381,6 +381,14 @@
           "loops"
         ],
         "difficulty": 8
+      },
+      {
+        "slug": "list-ops",
+        "name": "List Ops",
+        "uuid": "f2bd2ab7-c365-41c5-8807-95eb9f16b7fd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },

@@ -8,63 +8,63 @@ Red [
 test-init/limit %resistor-color-duo.red 1
 ; test-init/limit %.meta/example.red 1						; test example solution
 
-canonical-cases: [#(
+canonical-cases: [#[
     description: "Brown and black"
-    input: #(
+    input: #[
         colors: ["brown" "black"]
-    )
+    ]
     expected: 10
     function: "value"
     uuid: "ce11995a-5b93-4950-a5e9-93423693b2fc"
-) #(
+] #[
     description: "Blue and grey"
-    input: #(
+    input: #[
         colors: ["blue" "grey"]
-    )
+    ]
     expected: 68
     function: "value"
     uuid: "7bf82f7a-af23-48ba-a97d-38d59406a920"
-) #(
+] #[
     description: "Yellow and violet"
-    input: #(
+    input: #[
         colors: ["yellow" "violet"]
-    )
+    ]
     expected: 47
     function: "value"
     uuid: "f1886361-fdfd-4693-acf8-46726fe24e0c"
-) #(
+] #[
     description: "White and red"
-    input: #(
+    input: #[
         colors: ["white" "red"]
-    )
+    ]
     expected: 92
     function: "value"
     uuid: "b7a6cbd2-ae3c-470a-93eb-56670b305640"
-) #(
+] #[
     description: "Orange and orange"
-    input: #(
+    input: #[
         colors: ["orange" "orange"]
-    )
+    ]
     expected: 33
     function: "value"
     uuid: "77a8293d-2a83-4016-b1af-991acc12b9fe"
-) #(
+] #[
     description: "Ignore additional colors"
-    input: #(
+    input: #[
         colors: ["green" "brown" "orange"]
-    )
+    ]
     expected: 51
     function: "value"
     uuid: "0c4fb44f-db7c-4d03-afa8-054350f156a8"
-) #(
+] #[
     description: "Black and brown, one-digit"
-    input: #(
+    input: #[
         colors: ["black" "brown"]
-    )
+    ]
     expected: 1
     function: "value"
     uuid: "4a8ceec5-0ab4-4904-88a4-daf953a5e818"
-)]
+]]
 
 
 foreach c-case canonical-cases [

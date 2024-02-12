@@ -101,7 +101,7 @@ canonical-data: either map? canonical-data: try [
 ] [
 	canonical-data
 ] [
-	#( cases: [])
+	#[ cases: []]
 ]
 
 camel-to-kebab-case: function [

@@ -15,7 +15,7 @@ Red [
 ]
 
 make-node: func [][
-	make map! compose/only [properties: (copy #()) children: (copy [])]
+	make map! compose/only [properties: (copy #[]) children: (copy [])]
 ]
 
 unescape: func [value][

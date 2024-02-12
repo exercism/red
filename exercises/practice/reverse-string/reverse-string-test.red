@@ -9,55 +9,55 @@ Red [
 test-init/limit %.meta/example.red 20						; test example solution
 
 canonical-cases: [
-	#(
+	#[
 		description: "an empty string"
-		input: #(value: "")
+		input: #[value: ""]
 		expected: ""
 		function: "reverse"
 		uuid: "c3b7d806-dced-49ee-8543-933fd1719b1c"
-	)
-	#(
+	]
+	#[
 		description: "a word"
-		input: #(value: "robot")
+		input: #[value: "robot"]
 		expected: "tobor"
 		function: "reverse"
 		uuid: "01ebf55b-bebb-414e-9dec-06f7bb0bee3c"
-	)
-	#(
+	]
+	#[
 		description: "a capitalized word"
-		input: #(value: "Ramen")
+		input: #[value: "Ramen"]
 		expected: "nemaR"
 		function: "reverse"
 		uuid: "0f7c07e4-efd1-4aaa-a07a-90b49ce0b746"
-	)
-	#(
+	]
+	#[
 		description: "a sentence with punctuation"
-		input: #(value: "I'm hungry!")
+		input: #[value: "I'm hungry!"]
 		expected: "!yrgnuh m'I"
 		function: "reverse"
 		uuid: "71854b9c-f200-4469-9f5c-1e8e5eff5614"
-	)
-	#(
+	]
+	#[
 		description: "a palindrome"
-		input: #(value: "racecar")
+		input: #[value: "racecar"]
 		expected: "racecar"
 		function: "reverse"
 		uuid: "1f8ed2f3-56f3-459b-8f3e-6d8d654a1f6c"
-	)
-	#(
+	]
+	#[
 		description: "an even-sized word"
-		input: #(value: "drawer")
+		input: #[value: "drawer"]
 		expected: "reward"
 		function: "reverse"
 		uuid: "b9e7dec1-c6df-40bd-9fa3-cd7ded010c4c"
-	)
-	#(
+	]
+	#[
 		description: "wide characters"
-		input: #(value: "子猫")
+		input: #[value: "子猫"]
 		expected: "猫子"
 		function: "reverse"
 		uuid: "1bed0f8a-13b0-4bd3-9d59-3d0593326fa2"
-	)
+	]
 ]
 
 

@@ -5,8 +5,8 @@ Red [
 
 config: load %../config.json
 
-concepts-practice: #()
-concepts-unlock: #()
+concepts-practice: #[]
+concepts-unlock: #[]
 
 append-concept: function [
 	type [word!]

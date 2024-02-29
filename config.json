@@ -381,6 +381,14 @@
           "loops"
         ],
         "difficulty": 8
+      },
+      {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "cfc8475e-d8e8-4ee0-99a3-d993527a3e47",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },

@@ -15,5 +15,4 @@ abbreviate: function [
 	
 	uppercase abbreviation
 ]
-
  

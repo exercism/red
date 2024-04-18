@@ -5,8 +5,8 @@ Red [
 
 #include %testlib.red
 
-; test-init/limit %reverse-string.red 1
-test-init/limit %.meta/example.red 20						; test example solution
+test-init/limit %reverse-string.red 1
+; test-init/limit %.meta/example.red 1						; test example solution
 
 canonical-cases: [
 	#(

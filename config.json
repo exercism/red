@@ -35,6 +35,14 @@
   "exercises": {
     "practice": [
       {
+        "slug": "allergies",
+        "name": "Allergies",
+        "uuid": "62154622-ecd8-4443-be1a-5efb45c9b982",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",

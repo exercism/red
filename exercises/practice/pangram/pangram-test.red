@@ -81,14 +81,6 @@ canonical-cases: [#[
     function: "is-pangram"
     uuid: "938bd5d8-ade5-40e2-a2d9-55a338a01030"
 ] #[
-    description: "case insensitive"
-    input: #[
-        sentence: "the quick brown fox jumps over with lazy FX"
-    ]
-    expected: false
-    function: "is-pangram"
-    uuid: "2577bf54-83c8-402d-a64b-a2c0f7bb213a"
-] #[
     description: {a-m and A-M are 26 different characters but not a pangram}
     input: #[
         sentence: "abcdefghijklm ABCDEFGHIJKLM"

@@ -281,6 +281,15 @@
         "difficulty": 4
       },
       {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "status": "wip",
+        "uuid": "e48e5d31-f688-41cc-b7ce-bc521681f45d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "high-scores",
         "name": "High Scores",
         "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",

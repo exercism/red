@@ -126,6 +126,14 @@
         "difficulty": 2
       },
       {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "125d167d-952f-44cf-ad56-aa81924efa7b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "a29ae13e-f960-4c2a-80ed-859368a7a3f9",

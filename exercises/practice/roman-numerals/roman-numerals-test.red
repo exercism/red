@@ -209,6 +209,14 @@ canonical-cases: [#[
     function: "roman"
     uuid: "3bc4b41c-c2e6-49d9-9142-420691504336"
 ] #[
+    description: "3888 is MMMDCCCLXXXVIII"
+    input: #[
+        number: 3888
+    ]
+    expected: "MMMDCCCLXXXVIII"
+    function: "roman"
+    uuid: "2f89cad7-73f6-4d1b-857b-0ef531f68b7e"
+] #[
     description: "3999 is MMMCMXCIX"
     input: #[
         number: 3999

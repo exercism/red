@@ -63,14 +63,3 @@ test-random-character-valid: function [] [
 	and (is-valid char/wisdom)
 	and (char/hitpoints == (10 + modifier char/constitution))
 ]
-
-test-character-abilities: function [] [
-	char: new-character
-
-	(char/strength == char/strength)
-	and (char/dexterity == char/dexterity)
-	and (char/constitution == char/constitution)
-	and (char/intelligence == char/intelligence)
-	and (char/wisdom == char/wisdom)
-	and (char/hitpoints == char/hitpoints)
-]

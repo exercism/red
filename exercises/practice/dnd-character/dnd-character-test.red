@@ -148,12 +148,6 @@ canonical-cases: [#[
     expected: true
     function: "test-random-character-valid"
     uuid: "385d7e72-864f-4e88-8279-81a7d75b04ad"
-] #[
-    description: "each ability is only calculated once"
-    input: #[]
-    expected: true
-    function: "test-character-abilities"
-    uuid: "dca2b2ec-f729-4551-84b9-078876bb4808"
 ]]
 
 

@@ -43,6 +43,14 @@
         "difficulty": 2
       },
       {
+        "slug": "anagram",
+        "name": "Anagram",
+        "uuid": "ed6857bd-f588-4384-bdf9-6193cf39f21f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",

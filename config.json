@@ -51,6 +51,14 @@
         "difficulty": 2
       },
       {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "7ee5d442-dbed-4831-aee1-3d58070dcc36",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "160327c9-27e0-4e1f-8214-df28668900b6",

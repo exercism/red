@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "gigasecond.red"
+    ],
+    "test": [
+      "gigasecond-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Given a moment, determine the moment that would be after a gigasecond has passed."
+}

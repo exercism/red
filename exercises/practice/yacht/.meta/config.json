@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "yacht.red"
+    ],
+    "test": [
+      "yacht-test.red"
+    ],
+    "example": [
+      ".meta/example.red"
+    ]
+  },
+  "blurb": "Score a single throw of dice in the game Yacht."
+}

@@ -91,6 +91,14 @@
         "difficulty": 2
       },
       {
+        "slug": "etl",
+        "name": "ETL",
+        "uuid": "fca7c52a-7df4-4c23-bfa4-6728474e5471",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "gigasecond",
         "name": "Gigasecond",
         "uuid": "579eb0c9-4c56-4829-a97a-50a3c0ccee52",

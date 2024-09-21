@@ -353,6 +353,14 @@
         "difficulty": 5
       },
       {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "aef1c956-98fa-4caa-96fe-264f68aa1e01",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "high-scores",
         "name": "High Scores",
         "uuid": "75fb6823-2ee7-425d-a14d-4145094bbb3f",

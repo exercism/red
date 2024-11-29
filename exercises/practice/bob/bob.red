@@ -8,4 +8,3 @@ response: function [
 ] [
 	cause-error 'user 'message "You need to implement response function."
 ]
-

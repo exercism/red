@@ -393,6 +393,14 @@
         "difficulty": 5
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "6c162b52-01dc-4845-af09-1af65f112946",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "aef1c956-98fa-4caa-96fe-264f68aa1e01",

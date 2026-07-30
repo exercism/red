@@ -77,6 +77,8 @@ There is a tool that counts and prints exercises unlocked by each concept, and e
 
 `_tools/concepts-practice.red`
 
+Recently, Exercism introduced tasks, which are just parts of an exercise. Currently, they are only possible in concept exercises. You can indicate, which tests are specific for particular task. Each track links tasks with tests [in a way maintainers find appropriate](https://github.com/exercism/docs/blob/main/building/tooling/test-runners/interface.md#task-id). In Red it is done by adding `"   task_id: 1"` at the end of the test description string in exercise test file. Notice three spaces before "task_id".
+
 ## Contact
 
 Besides creating issues and commenting in this repository, you are welcome to post on [Red's "training" Gitter channel](https://gitter.im/red/training).

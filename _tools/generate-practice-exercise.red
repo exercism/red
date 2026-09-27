@@ -137,22 +137,19 @@ load-testcases: function [
 ] [
 	loaded: copy []
 	foreach testcase testcases [
-		append loaded
-			either none? testcase/cases [
-				either testcase-included? testcase/uuid [
-					make map! reduce [
-						'description testcase/description
-						'input testcase/input
-						'expected testcase/expected
-						'function camel-to-kebab-case testcase/property
-						'uuid testcase/uuid
-					]
-				] [
-					[]
+		either none? testcase/cases [
+			if testcase-included? testcase/uuid [
+				append loaded make map! reduce [
+					'description testcase/description
+					'input testcase/input
+					'expected testcase/expected
+					'function camel-to-kebab-case testcase/property
+					'uuid testcase/uuid
 				]
-			] [
-				load-testcases testcase/cases				; recurrently load nested testcases
 			]
+		] [
+			append loaded load-testcases testcase/cases			; recursively load nested testcases
+		]
 	]
 	loaded
 ]

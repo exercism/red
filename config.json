@@ -35,6 +35,26 @@
   "exercises": {
     "practice": [
       {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
+        "practices": [
+          "basics",
+          "script",
+          "strings"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "cfc8475e-d8e8-4ee0-99a3-d993527a3e47",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "62154622-ecd8-4443-be1a-5efb45c9b982",
@@ -142,18 +162,6 @@
         "difficulty": 2
       },
       {
-        "slug": "hello-world",
-        "name": "Hello World",
-        "uuid": "1d2e9dab-d85e-4b30-b414-1ebd969475ad",
-        "practices": [
-          "basics",
-          "script",
-          "strings"
-        ],
-        "prerequisites": [],
-        "difficulty": 1
-      },
-      {
         "slug": "isogram",
         "name": "Isogram",
         "uuid": "3f026c25-bfe1-4dbf-b605-064b29ba63a5",
@@ -174,17 +182,17 @@
         "difficulty": 1
       },
       {
-        "slug": "nucleotide-count",
-        "name": "Nucleotide Count",
-        "uuid": "21826136-f2ec-4b5c-968b-e2ec2dfe9171",
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "2ea97355-acb9-4043-b107-964b6b7a1752",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
       },
       {
-        "slug": "nth-prime",
-        "name": "Nth Prime",
-        "uuid": "2ea97355-acb9-4043-b107-964b6b7a1752",
+        "slug": "nucleotide-count",
+        "name": "Nucleotide Count",
+        "uuid": "21826136-f2ec-4b5c-968b-e2ec2dfe9171",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
@@ -246,33 +254,6 @@
           "basics"
         ],
         "difficulty": 2
-      },
-      {
-        "slug": "resistor-color-duo",
-        "name": "Resistor Color Duo",
-        "uuid": "593ac491-9b1e-4b92-86bd-7a49395846af",
-        "practices": [
-          "maths",
-          "blocks"
-        ],
-        "prerequisites": [
-          "blocks"
-        ],
-        "difficulty": 4
-      },
-      {
-        "slug": "resistor-color-trio",
-        "name": "Resistor Color Trio",
-        "uuid": "676e2e36-174e-4cad-bb8d-bee5d2660f05",
-        "practices": [
-          "conditionals",
-          "maps"
-        ],
-        "prerequisites": [
-          "maths",
-          "strings"
-        ],
-        "difficulty": 6
       },
       {
         "slug": "reverse-string",
@@ -374,6 +355,14 @@
         "difficulty": 5
       },
       {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "uuid": "e48e5d31-f688-41cc-b7ce-bc521681f45d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "darts",
         "name": "Darts",
         "uuid": "16a56737-a61d-44e7-a4d6-6bbeb95bd41a",
@@ -385,25 +374,9 @@
         "difficulty": 4
       },
       {
-        "slug": "dnd-character",
-        "name": "D&D Character",
-        "uuid": "e48e5d31-f688-41cc-b7ce-bc521681f45d",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
         "slug": "flower-field",
         "name": "Flower Field",
         "uuid": "6c162b52-01dc-4845-af09-1af65f112946",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "matching-brackets",
-        "name": "Matching Brackets",
-        "uuid": "aef1c956-98fa-4caa-96fe-264f68aa1e01",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
@@ -427,6 +400,41 @@
         ],
         "prerequisites": [
           "errors"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "aef1c956-98fa-4caa-96fe-264f68aa1e01",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "593ac491-9b1e-4b92-86bd-7a49395846af",
+        "practices": [
+          "maths",
+          "blocks"
+        ],
+        "prerequisites": [
+          "blocks"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "676e2e36-174e-4cad-bb8d-bee5d2660f05",
+        "practices": [
+          "conditionals",
+          "maps"
+        ],
+        "prerequisites": [
+          "maths",
+          "strings"
         ],
         "difficulty": 6
       },
@@ -533,14 +541,6 @@
           "loops"
         ],
         "difficulty": 8
-      },
-      {
-        "slug": "acronym",
-        "name": "Acronym",
-        "uuid": "cfc8475e-d8e8-4ee0-99a3-d993527a3e47",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
       }
     ]
   },

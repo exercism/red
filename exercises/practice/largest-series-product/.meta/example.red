@@ -9,10 +9,10 @@ largest-product: function [
 	return: [integer!]
 ] [
 	if span > length? digits [
-		cause-error 'user 'message ["span must be smaller than string length"]
+		cause-error 'user 'message ["span must not exceed string length"]
 	]
 	if span < 0 [
-		do make error! "span must be greater than zero"		;-- this is synonymous to "cause-error 'user 'message"
+		do make error! "span must not be negative"		;-- this is synonymous to "cause-error 'user 'message"
 	]
 	integers: copy []
 	foreach digit digits [

@@ -6,7 +6,7 @@ Red [
 
 context [
 	tested: ignore-after: test-file: results: output: none
-
+	
 	set 'test-init function [
 		file	[file!]
 		/limit
@@ -20,7 +20,7 @@ context [
 	]
 
 	sandbox!: context [
-
+	
 		assert: function [
 			code [block!]
 			/local result
@@ -34,10 +34,10 @@ context [
 				res/status: 'fail
 				throw/name none 'expect-fail
 			]
-
+			
 			:result
 		]
-
+	
 		expect: function [
 			expectation [any-type!]
 			code [block!]
@@ -48,14 +48,14 @@ context [
 
 			set/any 'result do code
 			res/actual: :result
-
+		
 			either :result = :expectation [
 				res/status: 'pass
 			] [
 				res/status: 'fail
 				throw/name none 'expect-fail
 			]
-
+			
 			:result
 		]
 
@@ -77,7 +77,7 @@ context [
 			res/actual: :result-or-error
 			res/expected: compose [type: (type)]
 			if message [append res/expected compose [id: 'message arg1: (msg)]]
-
+			
 			either all [
 				error? :result-or-error
 				not returned-error?
@@ -95,7 +95,7 @@ context [
 				res/status: 'fail
 				throw/name none 'expect-fail
 			]
-
+			
 			:result-or-error
 		]
 	]
@@ -114,14 +114,14 @@ context [
 			;-- actual						(optional field)
 			;-- output						(optional field)
 		]
-
+	
 		either any [
 			none? ignore-after
 			tested < ignore-after
 		] [
 			clear output
 			old-functions: override-console
-
+		
 			exercise: make sandbox! load test-file
 			code: bind code exercise
 			uncaught?: yes
@@ -134,8 +134,8 @@ context [
 				]
 				uncaught?: no
 				outcome
-			]
-
+			]			
+			
 			case [
 				error? outcome [
 					result/status: 'error
@@ -155,7 +155,7 @@ context [
 
 		tested: tested + 1
 	]
-
+	
 	set 'test-results function [
 		/print
 	] [

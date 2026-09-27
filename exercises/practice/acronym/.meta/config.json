@@ -1,9 +1,7 @@
 {
-  "blurb": "Convert a long phrase to its acronym.",
   "authors": [
     "BNAndras"
   ],
-  "contributors": [],
   "files": {
     "solution": [
       "acronym.red"
@@ -15,6 +13,7 @@
       ".meta/example.red"
     ]
   },
+  "blurb": "Convert a long phrase to its acronym.",
   "source": "Julien Vanier",
   "source_url": "https://github.com/monkbroc"
 }

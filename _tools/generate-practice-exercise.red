@@ -1,107 +1,114 @@
 Red [
 	description: "Practice exercise generator for Exercism's Red track"
 	usage: {
-		change "author" value in line 11
-		"red generate-practice-exercise.red <exercise-slug>"
+		"red generate-practice-exercise.red <exercise-slug> <github-username> [difficulty]"
+		"red generate-practice-exercise.red --sync-tests <exercise-slug>"
 	}
 	author: "loziniak"
 ]
 
-; change to your GitHub username
-author: "kickass"
+raw-arguments: trim/with copy system/script/args {"'}
+arguments: split raw-arguments " "
+argument-count: length? arguments
 
-
-slug: system/script/args
-slug: trim/with copy slug {"'}			; Linux adds quotes around arguments
-
-
-either system/platform = 'Windows [
-	uuid-cmd: {powershell -Command "[guid]::NewGuid().ToString()"}
-	copy-cmd: "xcopy /I /E /H"
-][
-	uuid-cmd: {uuidgen -r}
-	copy-cmd: {cp -r}
+sync-tests?: false
+if not empty? arguments [
+	sync-tests?: (first arguments) = "--sync-tests"
 ]
 
-;     ===========================
-print "      GENERATE UUID ..."
+either sync-tests? [
+	if 2 <> argument-count [
+		print {Usage: red generate-practice-exercise.red --sync-tests <exercise-slug>}
+		quit
+	]
 
-uuid: copy ""
-call/wait/output uuid-cmd uuid
-trim/lines uuid
+	slug: second arguments
+] [
+	if not all [
+		argument-count >= 2
+		argument-count <= 3
+	] [
+		print {Usage: red generate-practice-exercise.red <exercise-slug> <github-username> [difficulty]}
+		quit
+	]
+
+	slug: first arguments
+	author: second arguments
+	difficulty: any [third arguments "1"]
+]
 
 
 ;     ===========================
 print "          PATHS ..."
 
-github-problem-spec: rejoin
+problem-specifications-url: rejoin
 	[https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/ slug]
 
 exercise-path: rejoin [%../exercises/practice/ slug]
-call/wait rejoin [copy-cmd " " to-local-file %../_templates/practice-exercise " " to-local-file exercise-path]
+template-path: %../_templates/practice-exercise
 
-rename
-	rejoin [exercise-path %/practice-exercise.red]
+if not sync-tests? [
+	print "    CONFIGLET CREATE ..."
+	call/wait rejoin [
+		to-local-file %../bin/configlet
+		" create --practice-exercise " slug
+		" --author " author
+		" --difficulty " difficulty
+	]
+
+	print "SORT PRACTICE EXERCISES ..."
+	call/wait rejoin [
+		to-local-file %../bin/sort-practice-exercises
+		{ ".bucket, .lowercase_name" }
+		to-local-file %../config.json
+	]
+
+	; Copy only Red-specific templates, preserving Configlet-created .meta files.
+	copy-template: function [source [file!] destination [file!]] [
+		write destination read rejoin [template-path %/ source]
+	]
+
 	solution-file: rejoin [exercise-path %/ slug %.red]
+	copy-template %practice-exercise.red solution-file
+	copy-template %practice-exercise-test.red rejoin [exercise-path %/ slug %-test.red]
+	copy-template %testlib.red rejoin [exercise-path %/testlib.red]
+	copy-template %.meta/example.red rejoin [exercise-path %/.meta/example.red]
 
-rename
-	rejoin [exercise-path %/practice-exercise-test.red]
-	test-file: rejoin [exercise-path %/ slug %-test.red]
+	example-file: rejoin [exercise-path %/.meta/example.red]
+]
 
-example-file: rejoin [exercise-path %/.meta/example.red]
+test-file: rejoin [exercise-path %/ slug %-test.red]
 
 tests-toml-file: rejoin [exercise-path %/.meta/tests.toml]
 
-config-file: rejoin [exercise-path %/.meta/config.json]
-
-track-config-file: %../config.json
-
 
 ;     ===========================
-print "         METADATA ..."
+print "       EXERCISE TITLE ..."
 
-metadata: read rejoin [github-problem-spec %/metadata.toml]
-metadata: replace/all metadata {\"} {^^"}
-metadata: load metadata
-
-; convert toml to map assuming simple key/value pairs
-metadata: make map! parse metadata [collect any['= | keep skip]]
-
-if none? metadata/title [
-	metadata/title: title-case: copy slug
-
-	until [
-		change title-case
-			uppercase first title-case
-		title-case: find/tail title-case "-"
-		none? title-case
+track-config-data: load-json read %../config.json
+foreach practice-exercise track-config-data/exercises/practice [
+	if practice-exercise/slug = slug [
+		title: practice-exercise/name
 	]
-	replace/all metadata/title "-" " "
-
-	metadata/title: head metadata/title
 ]
-
-
-;     ===========================
-print "   EXERCISE DESCRIPTION ..."
-
-instructions: read/lines
-	rejoin [github-problem-spec %/description.md]
-
-instructions:  copy  skip instructions 2
-write/lines/append  rejoin [exercise-path %/.docs/instructions.md]  instructions
 
 
 ;     ===========================
 print "       TEST SUITE ..."
 
-canonical-data: either map? canonical-data: try [
-	load-json read 
-		rejoin [github-problem-spec %/canonical-data.json]
-] [
-	canonical-data
-] [
-	#[ cases: []]
+canonical-data: load-json read
+	rejoin [problem-specifications-url %/canonical-data.json]
+
+tests-toml: read tests-toml-file
+
+testcase-included?: function [uuid [string!]] [
+	section-start: find tests-toml rejoin ["[" uuid "]"]
+	either none? section-start [
+		false
+	] [
+		section-end: any [find next section-start "^/[" tail tests-toml]
+		none? find copy/part section-start section-end "include = false"
+	]
 ]
 
 camel-to-kebab-case: function [
@@ -132,12 +139,16 @@ load-testcases: function [
 	foreach testcase testcases [
 		append loaded
 			either none? testcase/cases [
-				make map! reduce [
-					'description testcase/description
-					'input testcase/input
-					'expected testcase/expected
-					'function camel-to-kebab-case testcase/property
-					'uuid testcase/uuid
+				either testcase-included? testcase/uuid [
+					make map! reduce [
+						'description testcase/description
+						'input testcase/input
+						'expected testcase/expected
+						'function camel-to-kebab-case testcase/property
+						'uuid testcase/uuid
+					]
+				] [
+					[]
 				]
 			] [
 				load-testcases testcase/cases				; recurrently load nested testcases
@@ -150,17 +161,17 @@ cases-for-tests: load-testcases canonical-data/cases
 
 test-code: read test-file
 
-test-code: replace/case test-code
-	"canonical-cases: []" 
-	rejoin [
-		"canonical-cases: "
-		mold cases-for-tests
-		"^/"
-	]
+canonical-cases-start: find test-code "canonical-cases:"
+canonical-cases-end: find canonical-cases-start "foreach c-case canonical-cases"
+change/part canonical-cases-start rejoin [
+	"canonical-cases: "
+	mold cases-for-tests
+	"^/^/"
+] canonical-cases-end
 
 test-code: replace/case test-code
 	{description: {Tests for "Practie Exercise" Exercism exercise}}
-	rejoin ["description: {Tests for ^"" metadata/title "^" Exercism exercise}"]
+	rejoin ["description: {Tests for ^"" title "^" Exercism exercise}"]
 
 test-code: replace/case test-code
 	"practice-exercise"
@@ -168,6 +179,10 @@ test-code: replace/case test-code
 
 write test-file test-code
 
+if sync-tests? [
+	print "          done."
+	quit
+]
 
 ;     ===========================
 print "      SOLUTION STUB ..."
@@ -176,7 +191,7 @@ solution-code: read solution-file
 
 solution-code: replace/case solution-code
 	"Practice Exercise"
-	metadata/title
+	title
 
 functions: copy []
 foreach testcase cases-for-tests [
@@ -212,57 +227,6 @@ replace/case solution-code
 	{author: "" ; you can write your name here, in quotes}
 
 write solution-file solution-code
-
-
-;     ===========================
-print "        TESTS.TOML ..."
-
-tests-toml: read tests-toml-file
-
-foreach testcase cases-for-tests [
-	append tests-toml rejoin [
-		"# " testcase/description #"^/"
-		mold testcase/uuid " = true^/^/"
-	]
-]
-
-write tests-toml-file tests-toml
-
-
-;     ===========================
-print "   EXERCISE CONFIG FILE ..."
-
-config-data: load-json read config-file
-
-config-data/blurb: metadata/blurb
-replace config-data/files/solution/1 "practice-exercise" slug
-replace config-data/files/test/1 "practice-exercise" slug
-append config-data/authors author
-
-write config-file to-json/pretty config-data "^-"
-
-
-;     ===========================
-print "    UPDATE TRACK CONFIG ..."
-
-track-config-data: load-json read track-config-file
-
-exercise-config: make map! reduce [
-	'slug slug
-	'name metadata/title
-	'status 'wip
-	'uuid uuid
-	'practices []
-	'prerequisites []
-	'difficulty 0
-]
-
-append track-config-data/exercises/practice exercise-config
-
-write track-config-file rejoin [
-	to-json/pretty track-config-data "  "
-	"^/"
-]
 
 ;     ===========================
 print "          done."

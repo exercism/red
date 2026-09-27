@@ -9,13 +9,13 @@ test-init/limit %bob.red 1
 ; test-init/limit %.meta/example.red 1						; test example solution
 
 canonical-cases: [#[
-    description: "stating something"
+    description: "asking a question"
     input: #[
-        heyBob: "Tom-ay-to, tom-aaaah-to."
+        heyBob: "Does this cryogenic chamber make me look fat?"
     ]
-    expected: "Whatever."
+    expected: "Sure."
     function: "response"
-    uuid: "e162fead-606f-437a-a166-d051915cea8e"
+    uuid: "8a2e771d-d6f1-4e3f-b6c6-b41495556e37"
 ] #[
     description: "shouting"
     input: #[
@@ -25,21 +25,29 @@ canonical-cases: [#[
     function: "response"
     uuid: "73a966dc-8017-47d6-bb32-cf07d1a5fcd9"
 ] #[
-    description: "shouting gibberish"
+    description: "forceful question"
     input: #[
-        heyBob: "FCECDFCAAB"
+        heyBob: "WHAT'S GOING ON?"
     ]
-    expected: "Whoa, chill out!"
+    expected: "Calm down, I know what I'm doing!"
     function: "response"
-    uuid: "d6c98afd-df35-4806-b55e-2c457c3ab748"
+    uuid: "a5193c61-4a92-4f68-93e2-f554eb385ec6"
 ] #[
-    description: "asking a question"
+    description: "silence"
     input: #[
-        heyBob: "Does this cryogenic chamber make me look fat?"
+        heyBob: ""
     ]
-    expected: "Sure."
+    expected: "Fine. Be that way!"
     function: "response"
-    uuid: "8a2e771d-d6f1-4e3f-b6c6-b41495556e37"
+    uuid: "bc39f7c6-f543-41be-9a43-fd1c2f753fc0"
+] #[
+    description: "stating something"
+    input: #[
+        heyBob: "Tom-ay-to, tom-aaaah-to."
+    ]
+    expected: "Whatever."
+    function: "response"
+    uuid: "e162fead-606f-437a-a166-d051915cea8e"
 ] #[
     description: "asking a numeric question"
     input: #[
@@ -57,46 +65,6 @@ canonical-cases: [#[
     function: "response"
     uuid: "2a02716d-685b-4e2e-a804-2adaf281c01e"
 ] #[
-    description: "talking forcefully"
-    input: #[
-        heyBob: "Hi there!"
-    ]
-    expected: "Whatever."
-    function: "response"
-    uuid: "c02f9179-ab16-4aa7-a8dc-940145c385f7"
-] #[
-    description: "using acronyms in regular speech"
-    input: #[
-        heyBob: "It's OK if you don't want to go work for NASA."
-    ]
-    expected: "Whatever."
-    function: "response"
-    uuid: "153c0e25-9bb5-4ec5-966e-598463658bcd"
-] #[
-    description: "forceful question"
-    input: #[
-        heyBob: "WHAT'S GOING ON?"
-    ]
-    expected: "Calm down, I know what I'm doing!"
-    function: "response"
-    uuid: "a5193c61-4a92-4f68-93e2-f554eb385ec6"
-] #[
-    description: "shouting numbers"
-    input: #[
-        heyBob: "1, 2, 3 GO!"
-    ]
-    expected: "Whoa, chill out!"
-    function: "response"
-    uuid: "a20e0c54-2224-4dde-8b10-bd2cdd4f61bc"
-] #[
-    description: "no letters"
-    input: #[
-        heyBob: "1, 2, 3"
-    ]
-    expected: "Whatever."
-    function: "response"
-    uuid: "f7bc4b92-bdff-421e-a238-ae97f230ccac"
-] #[
     description: "question with no letters"
     input: #[
         heyBob: "4?"
@@ -104,30 +72,6 @@ canonical-cases: [#[
     expected: "Sure."
     function: "response"
     uuid: "bb0011c5-cd52-4a5b-8bfb-a87b6283b0e2"
-] #[
-    description: "shouting with special characters"
-    input: #[
-        heyBob: "ZOMG THE %^^*@#$(*^^ ZOMBIES ARE COMING!!11!!1!"
-    ]
-    expected: "Whoa, chill out!"
-    function: "response"
-    uuid: "496143c8-1c31-4c01-8a08-88427af85c66"
-] #[
-    description: "shouting with no exclamation mark"
-    input: #[
-        heyBob: "I HATE THE DENTIST"
-    ]
-    expected: "Whoa, chill out!"
-    function: "response"
-    uuid: "e6793c1c-43bd-4b8d-bc11-499aea73925f"
-] #[
-    description: "statement containing question mark"
-    input: #[
-        heyBob: "Ending with ? means a question."
-    ]
-    expected: "Whatever."
-    function: "response"
-    uuid: "aa8097cc-c548-4951-8856-14a404dd236a"
 ] #[
     description: "non-letters with question"
     input: #[
@@ -145,13 +89,69 @@ canonical-cases: [#[
     function: "response"
     uuid: "8608c508-f7de-4b17-985b-811878b3cf45"
 ] #[
-    description: "silence"
+    description: "ending with whitespace"
     input: #[
-        heyBob: ""
+        heyBob: "Okay if like my  spacebar  quite a bit?   "
     ]
-    expected: "Fine. Be that way!"
+    expected: "Sure."
     function: "response"
-    uuid: "bc39f7c6-f543-41be-9a43-fd1c2f753fc0"
+    uuid: "05b304d6-f83b-46e7-81e0-4cd3ca647900"
+] #[
+    description: "multiple line question"
+    input: #[
+        heyBob: {^/Does this cryogenic chamber make me look fat?^/No.}
+    ]
+    expected: "Whatever."
+    function: "response"
+    uuid: "66953780-165b-4e7e-8ce3-4bcb80b6385a"
+] #[
+    description: "multiple line question"
+    input: #[
+        heyBob: {^/Does this cryogenic chamber make^/ me look fat?}
+    ]
+    expected: "Sure."
+    function: "response"
+    uuid: "2c7278ac-f955-4eb4-bf8f-e33eb4116a15"
+] #[
+    description: "shouting gibberish"
+    input: #[
+        heyBob: "FCECDFCAAB"
+    ]
+    expected: "Whoa, chill out!"
+    function: "response"
+    uuid: "d6c98afd-df35-4806-b55e-2c457c3ab748"
+] #[
+    description: "shouting a statement containing a question mark"
+    input: #[
+        heyBob: "DO LIONS EAT PEOPLE? AHHHHH."
+    ]
+    expected: "Whoa, chill out!"
+    function: "response"
+    uuid: "3c954328-86fb-4c71-8961-e18d6a5e2517"
+] #[
+    description: "shouting numbers"
+    input: #[
+        heyBob: "1, 2, 3 GO!"
+    ]
+    expected: "Whoa, chill out!"
+    function: "response"
+    uuid: "a20e0c54-2224-4dde-8b10-bd2cdd4f61bc"
+] #[
+    description: "shouting with special characters"
+    input: #[
+        heyBob: "ZOMG THE %^^*@#$(*^^ ZOMBIES ARE COMING!!11!!1!"
+    ]
+    expected: "Whoa, chill out!"
+    function: "response"
+    uuid: "496143c8-1c31-4c01-8a08-88427af85c66"
+] #[
+    description: "shouting with no exclamation mark"
+    input: #[
+        heyBob: "I HATE THE DENTIST"
+    ]
+    expected: "Whoa, chill out!"
+    function: "response"
+    uuid: "e6793c1c-43bd-4b8d-bc11-499aea73925f"
 ] #[
     description: "prolonged silence"
     input: #[
@@ -169,13 +169,45 @@ canonical-cases: [#[
     function: "response"
     uuid: "4428f28d-4100-4d85-a902-e5a78cb0ecd3"
 ] #[
-    description: "multiple line question"
+    description: "other whitespace"
     input: #[
-        heyBob: {^/Does this cryogenic chamber make me look fat?^/No.}
+        heyBob: "^/^M ^-"
+    ]
+    expected: "Fine. Be that way!"
+    function: "response"
+    uuid: "72bd5ad3-9b2f-4931-a988-dce1f5771de2"
+] #[
+    description: "talking forcefully"
+    input: #[
+        heyBob: "Hi there!"
     ]
     expected: "Whatever."
     function: "response"
-    uuid: "66953780-165b-4e7e-8ce3-4bcb80b6385a"
+    uuid: "c02f9179-ab16-4aa7-a8dc-940145c385f7"
+] #[
+    description: "using acronyms in regular speech"
+    input: #[
+        heyBob: "It's OK if you don't want to go work for NASA."
+    ]
+    expected: "Whatever."
+    function: "response"
+    uuid: "153c0e25-9bb5-4ec5-966e-598463658bcd"
+] #[
+    description: "no letters"
+    input: #[
+        heyBob: "1, 2, 3"
+    ]
+    expected: "Whatever."
+    function: "response"
+    uuid: "f7bc4b92-bdff-421e-a238-ae97f230ccac"
+] #[
+    description: "statement containing question mark"
+    input: #[
+        heyBob: "Ending with ? means a question."
+    ]
+    expected: "Whatever."
+    function: "response"
+    uuid: "aa8097cc-c548-4951-8856-14a404dd236a"
 ] #[
     description: "starting with whitespace"
     input: #[
@@ -184,22 +216,6 @@ canonical-cases: [#[
     expected: "Whatever."
     function: "response"
     uuid: "5371ef75-d9ea-4103-bcfa-2da973ddec1b"
-] #[
-    description: "ending with whitespace"
-    input: #[
-        heyBob: "Okay if like my  spacebar  quite a bit?   "
-    ]
-    expected: "Sure."
-    function: "response"
-    uuid: "05b304d6-f83b-46e7-81e0-4cd3ca647900"
-] #[
-    description: "other whitespace"
-    input: #[
-        heyBob: "^/^M ^-"
-    ]
-    expected: "Fine. Be that way!"
-    function: "response"
-    uuid: "72bd5ad3-9b2f-4931-a988-dce1f5771de2"
 ] #[
     description: "non-question ending with whitespace"
     input: #[
@@ -215,7 +231,7 @@ foreach c-case canonical-cases [
 	case-code: reduce [
 		'expect c-case/expected compose [
 			(to word! c-case/function) (values-of c-case/input)
-		] 
+		]
 	]
 
 	test c-case/description case-code

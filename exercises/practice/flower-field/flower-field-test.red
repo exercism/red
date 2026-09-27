@@ -104,6 +104,14 @@ canonical-cases: [#[
     expected: ["1*22*1" "12*322" " 123*2" "112*4*" "1*22*2" "111111"]
     function: "annotate"
     uuid: "dd9d4ca8-9e68-4f78-a677-a2a70fd7a7b8"
+] #[
+    description: "multiple adjacent flowers"
+    input: #[
+        garden: [" ** "]
+    ]
+    expected: ["1**1"]
+    function: "annotate"
+    uuid: "6e4ac13a-3e43-4728-a2e3-3551d4b1a996"
 ]]
 
 

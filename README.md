@@ -48,7 +48,13 @@ Now, here's how we do this in the Red track:
 2. Clone this repo,
 3. Run our exercise generator; it will create all necessary files for the exercise:
 ```shell
-$ red _tools/generate-practice-exercise.red <exercise-slug>
+$ red _tools/generate-practice-exercise.red <exercise-slug> <github-username> [difficulty]
+```
+
+To regenerate an existing exercise's test suite after updating `.meta/tests.toml`:
+
+```shell
+$ red _tools/generate-practice-exercise.red --sync-tests <exercise-slug>
 ```
 4. In `exercises/practice/<exercise-slug>/<exercise-slug>-test.red` make a change like this, to test your example solution:
 ```red
@@ -62,7 +68,7 @@ $ cd exercises/practice/<exercise-slug>
 $ red <exercise-slug>-test.red
 ```
 7. Once your solution passes all the tests, remember to revert the changes made ↑ at *point 4* in the `test-init` line: uncomment solution file, comment example file and change `limit` to `1` (second argument).
-8. Change the exercise's difficulty in track's `config,json`. If you want, add `practices` and `prerequisites` concepts. Copy the exercise's config to the proper position, so that all exercises are sorted from easiest to toughest.
+8. If you change an exercise's difficulty, run `bin/sort-practice-exercises ".bucket, .lowercase_name" config.json` to restore the CI-required order. You can also add `practices` and `prerequisites` concepts.
 9. Make a commit to a fresh branch and [make a Pull Request](https://exercism.org/docs/building/github/contributors-pull-request-guide).
 
 ### Concepts

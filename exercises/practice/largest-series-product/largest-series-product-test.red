@@ -18,7 +18,7 @@ canonical-cases: [#[
     function: "largest-product"
     uuid: "7c82f8b7-e347-48ee-8a22-f672323324d4"
 ] #[
-    description: {can find the largest product of 2 with numbers in order}
+    description: "can find the largest product of 2 with numbers in order"
     input: #[
         digits: "0123456789"
         span: 2
@@ -36,7 +36,7 @@ canonical-cases: [#[
     function: "largest-product"
     uuid: "f1376b48-1157-419d-92c2-1d7e36a70b8a"
 ] #[
-    description: {can find the largest product of 3 with numbers in order}
+    description: "can find the largest product of 3 with numbers in order"
     input: #[
         digits: "0123456789"
         span: 3
@@ -54,7 +54,7 @@ canonical-cases: [#[
     function: "largest-product"
     uuid: "a2dcb54b-2b8f-4993-92dd-5ce56dece64a"
 ] #[
-    description: {can find the largest product of 5 with numbers in order}
+    description: "can find the largest product of 5 with numbers in order"
     input: #[
         digits: "0123456789"
         span: 5
@@ -65,7 +65,7 @@ canonical-cases: [#[
 ] #[
     description: "can get the largest product of a big number"
     input: #[
-        digits: {73167176531330624919225119674426574742355349194934}
+        digits: "73167176531330624919225119674426574742355349194934"
         span: 6
     ]
     expected: 23520
@@ -96,10 +96,28 @@ canonical-cases: [#[
         span: 4
     ]
     expected: #[
-        error: "span must be smaller than string length"
+        error: "span must not exceed string length"
     ]
     function: "largest-product"
-    uuid: "5d81aaf7-4f67-4125-bf33-11493cc7eab7"
+    uuid: "0ae1ce53-d9ba-41bb-827f-2fceb64f058b"
+] #[
+    description: "reports 1 for empty string and empty product (0 span)"
+    input: #[
+        digits: ""
+        span: 0
+    ]
+    expected: 1
+    function: "largest-product"
+    uuid: "06bc8b90-0c51-4c54-ac22-3ec3893a079e"
+] #[
+    description: "reports 1 for nonempty string and empty product (0 span)"
+    input: #[
+        digits: "123"
+        span: 0
+    ]
+    expected: 1
+    function: "largest-product"
+    uuid: "3ec0d92e-f2e2-4090-a380-70afee02f4c0"
 ] #[
     description: "rejects empty string and nonzero span"
     input: #[
@@ -107,10 +125,10 @@ canonical-cases: [#[
         span: 1
     ]
     expected: #[
-        error: "span must be smaller than string length"
+        error: "span must not exceed string length"
     ]
     function: "largest-product"
-    uuid: "6d96c691-4374-4404-80ee-2ea8f3613dd4"
+    uuid: "6cf66098-a6af-4223-aab1-26aeeefc7402"
 ] #[
     description: "rejects invalid character in digits"
     input: #[
@@ -129,10 +147,10 @@ canonical-cases: [#[
         span: -1
     ]
     expected: #[
-        error: "span must be greater than zero"
+        error: "span must not be negative"
     ]
     function: "largest-product"
-    uuid: "5fe3c0e5-a945-49f2-b584-f0814b4dd1ef"
+    uuid: "c859f34a-9bfe-4897-9c2f-6d7f8598e7f0"
 ]]
 
 

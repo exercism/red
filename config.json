@@ -355,6 +355,14 @@
         "difficulty": 5
       },
       {
+        "slug": "camicia",
+        "name": "Camicia",
+        "uuid": "f0036f43-af3c-4e16-a547-4f3f9908bee6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "dnd-character",
         "name": "D&D Character",
         "uuid": "e48e5d31-f688-41cc-b7ce-bc521681f45d",

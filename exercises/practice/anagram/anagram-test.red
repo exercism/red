@@ -98,7 +98,7 @@ canonical-cases: [#[
     expected: ["Carthorse"]
     function: "find-anagrams"
     uuid: "f367325c-78ec-411c-be76-e79047f4bd54"
-]#[
+] #[
     description: {does not detect an anagram if the original word is repeated}
     input: #[
         subject: "go"
@@ -152,8 +152,25 @@ canonical-cases: [#[
     expected: ["Silent"]
     function: "find-anagrams"
     uuid: "33d3f67e-fbb9-49d3-a90e-0beb00861da7"
+] #[
+    description: "handles case of greek letters"
+    input: #[
+        subject: "ΑΒΓ"
+        candidates: ["ΒΓΑ" "ΒΓΔ" "γβα" "αβγ"]
+    ]
+    expected: ["ΒΓΑ" "γβα"]
+    function: "find-anagrams"
+    uuid: "a6854f66-eec1-4afd-a137-62ef2870c051"
+] #[
+    description: "different characters may have the same bytes"
+    input: #[
+        subject: "a⬂"
+        candidates: ["€a"]
+    ]
+    expected: []
+    function: "find-anagrams"
+    uuid: "fd3509e5-e3ba-409d-ac3d-a9ac84d13296"
 ]]
-
 
 foreach c-case canonical-cases [
 	expect-code: compose [

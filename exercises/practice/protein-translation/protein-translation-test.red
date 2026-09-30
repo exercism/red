@@ -145,7 +145,7 @@ canonical-cases: [#[
     function: "proteins"
     uuid: "9c2ad527-ebc9-4ace-808b-2b6447cb54cb"
 ] #[
-    description: "Sequence of two protein codons translate in proteins"
+    description: {Sequence of two protein codons translates into proteins}
     input: #[
         strand: "UUUUUU"
     ]
@@ -153,7 +153,7 @@ canonical-cases: [#[
     function: "proteins"
     uuid: "f4d9d8ee-00a8-47bf-a1e3-1641d4428e54"
 ] #[
-    description: "Sequence of two different protein codons translates into proteins"
+    description: {Sequence of two different protein codons translates into proteins}
     input: #[
         strand: "UUAUUG"
     ]
@@ -208,8 +208,15 @@ canonical-cases: [#[
     expected: ["Tryptophan" "Cysteine" "Tyrosine"]
     function: "proteins"
     uuid: "2c2a2a60-401f-4a80-b977-e0715b23b93d"
+] #[
+    description: {Sequence of two non-STOP codons does not translate to a STOP codon}
+    input: #[
+        strand: "AUGAUG"
+    ]
+    expected: ["Methionine" "Methionine"]
+    function: "proteins"
+    uuid: "f6f92714-769f-4187-9524-e353e8a41a80"
 ]]
-
 
 foreach c-case canonical-cases [
 	expect-code: compose [

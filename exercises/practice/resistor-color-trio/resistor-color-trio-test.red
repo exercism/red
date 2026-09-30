@@ -117,9 +117,8 @@ canonical-cases: [#[
         unit: "kiloohms"
     ]
     function: "label"
-    uuid: "872c92-f567-4b69-a105-8455611c10c4"
+    uuid: "30872c92-f567-4b69-a105-8455611c10c4"
 ]]
-
 
 foreach c-case canonical-cases [
 	expect-code: compose [

@@ -74,7 +74,6 @@ canonical-cases: [#[
     uuid: "16608eae-f60f-4a88-800e-aabce5df2865"
 ]]
 
-
 foreach c-case canonical-cases [
 	expect-code: compose [
 		(to word! c-case/function) (values-of c-case/input)

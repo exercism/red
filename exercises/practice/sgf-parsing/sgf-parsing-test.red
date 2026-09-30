@@ -162,20 +162,167 @@ canonical-cases: [#[
     function: "parse-sgf"
     uuid: "724eeda6-00db-41b1-8aa9-4d5238ca0130"
 ] #[
-    description: "escaped property"
+    description: {within property values, whitespace characters such as tab are converted to spaces}
     input: #[
-        encoded: "(;A[\]b\nc\nd\t\te \n\]])"
+        encoded: "(;A[hello^-^-world])"
     ]
     expected: #[
         properties: #[
-            A: ["]b\nc\nd  e \n]"]
+            A: ["hello  world"]
         ]
         children: []
     ]
     function: "parse-sgf"
-    uuid: "11c36323-93fc-495d-bb23-c88ee5844b8c"
+    uuid: "28092c06-275f-4b9f-a6be-95663e69d4db"
+] #[
+    description: {within property values, newlines remain as newlines}
+    input: #[
+        encoded: "(;A[hello^/^/world])"
+    ]
+    expected: #[
+        properties: #[
+            A: ["hello^/^/world"]
+        ]
+        children: []
+    ]
+    function: "parse-sgf"
+    uuid: "deaecb9d-b6df-4658-aa92-dcd70f4d472a"
+] #[
+    description: {escaped closing bracket within property value becomes just a closing bracket}
+    input: #[
+        encoded: "(;A[\]])"
+    ]
+    expected: #[
+        properties: #[
+            A: ["]"]
+        ]
+        children: []
+    ]
+    function: "parse-sgf"
+    uuid: "8e4c970e-42d7-440e-bfef-5d7a296868ef"
+] #[
+    description: {escaped backslash in property value becomes just a backslash}
+    input: #[
+        encoded: "(;A[\\])"
+    ]
+    expected: #[
+        properties: #[
+            A: ["\"]
+        ]
+        children: []
+    ]
+    function: "parse-sgf"
+    uuid: "cf371fa8-ba4a-45ec-82fb-38668edcb15f"
+] #[
+    description: {opening bracket within property value doesn't need to be escaped}
+    input: #[
+        encoded: "(;A[x[y\]z][foo]B[bar];C[baz])"
+    ]
+    expected: #[
+        properties: #[
+            A: ["x[y]z" "foo"]
+            B: ["bar"]
+        ]
+        children: [#[
+            properties: #[
+                C: ["baz"]
+            ]
+            children: []
+        ]]
+    ]
+    function: "parse-sgf"
+    uuid: "dc13ca67-fac0-4b65-b3fe-c584d6a2c523"
+] #[
+    description: {semicolon in property value doesn't need to be escaped}
+    input: #[
+        encoded: "(;A[a;b][foo]B[bar];C[baz])"
+    ]
+    expected: #[
+        properties: #[
+            A: ["a;b" "foo"]
+            B: ["bar"]
+        ]
+        children: [#[
+            properties: #[
+                C: ["baz"]
+            ]
+            children: []
+        ]]
+    ]
+    function: "parse-sgf"
+    uuid: "a780b97e-8dbb-474e-8f7e-4031902190e8"
+] #[
+    description: {parentheses in property value don't need to be escaped}
+    input: #[
+        encoded: "(;A[x(y)z][foo]B[bar];C[baz])"
+    ]
+    expected: #[
+        properties: #[
+            A: ["x(y)z" "foo"]
+            B: ["bar"]
+        ]
+        children: [#[
+            properties: #[
+                C: ["baz"]
+            ]
+            children: []
+        ]]
+    ]
+    function: "parse-sgf"
+    uuid: "0b57a79e-8d89-49e5-82b6-2eaaa6b88ed7"
+] #[
+    description: {escaped tab in property value is converted to space}
+    input: #[
+        encoded: "(;A[hello\^-world])"
+    ]
+    expected: #[
+        properties: #[
+            A: ["hello world"]
+        ]
+        children: []
+    ]
+    function: "parse-sgf"
+    uuid: "c72a33af-9e04-4cc5-9890-1b92262813ac"
+] #[
+    description: {escaped newline in property value is converted to nothing at all}
+    input: #[
+        encoded: "(;A[hello\^/world])"
+    ]
+    expected: #[
+        properties: #[
+            A: ["helloworld"]
+        ]
+        children: []
+    ]
+    function: "parse-sgf"
+    uuid: "3a1023d2-7484-4498-8d73-3666bb386e81"
+] #[
+    description: {escaped t and n in property value are just letters, not whitespace}
+    input: #[
+        encoded: "(;A[\t = t and \n = n])"
+    ]
+    expected: #[
+        properties: #[
+            A: ["t = t and n = n"]
+        ]
+        children: []
+    ]
+    function: "parse-sgf"
+    uuid: "25abf1a4-5205-46f1-8c72-53273b94d009"
+] #[
+    description: {mixing various kinds of whitespace and escaped characters in property value}
+    input: #[
+        encoded: {(;A[\]b^/c\^/d^-^-e\\ \^/\]])}
+    ]
+    expected: #[
+        properties: #[
+            A: ["]b^/cd  e\ ]"]
+        ]
+        children: []
+    ]
+    function: "parse-sgf"
+    uuid: "08e4b8ba-bb07-4431-a3d9-b1f4cdea6dab"
 ]]
-
 
 foreach c-case canonical-cases [
 	expect-code: compose [

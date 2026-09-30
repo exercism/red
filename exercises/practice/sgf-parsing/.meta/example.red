@@ -19,7 +19,14 @@ make-node: func [][
 ]
 
 unescape: func [value][
-	rejoin parse value [collect any [keep "\n" | "\t" keep (" ") | ["\" keep skip] | keep skip]]
+	rejoin parse value [collect any [
+		keep #"^/"
+		| #"^-" keep (" ")
+		| [#"\" #"^/"]
+		| [#"\" #"^-" keep (" ")]
+		| [#"\" keep skip]
+		| keep skip
+	]]
 ]
 
 input-error: func [error-msg] [do make error! error-msg]
@@ -47,14 +54,14 @@ parse-sgf: function [{
 		any property
 	]
 	property: [prop-name [some prop-value | (input-error "properties without delimiter")]]
-	prop-name: [copy name value (
+	prop-name: [copy name some prop-ident (
 		unless name == uppercase copy name [input-error "property must be in uppercase"]
 		put :cur-node/properties to word! :name cur-prop: copy []
 	)]
 	prop-value: [ #"[" copy val value #"]" (append :cur-prop unescape :val)]
-	value: [some [escaped | not specials skip]]
+	prop-ident: charset "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	value: [some [escaped | not #"]" skip]]
 	escaped: [#"\" skip]
-	specials: charset "()[];"
 
 	tree-stack: copy []
 	root: node-sequence: copy []
@@ -64,4 +71,3 @@ parse-sgf: function [{
 
 	return first root
 ]
-

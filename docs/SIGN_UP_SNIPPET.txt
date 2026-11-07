@@ -1,0 +1,9 @@
+most-common-word: function [text [string!]] [
+	counts: make map! []
+	best: ""
+	foreach word split lowercase copy text space [
+		put counts word 1 + any [select counts word 0]
+		if (select counts word) > any [select counts best 0] [best: word]
+	]
+	rejoin [{"} best {" appears } select counts best " times"]
+]
